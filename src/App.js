@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import logo from './logo.svg';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -7,6 +8,9 @@ import { Experience } from "./components/Experience";
 import { Projects } from "./components/Projects";
 
 function App() {
+  useEffect(() => {
+    document.title = 'LLT';
+  }, []);
   return (
     <div className="App">
       <NavBar />
