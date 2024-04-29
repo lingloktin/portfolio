@@ -13,7 +13,7 @@ export const ProjectCard = ({ title, description, imgUrl, tech, githubUrl }) => 
 
   return (
     <Col size={12} sm={6} md={4}>
-      <div className="proj-card" onClick={toggleCover}>
+      <div className="proj-card" onClick={isCoverVisible ? null : toggleCover}>
         <div className="proj-imgbx" >
           <img src={imgUrl} />
         </div>
@@ -21,19 +21,17 @@ export const ProjectCard = ({ title, description, imgUrl, tech, githubUrl }) => 
           <h4>{title}</h4>
           <span>{description}</span>
         </div>
-        {isCoverVisible && (
-          <div className= {`proj-card-cover ${isCoverVisible ? 'visible' : ''}`} >
-            <button className="close-btn" onClick={toggleCover}><i class='bx bx-x-circle'></i></button>
-            <div className="proj-tech" >
-              <p><span>Using: </span>{tech.join(", ")}</p>
-            </div>
-            <div className="proj-link">
-              <a href={githubUrl}>
-                <i class="bx bxl-github"></i>
-              </a>
-            </div>
+        <div className={`proj-card-cover ${isCoverVisible ? 'visible' : ''}`} >
+          <button className="close-btn" onClick={toggleCover}><i class='bx bx-x-circle'></i></button>
+          <div className="proj-tech" >
+            <p><span>Using: </span>{tech.join(", ")}</p>
           </div>
-        )}
+          <div className="proj-link">
+            <a href={githubUrl}>
+              <i class="bx bxl-github"></i>
+            </a>
+          </div>
+        </div>
       </div>
     </Col>
   )

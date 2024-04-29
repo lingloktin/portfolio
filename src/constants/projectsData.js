@@ -4,38 +4,48 @@ import projImg3 from "../assets/img/project-img3.png";
 import techTools from "./techTools";
 
 const projectsData = [
-    {
-      title: "BlockChain To-Do List",
-      description: "Learning Blockchain",
-      imgUrl: projImgEthToDo,
-      tech: [techTools.ethereum, techTools.truffle, techTools.solidity, techTools.web3js, techTools.nodejs, techTools.javascript],
-      githubUrl: "https://github.com/lingloktin/eth-todo-list",
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg2,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg3,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImgEthToDo,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg2,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg3,
-    },
-  ];
+  {
+    title: "BlockChain To-Do List",
+    description: "Learning Blockchain",
+    imgUrl: projImgEthToDo,
+    tech: [techTools.ethereum, techTools.truffle, techTools.solidity, techTools.web3js, techTools.nodejs, techTools.javascript],
+    githubUrl: "https://github.com/lingloktin/eth-todo-list",
+  },
+  {
+    title: "Business Startup",
+    description: "Design & Development",
+    imgUrl: projImg2,
+    tech: [techTools.ethereum, techTools.truffle, techTools.solidity,],
+    githubUrl: "",
+  },
+  {
+    title: "Business Startup",
+    description: "Design & Development",
+    imgUrl: projImg3,
+    tech: [techTools.ethereum, techTools.truffle, techTools.solidity,],
+    githubUrl: "",
+  },
+  {
+    title: "Business Startup",
+    description: "Design & Development",
+    imgUrl: projImgEthToDo,
+    tech: [techTools.ethereum, techTools.truffle, techTools.solidity,],
+    githubUrl: "",
+  },
+  {
+    title: "Business Startup",
+    description: "Design & Development",
+    imgUrl: projImg2,
+    tech: [techTools.ethereum, techTools.truffle, techTools.solidity,],
+    githubUrl: "",
+  },
+  {
+    title: "Business Startup",
+    description: "Design & Development",
+    imgUrl: projImg3,
+    tech: [techTools.ethereum, techTools.truffle, techTools.solidity,],
+    githubUrl: "",
+  },
+];
 
 export default projectsData;
