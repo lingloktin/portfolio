@@ -3,7 +3,7 @@ import { Col, Row } from "react-bootstrap";
 import "boxicons/css/boxicons.min.css";
 
 
-export const ProjectCard = ({ title, description, imgUrl }) => {
+export const ProjectCard = ({ title, description, imgUrl, tech, githubUrl }) => {
 
   const [isCoverVisible, setIsCoverVisible] = useState(false);
 
@@ -22,13 +22,13 @@ export const ProjectCard = ({ title, description, imgUrl }) => {
           <span>{description}</span>
         </div>
         {isCoverVisible && (
-          <div className="proj-card-cover" >
-            {/* <button className="close-btn" onClick={toggleCover}></button> */}
+          <div className= {`proj-card-cover ${isCoverVisible ? 'visible' : ''}`} >
+            <button className="close-btn" onClick={toggleCover}><i class='bx bx-x-circle'></i></button>
             <div className="proj-tech" >
-              <p>Using: {description}</p>
+              <p><span>Using: </span>{tech.join(", ")}</p>
             </div>
             <div className="proj-link">
-            <a href="#">
+              <a href={githubUrl}>
                 <i class="bx bxl-github"></i>
               </a>
             </div>

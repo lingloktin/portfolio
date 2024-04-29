@@ -430,7 +430,8 @@ span.navbar-text {
   position: absolute;
   top: 10px;
   right: 10px;
-  /* Style the close button as needed */
+  background-color: transparent;
+  font-size: 2.5rem;
 }
 .proj-imgbx {
   position: relative;
@@ -479,6 +480,13 @@ span.navbar-text {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-size: 1.8rem;
+  transform: translateY(100%); /* Hide it initially */
+  transition: 0.5s ease-in-out; /* Animate the transform property */
+ }
+ .proj-card-cover.visible {
+  transition: 0.5s ease-in-out; /* Animate the transform property */
+  transform: translateY(0%); /* Show it by moving it to its original position */
  }
 .proj-tech {
   display: flex;
@@ -488,7 +496,12 @@ span.navbar-text {
   height: 300px;
   width: 100%;
   border-radius: 30px 30px 0 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid white !important;
+  padding: 2rem;
+}
+.proj-tech span{
+  color: white;
+  font-weight: bold;
 }
 .proj-link {
   display: flex;

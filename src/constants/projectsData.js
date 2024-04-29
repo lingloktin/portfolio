@@ -9,6 +9,7 @@ const projectsData = [
       description: "Learning Blockchain",
       imgUrl: projImgEthToDo,
       tech: [techTools.ethereum, techTools.truffle, techTools.solidity, techTools.web3js, techTools.nodejs, techTools.javascript],
+      githubUrl: "https://github.com/lingloktin/eth-todo-list",
     },
     {
       title: "Business Startup",
