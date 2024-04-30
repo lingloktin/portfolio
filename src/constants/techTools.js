@@ -1,16 +1,19 @@
 const techTools = {
-    ethereum: "Ethereum",
-    solidity: "Solidity",
-    web3js: "Web3.js",
-    truffle: "Truffle",
-    nodejs: "Node.js",
-    npm: "NPM",
-    ganache: "Ganache",
-    metamask: "MetaMask",
-    html: "HTML",
-    css: "CSS",
-    javascript: "JavaScript",
-    jquery: "jQuery"
-};
+    ETHEREUM: 'Ethereum',
+    SOLIDITY: 'Solidity',
+    WEB3JS: 'Web3.js',
+    TRUFFLE: 'Truffle',
+    NODEJS: 'Node.js',
+    NPM: 'NPM',
+    GANACHE: 'Ganache',
+    METAMASK: 'MetaMask',
+    HTML: 'HTML',
+    CSS: 'CSS',
+    JAVASCRIPT: 'JavaScript',
+    JQUERY: 'jQuery',
+    EXPRESS: 'Express',
+    MONGODB: 'MongoDB',
+    MONGOOSE: 'Mongoose',
+  };
 
 export default techTools

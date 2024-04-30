@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
 
 /************ Default Css ************/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
   outline: none;
   border: none;
@@ -14,11 +14,11 @@
 
 :root {
   --bg-color: rgb(8, 27, 41);
-  --second-bg-color: rgb(17, 46, 66); 
+  --second-bg-color: rgb(17, 46, 66);
   --text-color: rgb(237, 237, 237);
   --main-color: rgb(0, 171, 240);
   --main-color-transparent: rgba(11, 69, 90, 0.282);
-  --second-bg-color-transparent: rgba(17, 46, 66, 0.5); 
+  --second-bg-color-transparent: rgba(17, 46, 66, 0.5);
 }
 
 html {
@@ -33,7 +33,7 @@ body {
   position: relative;
   background-color: var(--bg-color) !important;
   color: var(--text-color) !important;
-  font-family: 'Centra', sans-serif !important;
+  font-family: "Centra", sans-serif !important;
 }
 
 section {
@@ -43,13 +43,13 @@ section {
   align-items: center;
   padding: 100px 20px;
 }
-.section-header{
+.section-header {
   font-size: 5rem;
   margin-bottom: 3rem;
   text-align: center;
 }
-span{
-  color: var(--main-color)
+span {
+  color: var(--main-color);
 }
 /************ Navbar Css ************/
 nav.navbar {
@@ -61,14 +61,14 @@ nav.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition:  0.32s ease-in-out;
+  transition: 0.32s ease-in-out;
 }
 nav.navbar.scrolled {
   padding: 0px 0;
   background-color: #121212;
 }
 nav.navbar a.navbar-brand {
-    width: 9%;
+  width: 9%;
 }
 nav.navbar .navbar-nav .nav-link.navbar-link {
   font-weight: 400;
@@ -80,8 +80,8 @@ nav.navbar .navbar-nav .nav-link.navbar-link {
 }
 nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
 nav.navbar .navbar-nav a.nav-link.navbar-link.active {
-    opacity: 1;
-    color: var(--main-color)
+  opacity: 1;
+  color: var(--main-color);
 }
 nav.navbar a.navbar-brand {
   font-size: 2.5rem;
@@ -89,13 +89,13 @@ nav.navbar a.navbar-brand {
   font-weight: 600;
 }
 span.navbar-text {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 /************ Banner Css ************/
-.container{
-  height: 100%; 
+.container {
+  height: 100%;
 }
 
 .banner {
@@ -116,14 +116,14 @@ span.navbar-text {
   position: relative;
   width: 32.8rem;
 }
-.banner .text-animate h3{
+.banner .text-animate h3 {
   font-size: 3.2rem;
   font-weight: 700;
   color: var(--main-color);
   letter-spacing: 0.8px;
 }
 .banner p {
-  color: #B8B8B8;
+  color: #b8b8b8;
   font-size: 1.6rem;
   margin: 2rem 0 4rem;
   letter-spacing: 0.5px;
@@ -145,42 +145,42 @@ span.navbar-text {
   width: 15rem;
   height: 100%;
   background: var(--main-color);
-  border: .3rem solid var(--main-color); 
-  border-radius: .8rem;
+  border: 0.3rem solid var(--main-color);
+  border-radius: 0.8rem;
   font-size: 1.8rem;
   font-weight: 600;
   color: var(--bg-color);
   z-index: 1;
   overflow: hidden;
-  transition: .5s;
+  transition: 0.5s;
 }
 .btn-box .btn::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 0;
   height: 100%;
   background: var(--bg-color);
-  
+
   z-index: -1;
-  transition: .5s;
+  transition: 0.5s;
 }
 .btn-box .btn:hover {
   color: var(--main-color);
-  border: .3rem solid var(--main-color); 
+  border: 0.3rem solid var(--main-color);
 }
 .btn-box .btn:hover::before {
   width: 100%;
 }
-.social-icon{
+.social-icon {
   position: relative;
   width: 145px;
   margin: 8rem 0 4rem;
   display: flex;
   justify-content: space-between;
 }
-.social-icon a{
+.social-icon a {
   position: relative;
   display: inline-flex;
   justify-content: center;
@@ -188,20 +188,20 @@ span.navbar-text {
   width: 50px;
   height: 50px;
   background: transparent;
-  border: .2rem solid var(--main-color);
+  border: 0.2rem solid var(--main-color);
   border-radius: 50%;
   font-size: 25px;
   color: var(--main-color);
   z-index: 1;
   overflow: hidden;
   text-decoration: none;
-  transition: .5s;
+  transition: 0.5s;
 }
-.social-icon a:hover{
+.social-icon a:hover {
   color: var(--bg-color);
 }
-.social-icon a::before{
-  content: '';
+.social-icon a::before {
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -209,49 +209,48 @@ span.navbar-text {
   height: 100%;
   background: var(--main-color);
   z-index: -1;
-  transition: .5s;
+  transition: 0.5s;
 }
-.social-icon a:hover::before{
+.social-icon a:hover::before {
   width: 100%;
 }
 .banner-img-container {
-  background: url('./assets/img/banner_img.jpg') no-repeat center center;
+  background: url("./assets/img/banner_img.jpg") no-repeat center center;
   background-size: contain;
-  width: 100%; 
+  width: 100%;
   height: 100%;
-  display: flex; 
-  justify-content: center; 
-  align-items: center; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.banner-imgHover{
+.banner-imgHover {
   position: absolute;
   top: 0;
   right: 0;
   width: 50%;
   height: 100%;
   background: transparent;
-  transition: .5s;
+  transition: 0.5s;
 }
-.banner-imgHover:hover{
+.banner-imgHover:hover {
   background: var(--bg-color);
   opacity: 0.8;
 }
 
 @keyframes updown {
-    0% {
-        transform: translateY(-20px);
-    }
-    50% {
-        transform: translateY(20px);
-    }
-    100% {
-        transform: translateY(-20px);
-    }
+  0% {
+    transform: translateY(-20px);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
 }
 .txt-rotate > .wrap {
   border-right: 0.08em solid #666;
 }
-
 
 /************ Experience Css ************/
 .experience {
@@ -279,7 +278,7 @@ span.navbar-text {
   padding-left: 2rem;
 }
 .experience-box .experience-content::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -1.1rem;
@@ -288,58 +287,66 @@ span.navbar-text {
   background: var(--main-color);
   border-radius: 50%;
 }
-.experience-content .content{
+.experience-content .content {
   position: relative;
   padding: 1.5rem;
-  border: .2rem solid var(--main-color);
-  border-radius: .6rem;
+  border: 0.2rem solid var(--main-color);
+  border-radius: 0.6rem;
   margin-bottom: 2rem;
   overflow: hidden;
   z-index: 2;
 }
 .experience-content .content::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 0;
   height: 100%;
   background: var(--main-color-transparent);
-  transition: .5s;
+  transition: 0.5s;
   z-index: -1;
 }
 .experience-content .content:hover::before {
-  width: 100%
+  width: 100%;
 }
 .experience-content .content .year {
   font-size: 1.5rem;
   color: var(--main-color);
-  padding-bottom: .5rem;
+  padding-bottom: 0.5rem;
 }
-.experience-content .content .year i{
-  padding-right: .5rem;
+.experience-content .content .year i {
+  padding-right: 0.5rem;
 }
-.hku-icon{
-  background: url('./assets/img/hku.png') no-repeat center center;
+.hku-icon {
+  background: url("./assets/img/hku.png") no-repeat center center;
 }
 .sttss-icon {
-  background: url('./assets/img/sttss.png') no-repeat center center;
+  background: url("./assets/img/sttss.png") no-repeat center center;
 }
 .sth-icon {
-  background: url('./assets/img/sth.png') no-repeat center center;
+  background: url("./assets/img/sth.png") no-repeat center center;
 }
 .moveit-icon {
-  background: url('./assets/img/moveit.png') no-repeat center center;
+  background: url("./assets/img/moveit.png") no-repeat center center;
 }
 .pks-icon {
-  background: url('./assets/img/pks.png') no-repeat center center;
+  background: url("./assets/img/pks.png") no-repeat center center;
 }
-.hku-icon, .sttss-icon, .sth-icon, .moveit-icon, .pks-icon{
+.hku-icon,
+.sttss-icon,
+.sth-icon,
+.moveit-icon,
+.pks-icon {
   background-size: contain;
   width: 100%;
   height: 100%;
 }
-.hku-title, .sttss-title, .sth-title, .moveit-title, .pks-title{
+.hku-title,
+.sttss-title,
+.sth-title,
+.moveit-title,
+.pks-title {
   flex: 13 13 !important;
 }
 .experience-content .content h3 {
@@ -348,17 +355,18 @@ span.navbar-text {
 .experience-content .content h4 {
   font-size: 2rem;
 }
-.experience-content .content p, li {
+.experience-content .content p,
+li {
   font-size: 1.6rem;
-  padding-top: .5rem;
+  padding-top: 0.5rem;
 }
 .experience-content .content ul {
-  padding: .5rem;
+  padding: 0.5rem;
   margin-left: 2rem;
 }
 
 /************ Projects Css ************/
-.projects{
+.projects {
   flex-direction: column;
 }
 .projects .nav.nav-pills {
@@ -388,20 +396,20 @@ span.navbar-text {
   z-index: 0;
 }
 .projects .nav.nav-pills .nav-link::before {
-    content: "";
-    position: absolute;
-    width: 0%;
-    height: 100%;
-    background: linear-gradient(#AA367C -5.91%, #4A2FBD 111.58%);
-    /* background: transparent; */
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: 0.3s ease-in-out;
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(#aa367c -5.91%, #4a2fbd 111.58%);
+  /* background: transparent; */
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: 0.3s ease-in-out;
 }
 .projects .nav.nav-pills .nav-link.active::before {
-    width: 100%;
-    /* background: linear-gradient(#AA367C -5.91%, #4A2FBD 111.58%) */
+  width: 100%;
+  /* background: linear-gradient(#AA367C -5.91%, #4A2FBD 111.58%) */
 }
 .nav-link#projects-tabs-tab-first {
   border-radius: 15px 0px 0px 15px;
@@ -413,11 +421,11 @@ span.navbar-text {
 .nav-link#projects-tabs-tab-third {
   border-radius: 0 15px 15px 0;
 }
-.proj-card{
+.proj-card {
   position: relative;
   height: 100%;
   width: 100%;
-  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+  background: linear-gradient(90.21deg, #aa367c -5.91%, #4a2fbd 111.58%);
   height: 400px;
   margin-bottom: 25px;
   border-radius: 30px;
@@ -425,6 +433,9 @@ span.navbar-text {
   display: flex;
   flex-wrap: wrap;
   overflow: hidden;
+}
+.proj-card .clickable {
+  cursor: pointer;
 }
 .close-btn {
   position: absolute;
@@ -439,8 +450,8 @@ span.navbar-text {
   border-radius: 30px 30px 0 0;
   overflow: hidden;
   width: 100%;
-  height: 250px;  
-} 
+  height: 250px;
+}
 .proj-imgbx img {
   display: block;
   width: 100%; /* Adjusts the width of the image to fit its container */
@@ -481,24 +492,36 @@ span.navbar-text {
   justify-content: center;
   align-items: center;
   font-size: 1.8rem;
-  transform: translateY(100%); 
+  transform: translateY(100%);
   transition: transform 0.5s ease-in-out;
- }
- .proj-card-cover.visible {
+}
+.proj-card-cover.visible {
   transform: translateY(0%);
- }
+}
 .proj-tech {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   height: 300px;
   width: 100%;
   border-radius: 30px 30px 0 0;
   border-bottom: 1px solid var(--main-color);
-  padding: 2rem;
+  padding: 4rem 3rem;
 }
-.proj-tech span{
+.proj-tech h4 {
+  flex: 1;
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  line-height: 1.1em;
+}
+.proj-tech p {
+  flex: 1;
+  font-size: 1.6rem;
+}
+.proj-tech span {
   color: white;
   font-weight: bold;
 }
@@ -509,7 +532,7 @@ span.navbar-text {
   width: 100%;
   height: 100px;
 }
-.proj-link a{
+.proj-link a {
   position: relative;
   display: inline-flex;
   justify-content: center;
@@ -517,20 +540,20 @@ span.navbar-text {
   width: 50px;
   height: 50px;
   background: transparent;
-  border: .2rem solid var(--main-color);
+  border: 0.2rem solid var(--main-color);
   border-radius: 50%;
   font-size: 25px;
   color: var(--main-color);
   z-index: 1;
   overflow: hidden;
   text-decoration: none;
-  transition: .5s;
+  transition: 0.5s;
 }
-.proj-link a:hover{
+.proj-link a:hover {
   color: var(--bg-color);
 }
-.proj-link a::before{
-  content: '';
+.proj-link a::before {
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -538,8 +561,8 @@ span.navbar-text {
   height: 100%;
   background: var(--main-color);
   z-index: -1;
-  transition: .5s;
+  transition: 0.5s;
 }
-.proj-link a:hover::before{
+.proj-link a:hover::before {
   width: 100%;
 }
