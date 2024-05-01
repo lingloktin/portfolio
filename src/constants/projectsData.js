@@ -1,4 +1,5 @@
 import projImgEthToDo from "../assets/img/project_eth_to_do.jpg";
+import projImgCRUD from "../assets/img/project_crud.jpg";
 import projImg2 from "../assets/img/project-img2.png";
 import projImg3 from "../assets/img/project-img3.png";
 import techTools from "./techTools";
@@ -19,7 +20,7 @@ const projectsData = [
   {
     title: "Simple Backend Project",
     description: "Learning MongoDB and ExpressJS",
-    imgUrl: projImg2,
+    imgUrl: projImgCRUD,
     tech: {
       "Backend Development": [techTools.NODEJS, techTools.EXPRESS, techTools.MONGOOSE],
       "Database": [techTools.MONGODB]
