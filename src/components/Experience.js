@@ -13,7 +13,7 @@ export const Experience = () => {
       </Container>
       <Container>
         <Row>
-          <Col>
+          <Col size={12} sm={12} md={6}>
             <Container>
               <Row className="aligh-items-center experience-row">
                 <Col>
@@ -47,7 +47,7 @@ export const Experience = () => {
               </Row>
             </Container>
           </Col>
-          <Col>
+          <Col size={12} sm={12} md={6}>
             <Container>
               <Row className="aligh-items-center experience-row">
                 <Col>
