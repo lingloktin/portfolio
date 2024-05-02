@@ -25,7 +25,7 @@ const projectsData = [
       "Backend Development": [techTools.NODEJS, techTools.EXPRESS, techTools.MONGOOSE],
       "Database": [techTools.MONGODB]
     },
-    githubUrl: "",
+    githubUrl: "https://github.com/lingloktin/simple-crud",
   },
   {
     title: "Business Startup",
