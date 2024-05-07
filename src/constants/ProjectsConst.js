@@ -4,6 +4,12 @@ import projImg2 from "../assets/img/project-img2.png";
 import projImg3 from "../assets/img/project-img3.png";
 import techTools from "./techTools";
 
+const projectTypes = {
+  SIDE_PROJECT: 1,
+  ACADEMIC_PROJECT: 2,
+  COMPANY_PROJECT: 3,
+};
+
 
 const projectsData = [
   {
@@ -16,9 +22,10 @@ const projectsData = [
       "Backend Development": [techTools.NODEJS],
     },
     githubUrl: "https://github.com/lingloktin/eth-todo-list",
+    type: projectTypes.SIDE_PROJECT,
   },
   {
-    title: "Simple Backend Project",
+    title: "Simple CRUD API",
     description: "Learning MongoDB and ExpressJS",
     imgUrl: projImgCRUD,
     tech: {
@@ -26,17 +33,17 @@ const projectsData = [
       "Database": [techTools.MONGODB]
     },
     githubUrl: "https://github.com/lingloktin/simple-crud",
+    type: projectTypes.SIDE_PROJECT,
   },
   {
-    title: "Business Startup",
+    title: "Personal Portfolio",
     description: "Design & Development",
     imgUrl: projImg3,
     tech: {
-      "Smart Contract Development": [techTools.ETHEREUM, techTools.SOLIDITY, techTools.TRUFFLE, techTools.GANACHE],
-      "Frontend Development": [techTools.HTML, techTools.CSS, techTools.JAVASCRIPT],
-      "Backend Development": [techTools.NODEJS],
+      "Frontend Development": [techTools.REACTJS, techTools.REACTBOOTSTRAP, techTools.HTML, techTools.CSS],
     },
-    githubUrl: "",
+    githubUrl: "https://github.com/lingloktin/portfolio",
+    type: projectTypes.SIDE_PROJECT,
   },
   {
     title: "Business Startup",
@@ -48,6 +55,7 @@ const projectsData = [
       "Backend Development": [techTools.NODEJS],
     },
     githubUrl: "",
+    type: projectTypes.ACADEMIC_PROJECT,
   },
   {
     title: "Business Startup",
@@ -59,6 +67,7 @@ const projectsData = [
       "Backend Development": [techTools.NODEJS],
     },
     githubUrl: "",
+    type: projectTypes.ACADEMIC_PROJECT,
   },
   {
     title: "Business Startup",
@@ -70,7 +79,8 @@ const projectsData = [
       "Backend Development": [techTools.NODEJS],
     },
     githubUrl: "",
+    type: projectTypes.COMPANY_PROJECT,
   },
 ];
 
-export default projectsData;
+export { projectTypes, projectsData };
