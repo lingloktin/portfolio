@@ -1,18 +1,7 @@
 import { Container, Row, Col } from "react-bootstrap";
+import { TechType, TechConst } from "../constants/TechConst";
 
 export const Skills = () => {
-  const techTools = {
-    JAVASCRIPT: {
-      text: "JavaScript",
-      iconUrl: "bx bxl-javascript",
-      type: 1,
-    },
-    MONGODB: {
-      text: "MongoDB",
-      iconUrl: "bx bxl-mongodb",
-      type: 6,
-    },
-  };
 
   return (
     <section className="skills">
@@ -23,10 +12,19 @@ export const Skills = () => {
       </Container>
       <Container>
         <Row className="skills-row">
-          <Col className="frontend-box">
+          <Col className="skills-card">
+            <div className="skills-title">
+              <p>Frontend Development</p>
+            </div>
+            <div className="skills-content">
+              {Object.values(TechConst)
+                .filter(tech => tech.type === TechType.FRONTEND)
+                .map(tech => tech.text + ' ')}
+            </div>
+
 
           </Col>
-          <Col className="frontend-box">
+          <Col className="skills-card">
 
           </Col>
         </Row>
