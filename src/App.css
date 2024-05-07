@@ -75,7 +75,7 @@ nav.navbar a.navbar-brand {
 }
 nav.navbar .navbar-nav .nav-link.navbar-link {
   font-weight: 400;
-  color: #fff;
+  color: var(--white);
   letter-spacing: 0.8px;
   padding: 0 25px;
   font-size: 18px;
@@ -88,7 +88,7 @@ nav.navbar .navbar-nav a.nav-link.navbar-link.active {
 }
 nav.navbar a.navbar-brand {
   font-size: 2.5rem;
-  color: #ededed;
+  color: var(--white);
   font-weight: 600;
 }
 span.navbar-text {
