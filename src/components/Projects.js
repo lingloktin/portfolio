@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { ProjectCard } from "./ProjectCard";
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
-import projectsData from "../constants/projectsData";
+import { projectTypes, projectsData } from "../constants/ProjectsConst";
 
 export const Projects = () => {
   return (
@@ -13,43 +13,47 @@ export const Projects = () => {
       </Container>
       <Container>
         <Row>
-          <Tab.Container id="projects-tabs" defaultActiveKey="first">
+          <Tab.Container id="projects-tabs" defaultActiveKey={`${projectTypes.SIDE_PROJECT}`}>
             <Nav
               className="nav-pills"
             >
               <Nav.Item>
-                <Nav.Link eventKey="first">Tab 1</Nav.Link>
+                <Nav.Link eventKey={`${projectTypes.SIDE_PROJECT}`}>Side Hustle</Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link eventKey="second">Tab 2</Nav.Link>
+                <Nav.Link eventKey={`${projectTypes.ACADEMIC_PROJECT}`}>Academic Projects</Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link eventKey="third">Tab 3</Nav.Link>
+                <Nav.Link eventKey={`${projectTypes.COMPANY_PROJECT}`}>Company Projects</Nav.Link>
               </Nav.Item>
             </Nav>
             <Tab.Content id="slideInUp">
-              <Tab.Pane eventKey="first">
+              <Tab.Pane eventKey={`${projectTypes.SIDE_PROJECT}`}>
                 <Row>
-                  {projectsData.map((project, index) => {
+                  {projectsData
+                  .filter(project => project.type === projectTypes.SIDE_PROJECT)
+                  .map((project, index) => {
                     return <ProjectCard key={index} {...project} />;
                   })}
                 </Row>
               </Tab.Pane>
-              <Tab.Pane eventKey="second">
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Cumque quam, quod neque provident velit, rem explicabo
-                  excepturi id illo molestiae blanditiis, eligendi dicta
-                  officiis asperiores delectus quasi inventore debitis quo.
-                </p>
+              <Tab.Pane eventKey={`${projectTypes.ACADEMIC_PROJECT}`}>
+              <Row>
+                  {projectsData
+                  .filter(project => project.type === projectTypes.ACADEMIC_PROJECT)
+                  .map((project, index) => {
+                    return <ProjectCard key={index} {...project} />;
+                  })}
+                </Row>
               </Tab.Pane>
-              <Tab.Pane eventKey="third">
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Cumque quam, quod neque provident velit, rem explicabo
-                  excepturi id illo molestiae blanditiis, eligendi dicta
-                  officiis asperiores delectus quasi inventore debitis quo.
-                </p>
+              <Tab.Pane eventKey={`${projectTypes.COMPANY_PROJECT}`}>
+              <Row>
+                  {projectsData
+                  .filter(project => project.type === projectTypes.COMPANY_PROJECT)
+                  .map((project, index) => {
+                    return <ProjectCard key={index} {...project} />;
+                  })}
+                </Row>
               </Tab.Pane>
             </Tab.Content>
           </Tab.Container>
