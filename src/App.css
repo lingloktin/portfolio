@@ -14,6 +14,7 @@
 
 :root {
   --black:rgb(18, 18, 18);
+  --grey: rgba(255, 255, 255, 0.25);
   --white: rgb(237, 237, 237);
   --bg-color: rgb(8, 27, 41);
   --second-bg-color: rgb(17, 46, 66);
@@ -380,6 +381,9 @@ li {
   background-color: var(--second-bg-color-transparent);
   overflow: hidden;
   display: flex;
+  padding-left: 0;
+    padding-right: 0;
+    border: 1px solid var(--grey);
 }
 .projects .nav.nav-pills .nav-item {
   flex: 1;
@@ -414,15 +418,18 @@ li {
   width: 100%;
   /* background: linear-gradient(#AA367C -5.91%, #4A2FBD 111.58%) */
 }
-.nav-link#projects-tabs-tab-first {
+.nav-link#projects-tabs-tab-1 {
   border-radius: 15px 0px 0px 15px;
 }
-.nav-link#projects-tabs-tab-second {
-  border-left: 1px solid rgba(255, 255, 255, 0.2);
-  border-right: 1px solid rgba(255, 255, 255, 0.2);
+.nav-link#projects-tabs-tab-2 {
+  border-left: 1px solid var(--grey);
+  border-right: 1px solid var(--grey);
 }
-.nav-link#projects-tabs-tab-third {
+.nav-link#projects-tabs-tab-3 {
   border-radius: 0 15px 15px 0;
+}
+.projects .nav.nav-pills .nav-link{
+  /* border: 1px solid var(--grey-color); */
 }
 .proj-card {
   position: relative;
