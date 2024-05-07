@@ -13,7 +13,7 @@
 }
 
 :root {
-  --black:rgb(18, 18, 18);
+  --black: rgb(18, 18, 18);
   --grey: rgba(255, 255, 255, 0.25);
   --white: rgb(237, 237, 237);
   --bg-color: rgb(8, 27, 41);
@@ -68,7 +68,7 @@ nav.navbar {
 }
 nav.navbar.scrolled {
   padding: 10px 0;
-  background-color:var(--black);
+  background-color: var(--black);
 }
 nav.navbar a.navbar-brand {
   width: 9%;
@@ -382,8 +382,8 @@ li {
   overflow: hidden;
   display: flex;
   padding-left: 0;
-    padding-right: 0;
-    border: 1px solid var(--grey);
+  padding-right: 0;
+  border: 1px solid var(--grey);
 }
 .projects .nav.nav-pills .nav-item {
   flex: 1;
@@ -428,7 +428,7 @@ li {
 .nav-link#projects-tabs-tab-3 {
   border-radius: 0 15px 15px 0;
 }
-.projects .nav.nav-pills .nav-link{
+.projects .nav.nav-pills .nav-link {
   /* border: 1px solid var(--grey-color); */
 }
 .proj-card {
@@ -464,9 +464,9 @@ li {
 }
 .proj-imgbx img {
   display: block;
-  width: 100%; /* Adjusts the width of the image to fit its container */
-  height: 100%; /* Adjusts the height of the image to fit its container */
-  object-fit: cover; /* Ensures the image covers the area without stretching */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .proj-txtx {
   text-align: center;
@@ -583,12 +583,27 @@ li {
   gap: 2rem;
   background-color: var(--second-bg-color);
 }
-.skills .skills-row{
+.skills .skills-row {
   gap: 2rem;
 }
-.skills .frontend-box{
-  width: 100%;
+.skills .skills-card {
   height: 200px;
-  border: 1px solid var(--white);
+  border: 1px solid var(--main-color);
   border-radius: 15px;
+  background-color: var(--grey);
+}
+.skills .skills-title {
+  text-align: center;
+  width: 100%;
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  line-height: 1.1em;
+}
+.skills .skills-content {
+  text-align: center;
+  width: 100%;
+  font-size: 1.6rem;
+  letter-spacing: 0.8px;
+  line-height: 1.1em;
 }
