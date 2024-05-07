@@ -2,7 +2,7 @@ import projImgEthToDo from "../assets/img/project_eth_to_do.jpg";
 import projImgCRUD from "../assets/img/project_crud.jpg";
 import projImg2 from "../assets/img/project-img2.png";
 import projImg3 from "../assets/img/project-img3.png";
-import techTools from "./techTools";
+import TechConst from "./TechConst";
 
 const projectTypes = {
   SIDE_PROJECT: 1,
@@ -17,9 +17,9 @@ const projectsData = [
     description: "Learning Blockchain",
     imgUrl: projImgEthToDo,
     tech: {
-      "Smart Contract Development": [techTools.ETHEREUM, techTools.SOLIDITY, techTools.TRUFFLE, techTools.GANACHE],
-      "Frontend Development": [techTools.HTML, techTools.CSS, techTools.JAVASCRIPT],
-      "Backend Development": [techTools.NODEJS],
+      "Smart Contract Development": [TechConst.ETHEREUM.text, TechConst.SOLIDITY.text, TechConst.TRUFFLE.text, TechConst.GANACHE.text],
+      "Frontend Development": [TechConst.HTML.text, TechConst.CSS.text, TechConst.JAVASCRIPT.text],
+      "Backend Development": [TechConst.NODEJS.text],
     },
     githubUrl: "https://github.com/lingloktin/eth-todo-list",
     type: projectTypes.SIDE_PROJECT,
@@ -29,8 +29,8 @@ const projectsData = [
     description: "Learning MongoDB and ExpressJS",
     imgUrl: projImgCRUD,
     tech: {
-      "Backend Development": [techTools.NODEJS, techTools.EXPRESS, techTools.MONGOOSE],
-      "Database": [techTools.MONGODB]
+      "Backend Development": [TechConst.NODEJS.text, TechConst.EXPRESS.text, TechConst.MONGOOSE.text],
+      "Database": [TechConst.MONGODB.text]
     },
     githubUrl: "https://github.com/lingloktin/simple-crud",
     type: projectTypes.SIDE_PROJECT,
@@ -40,7 +40,7 @@ const projectsData = [
     description: "Design & Development",
     imgUrl: projImg3,
     tech: {
-      "Frontend Development": [techTools.REACTJS, techTools.REACTBOOTSTRAP, techTools.HTML, techTools.CSS],
+      "Frontend Development": [TechConst.REACTJS.text, TechConst.REACTBOOTSTRAP.text, TechConst.HTML.text, TechConst.CSS.text],
     },
     githubUrl: "https://github.com/lingloktin/portfolio",
     type: projectTypes.SIDE_PROJECT,
@@ -50,9 +50,9 @@ const projectsData = [
     description: "Design & Development",
     imgUrl: projImgEthToDo,
     tech: {
-      "Smart Contract Development": [techTools.ETHEREUM, techTools.SOLIDITY, techTools.TRUFFLE, techTools.GANACHE],
-      "Frontend Development": [techTools.HTML, techTools.CSS, techTools.JAVASCRIPT],
-      "Backend Development": [techTools.NODEJS],
+      "Smart Contract Development": [TechConst.ETHEREUM.text, TechConst.SOLIDITY.text, TechConst.TRUFFLE.text, TechConst.GANACHE.text],
+      "Frontend Development": [TechConst.HTML.text, TechConst.CSS.text, TechConst.JAVASCRIPT.text],
+      "Backend Development": [TechConst.NODEJS.text],
     },
     githubUrl: "",
     type: projectTypes.ACADEMIC_PROJECT,
@@ -62,9 +62,9 @@ const projectsData = [
     description: "Design & Development",
     imgUrl: projImg2,
     tech: {
-      "Smart Contract Development": [techTools.ETHEREUM, techTools.SOLIDITY, techTools.TRUFFLE, techTools.GANACHE],
-      "Frontend Development": [techTools.HTML, techTools.CSS, techTools.JAVASCRIPT],
-      "Backend Development": [techTools.NODEJS],
+      "Smart Contract Development": [TechConst.ETHEREUM.text, TechConst.SOLIDITY.text, TechConst.TRUFFLE.text, TechConst.GANACHE.text],
+      "Frontend Development": [TechConst.HTML.text, TechConst.CSS.text, TechConst.JAVASCRIPT.text],
+      "Backend Development": [TechConst.NODEJS.text],
     },
     githubUrl: "",
     type: projectTypes.ACADEMIC_PROJECT,
@@ -74,9 +74,9 @@ const projectsData = [
     description: "Design & Development",
     imgUrl: projImg3,
     tech: {
-      "Smart Contract Development": [techTools.ETHEREUM, techTools.SOLIDITY, techTools.TRUFFLE, techTools.GANACHE],
-      "Frontend Development": [techTools.HTML, techTools.CSS, techTools.JAVASCRIPT],
-      "Backend Development": [techTools.NODEJS],
+      "Smart Contract Development": [TechConst.ETHEREUM.text, TechConst.SOLIDITY.text, TechConst.TRUFFLE.text, TechConst.GANACHE.text],
+      "Frontend Development": [TechConst.HTML.text, TechConst.CSS.text, TechConst.JAVASCRIPT.text],
+      "Backend Development": [TechConst.NODEJS.text],
     },
     githubUrl: "",
     type: projectTypes.COMPANY_PROJECT,
