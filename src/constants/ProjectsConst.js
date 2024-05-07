@@ -2,7 +2,7 @@ import projImgEthToDo from "../assets/img/project_eth_to_do.jpg";
 import projImgCRUD from "../assets/img/project_crud.jpg";
 import projImg2 from "../assets/img/project-img2.png";
 import projImg3 from "../assets/img/project-img3.png";
-import TechConst from "./TechConst";
+import { TechConst } from "./TechConst";
 
 const projectTypes = {
   SIDE_PROJECT: 1,
