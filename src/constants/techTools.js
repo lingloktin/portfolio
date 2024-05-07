@@ -21,6 +21,8 @@ const techTools = {
     CSS: 'CSS',
     JAVASCRIPT: 'JavaScript',
     JQUERY: 'jQuery',
+    REACTJS: 'React.js',
+    REACTBOOTSTRAP: 'React-Bootstrap',
     EXPRESS: 'Express',
     MONGODB: 'MongoDB',
     MONGOOSE: 'Mongoose',
