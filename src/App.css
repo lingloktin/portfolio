@@ -13,6 +13,8 @@
 }
 
 :root {
+  --black:rgb(18, 18, 18);
+  --white: rgb(237, 237, 237);
   --bg-color: rgb(8, 27, 41);
   --second-bg-color: rgb(17, 46, 66);
   --text-color: rgb(237, 237, 237);
@@ -61,11 +63,11 @@ nav.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: 0.32s ease-in-out;
+  transition: 0.4s ease-in-out;
 }
 nav.navbar.scrolled {
-  padding: 0px 0;
-  background-color: #121212;
+  padding: 10px 0;
+  background-color:var(--black);
 }
 nav.navbar a.navbar-brand {
   width: 9%;
@@ -368,6 +370,7 @@ li {
 /************ Projects Css ************/
 .projects {
   flex-direction: column;
+  gap: 2rem;
 }
 .projects .nav.nav-pills {
   width: 50%;
@@ -565,4 +568,20 @@ li {
 }
 .proj-link a:hover::before {
   width: 100%;
+}
+
+/************ Skills Css ************/
+.skills {
+  flex-direction: column;
+  gap: 2rem;
+  background-color: var(--second-bg-color);
+}
+.skills .skills-row{
+  gap: 2rem;
+}
+.skills .frontend-box{
+  width: 100%;
+  height: 200px;
+  border: 1px solid var(--white);
+  border-radius: 15px;
 }
