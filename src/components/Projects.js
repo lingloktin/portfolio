@@ -13,46 +13,60 @@ export const Projects = () => {
       </Container>
       <Container>
         <Row>
-          <Tab.Container id="projects-tabs" defaultActiveKey={`${projectTypes.SIDE_PROJECT}`}>
-            <Nav
-              className="nav-pills"
-            >
+          <Tab.Container
+            id="projects-tabs"
+            defaultActiveKey={`${projectTypes.SIDE_PROJECT}`}
+          >
+            <Nav className="nav-pills">
               <Nav.Item>
-                <Nav.Link eventKey={`${projectTypes.SIDE_PROJECT}`}>Side Hustle</Nav.Link>
+                <Nav.Link eventKey={`${projectTypes.SIDE_PROJECT}`}>
+                  Side Hustle
+                </Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link eventKey={`${projectTypes.ACADEMIC_PROJECT}`}>Academic Projects</Nav.Link>
+                <Nav.Link eventKey={`${projectTypes.ACADEMIC_PROJECT}`}>
+                  Academic Projects
+                </Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link eventKey={`${projectTypes.COMPANY_PROJECT}`}>Company Projects</Nav.Link>
+                <Nav.Link eventKey={`${projectTypes.COMPANY_PROJECT}`}>
+                  Company Projects
+                </Nav.Link>
               </Nav.Item>
             </Nav>
-            <Tab.Content id="slideInUp">
+            <Tab.Content>
               <Tab.Pane eventKey={`${projectTypes.SIDE_PROJECT}`}>
                 <Row>
                   {projectsData
-                  .filter(project => project.type === projectTypes.SIDE_PROJECT)
-                  .map((project, index) => {
-                    return <ProjectCard key={index} {...project} />;
-                  })}
+                    .filter(
+                      (project) => project.type === projectTypes.SIDE_PROJECT
+                    )
+                    .map((project, index) => {
+                      return <ProjectCard key={index} {...project} />;
+                    })}
                 </Row>
               </Tab.Pane>
               <Tab.Pane eventKey={`${projectTypes.ACADEMIC_PROJECT}`}>
-              <Row>
+                <Row>
                   {projectsData
-                  .filter(project => project.type === projectTypes.ACADEMIC_PROJECT)
-                  .map((project, index) => {
-                    return <ProjectCard key={index} {...project} />;
-                  })}
+                    .filter(
+                      (project) =>
+                        project.type === projectTypes.ACADEMIC_PROJECT
+                    )
+                    .map((project, index) => {
+                      return <ProjectCard key={index} {...project} />;
+                    })}
                 </Row>
               </Tab.Pane>
               <Tab.Pane eventKey={`${projectTypes.COMPANY_PROJECT}`}>
-              <Row>
+                <Row>
                   {projectsData
-                  .filter(project => project.type === projectTypes.COMPANY_PROJECT)
-                  .map((project, index) => {
-                    return <ProjectCard key={index} {...project} />;
-                  })}
+                    .filter(
+                      (project) => project.type === projectTypes.COMPANY_PROJECT
+                    )
+                    .map((project, index) => {
+                      return <ProjectCard key={index} {...project} />;
+                    })}
                 </Row>
               </Tab.Pane>
             </Tab.Content>
