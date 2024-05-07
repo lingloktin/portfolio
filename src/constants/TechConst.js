@@ -1,102 +1,102 @@
 import "boxicons/css/boxicons.min.css";
 
-const TYPES = {
+const TechType = {
   FRONTEND: 1,
   BACKEND: 2,
-  SMART_CONTRACT: 3,
-  FRAMEWORK: 4,
-  LIBRARY: 5,
-  DATABASE: 6,
+  DATABASE: 3,
+  SMART_CONTRACT: 4,
+  FRAMEWORK: 5,
+  LIBRARY: 6,
 };
 
 const TechConst = {
   JAVASCRIPT: {
     text: "JavaScript",
     iconUrl: "bx bxl-javascript",
-    type: TYPES.FRONTEND,
+    type: TechType.FRONTEND,
   },
   HTML: {
     text: "HTML",
     iconUrl: "",
-    type: TYPES.FRONTEND,
+    type: TechType.FRONTEND,
   },
   CSS: {
     text: "CSS",
     iconUrl: "",
-    type: TYPES.FRONTEND,
+    type: TechType.FRONTEND,
   },
   NODEJS: {
     text: "Node.js",
     iconUrl: "",
-    type: TYPES.BACKEND,
+    type: TechType.BACKEND,
   },
   ETHEREUM: {
     text: "Ethereum",
     iconUrl: "",
-    type: TYPES.SMART_CONTRACT,
+    type: TechType.SMART_CONTRACT,
   },
   SOLIDITY: {
     text: "Solidity",
     iconUrl: "",
-    type: TYPES.SMART_CONTRACT,
+    type: TechType.SMART_CONTRACT,
   },
   WEB3JS: {
     text: "Web3.js",
     iconUrl: "",
-    type: TYPES.SMART_CONTRACT,
+    type: TechType.SMART_CONTRACT,
   },
   NPM: {
     text: "NPM",
     iconUrl: "",
-    type: TYPES.FRONTEND,
+    type: TechType.FRONTEND,
   },
   GANACHE: {
     text: "Ganache",
     iconUrl: "",
-    type: TYPES.SMART_CONTRACT,
+    type: TechType.SMART_CONTRACT,
   },
   METAMASK: {
     text: "MetaMask",
     iconUrl: "",
-    type: TYPES.FRONTEND,
+    type: TechType.FRONTEND,
   },
   REACTJS: {
     text: "React.js",
     iconUrl: "",
-    type: TYPES.FRONTEND,
+    type: TechType.FRONTEND,
   },
   REACTBOOTSTRAP: {
     text: "React-Bootstrap",
     iconUrl: "",
-    type: TYPES.FRONTEND,
+    type: TechType.FRONTEND,
   },
   EXPRESS: {
     text: "Express",
     iconUrl: "",
-    type: TYPES.BACKEND,
+    type: TechType.BACKEND,
   },
   MONGODB: {
     text: "MongoDB",
     iconUrl: "",
-    type: TYPES.DATABASE,
+    type: TechType.DATABASE,
   },
   MONGOOSE: {
     text: "Mongoose",
     iconUrl: "",
-    type: TYPES.DATABASE,
+    type: TechType.DATABASE,
   },
   JQUERY: {
     text: "jQuery",
     iconUrl: "",
-    type: TYPES.FRONTEND,
+    type: TechType.FRONTEND,
   },
   TRUFFLE: {
     text: "Truffle",
     iconUrl: "",
-    type: TYPES.SMART_CONTRACT,
+    type: TechType.SMART_CONTRACT,
   },
 }
 
 
 
-export default TechConst
+export { TechType, TechConst }
