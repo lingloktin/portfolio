@@ -1,5 +1,6 @@
 import { Container, Row, Col } from "react-bootstrap";
-import { TechType, TechConst } from "../constants/TechConst";
+import { TechArea, TechConst } from "../constants/TechConst";
+import { SkillsCard}  from "./SkillsCard"
 
 export const Skills = () => {
 
@@ -18,14 +19,19 @@ export const Skills = () => {
             </div>
             <div className="skills-content">
               {Object.values(TechConst)
-                .filter(tech => tech.type === TechType.FRONTEND)
-                .map(tech => tech.text + ' ')}
+                .filter(tech => tech.area === TechArea.FRONTEND)
+                .map((tech, index) => {return <SkillsCard key={index} {...tech} /> })}
             </div>
-
-
           </Col>
           <Col className="skills-card">
-
+          <div className="skills-title">
+              <p>Smart Contract Development</p>
+            </div>
+            <div className="skills-content">
+              {Object.values(TechConst)
+                .filter(tech => tech.area === TechArea.SMART_CONTRACT)
+                .map((tech, index) => {return <SkillsCard key={index} {...tech} /> })}
+            </div>
           </Col>
         </Row>
       </Container>
