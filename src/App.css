@@ -606,4 +606,9 @@ li {
   font-size: 1.6rem;
   letter-spacing: 0.8px;
   line-height: 1.1em;
+  display: flex;
+    align-items: center;
+}
+.skills .skills-icon{
+  width:100%
 }
