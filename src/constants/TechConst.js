@@ -1,102 +1,131 @@
-import "boxicons/css/boxicons.min.css";
+const IconFrom = {
+  BOXICONS: 1,
+  FORTAWESOME : 2,
+}
 
-const TechType = {
+const TechArea = {
+  GENERAL: 0,
   FRONTEND: 1,
   BACKEND: 2,
   DATABASE: 3,
   SMART_CONTRACT: 4,
-  FRAMEWORK: 5,
-  LIBRARY: 6,
+};
+
+const TechType = {  
+  LANGUAGE: 1,
+  TOOL: 2,
 };
 
 const TechConst = {
   JAVASCRIPT: {
     text: "JavaScript",
+    iconFrom: IconFrom.BOXICONS,
     iconUrl: "bx bxl-javascript",
-    type: TechType.FRONTEND,
+    area: TechArea.FRONTEND,
+    type: TechType.LANGUAGE,
   },
   HTML: {
     text: "HTML",
-    iconUrl: "",
-    type: TechType.FRONTEND,
+    iconFrom: IconFrom.BOXICONS,
+    iconUrl: "bx bxs-file-html",
+    area: TechArea.FRONTEND,
+    type: TechType.LANGUAGE,
   },
   CSS: {
     text: "CSS",
-    iconUrl: "",
-    type: TechType.FRONTEND,
+    iconFrom: IconFrom.BOXICONS,
+    iconUrl: "bx bxs-file-css",
+    area: TechArea.FRONTEND,
+    type: TechType.LANGUAGE,
   },
   NODEJS: {
     text: "Node.js",
-    iconUrl: "",
-    type: TechType.BACKEND,
+    iconFrom: IconFrom.BOXICONS,
+    iconUrl: "bx bxl-react",
+    area: TechArea.BACKEND,
+    type: TechType.TOOL,
   },
   ETHEREUM: {
     text: "Ethereum",
-    iconUrl: "",
-    type: TechType.SMART_CONTRACT,
+    iconFrom: IconFrom.FORTAWESOME,
+    iconUrl: "fa-brands fa-ethereum",
+    area: TechArea.SMART_CONTRACT,
+    type: TechType.TOOL,
   },
   SOLIDITY: {
     text: "Solidity",
     iconUrl: "",
-    type: TechType.SMART_CONTRACT,
+    area: TechArea.SMART_CONTRACT,
+    type: TechType.LANGUAGE,
   },
   WEB3JS: {
     text: "Web3.js",
     iconUrl: "",
-    type: TechType.SMART_CONTRACT,
+    area: TechArea.SMART_CONTRACT,
+    type: TechType.TOOL,
   },
   NPM: {
     text: "NPM",
     iconUrl: "",
-    type: TechType.FRONTEND,
+    area: TechArea.GENERAL,
+    type: TechType.TOOL,
   },
   GANACHE: {
     text: "Ganache",
     iconUrl: "",
-    type: TechType.SMART_CONTRACT,
+    area: TechArea.SMART_CONTRACT,
+    type: TechType.TOOL,
   },
   METAMASK: {
     text: "MetaMask",
     iconUrl: "",
-    type: TechType.FRONTEND,
+    area: TechArea.SMART_CONTRACT,
+    type: TechType.TOOL,
   },
   REACTJS: {
     text: "React.js",
     iconUrl: "",
-    type: TechType.FRONTEND,
+    area: TechArea.FRONTEND,
+    type: TechType.TOOL,
   },
   REACTBOOTSTRAP: {
     text: "React-Bootstrap",
     iconUrl: "",
-    type: TechType.FRONTEND,
+    area: TechArea.FRONTEND,
+    type: TechType.TOOL,
   },
   EXPRESS: {
     text: "Express",
     iconUrl: "",
-    type: TechType.BACKEND,
+    area: TechArea.BACKEND,
+    type: TechType.TOOL,
   },
   MONGODB: {
     text: "MongoDB",
     iconUrl: "",
-    type: TechType.DATABASE,
+    area: TechArea.DATABASE,
+    type: TechType.TOOL,
   },
   MONGOOSE: {
     text: "Mongoose",
     iconUrl: "",
-    type: TechType.DATABASE,
+    area: TechArea.DATABASE,
+    type: TechType.TOOL,
   },
   JQUERY: {
     text: "jQuery",
     iconUrl: "",
-    type: TechType.FRONTEND,
+    area: TechArea.FRONTEND,
+    type: TechType.TOOL,
   },
   TRUFFLE: {
     text: "Truffle",
     iconUrl: "",
-    type: TechType.SMART_CONTRACT,
+    area: TechArea.SMART_CONTRACT,
+    type: TechType.TOOL,
   },
 }
 
 
 
-export { TechType, TechConst }
+export { TechArea, TechConst, IconFrom }
