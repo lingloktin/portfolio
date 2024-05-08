@@ -2,10 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { Col, Row } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconFrom } from "../constants/TechConst";
-import { faEthereum } from '@fortawesome/free-brands-svg-icons';
+import { faEthereum, faNpm, faReact, faBootstrap, faNode } from '@fortawesome/free-brands-svg-icons';
 
 export const SkillsCard = ({ text, iconFrom, iconUrl, area, type }) => {
-
   return (
     <Col>
       <div className="skills-icon">
@@ -14,6 +13,10 @@ export const SkillsCard = ({ text, iconFrom, iconUrl, area, type }) => {
         ) : iconFrom === IconFrom.FORTAWESOME ? (
           <div>
             <FontAwesomeIcon icon={faEthereum} />
+            <FontAwesomeIcon icon={faNpm} />
+            <FontAwesomeIcon icon={faReact} />
+            <FontAwesomeIcon icon={faBootstrap} />
+            <FontAwesomeIcon icon={faNode} />
           </div>
         ) : null}
       </div>

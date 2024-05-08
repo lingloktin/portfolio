@@ -40,8 +40,8 @@ const TechConst = {
   },
   NODEJS: {
     text: "Node.js",
-    iconFrom: IconFrom.BOXICONS,
-    iconUrl: "bx bxl-react",
+    iconFrom: IconFrom.FORTAWESOME,
+    iconUrl: "fa-brands fa-node",
     area: TechArea.BACKEND,
     type: TechType.TOOL,
   },
@@ -84,12 +84,14 @@ const TechConst = {
   },
   REACTJS: {
     text: "React.js",
-    iconUrl: "",
+    iconFrom: IconFrom.BOXICONS,
+    iconUrl: "bx bxl-react",
     area: TechArea.FRONTEND,
     type: TechType.TOOL,
   },
   REACTBOOTSTRAP: {
     text: "React-Bootstrap",
+    iconFrom: IconFrom.FORTAWESOME,
     iconUrl: "",
     area: TechArea.FRONTEND,
     type: TechType.TOOL,
@@ -102,7 +104,8 @@ const TechConst = {
   },
   MONGODB: {
     text: "MongoDB",
-    iconUrl: "",
+    iconFrom: IconFrom.BOXICONS,
+    iconUrl: "bx bxl-mongodb",
     area: TechArea.DATABASE,
     type: TechType.TOOL,
   },
@@ -114,7 +117,8 @@ const TechConst = {
   },
   JQUERY: {
     text: "jQuery",
-    iconUrl: "",
+    iconFrom: IconFrom.BOXICONS,
+    iconUrl: "bx bxl-jquery",
     area: TechArea.FRONTEND,
     type: TechType.TOOL,
   },
