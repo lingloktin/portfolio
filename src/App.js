@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import logo from './logo.svg';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import "boxicons/css/boxicons.min.css";
 import { NavBar } from "./components/NavBar";
 import { Banner } from "./components/Banner";
 import { Experience } from "./components/Experience";

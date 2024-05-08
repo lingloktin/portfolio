@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Col, Row } from "react-bootstrap";
-import "boxicons/css/boxicons.min.css";
 
 
 export const ProjectCard = ({ title, description, imgUrl, tech, githubUrl }) => {
