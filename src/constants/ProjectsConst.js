@@ -1,7 +1,7 @@
-import projImgEthToDo from "../assets/img/project_eth_to_do.jpg";
-import projImgCRUD from "../assets/img/project_crud.jpg";
-import projImg2 from "../assets/img/project-img2.png";
-import projImg3 from "../assets/img/project-img3.png";
+import projImgEthToDo from "../assets/img/projects/project_eth_to_do.jpg";
+import projImgCRUD from "../assets/img/projects/project_crud.jpg";
+import projImg2 from "../assets/img/projects/project-img2.png";
+import projImg3 from "../assets/img/projects/project-img3.png";
 import { TechConst } from "./TechConst";
 
 const projectTypes = {
@@ -40,7 +40,7 @@ const projectsData = [
     description: "Design & Development",
     imgUrl: projImg3,
     tech: {
-      "Frontend Development": [TechConst.REACTJS.text, TechConst.REACTBOOTSTRAP.text, TechConst.HTML.text, TechConst.CSS.text],
+      "Frontend Development": [TechConst.REACTJS.text, TechConst.BOOTSTRAP.text, TechConst.HTML.text, TechConst.CSS.text],
     },
     githubUrl: "https://github.com/lingloktin/portfolio",
     type: projectTypes.SIDE_PROJECT,
