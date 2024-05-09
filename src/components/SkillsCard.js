@@ -1,26 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { Col, Row } from "react-bootstrap";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { IconFrom } from "../constants/TechConst";
-import { faEthereum, faNpm, faReact, faBootstrap, faNode } from '@fortawesome/free-brands-svg-icons';
 
-export const SkillsCard = ({ text, iconFrom, iconUrl, area, type }) => {
+
+export const SkillsCard = ({ text, shortName, iconUrl, area, type }) => {
   return (
-    <Col>
-      <div className="skills-icon">
-        {iconFrom === IconFrom.BOXICONS ? (
-          <i className={iconUrl}></i>
-        ) : iconFrom === IconFrom.FORTAWESOME ? (
-          <div>
-            <FontAwesomeIcon icon={faEthereum} />
-            <FontAwesomeIcon icon={faNpm} />
-            <FontAwesomeIcon icon={faReact} />
-            <FontAwesomeIcon icon={faBootstrap} />
-            <FontAwesomeIcon icon={faNode} />
-          </div>
-        ) : null}
-      </div>
-      <div>{text}</div>
+    <Col className="skills-item">
+      <Row className="skills-icon">
+      <img src={iconUrl} />
+
+      </Row>
+      <p className='skills-label'>{text}</p>
     </Col>
+
   );
 };

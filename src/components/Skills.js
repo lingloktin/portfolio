@@ -3,6 +3,24 @@ import { TechArea, TechConst } from "../constants/TechConst";
 import { SkillsCard } from "./SkillsCard"
 
 export const Skills = () => {
+  const skillsAreaMap = [
+    {
+      title: "Frontend Development",
+      area: TechArea.FRONTEND
+    },
+    {
+      title: "Backend Development",
+      area: TechArea.BACKEND
+    },
+    {
+      title: "Smart Contract Development",
+      area: TechArea.SMART_CONTRACT
+    },
+    {
+      title: "Database Management",
+      area: TechArea.DATABASE
+    },
+  ]
 
   return (
     <section className="skills">
@@ -13,49 +31,32 @@ export const Skills = () => {
       </Container>
       <Container>
         <Row className="skills-row">
-          <Col className="skills-card">
-            <div className="skills-title">
-              <p>Frontend Development</p>
-            </div>
-            <div className="skills-content">
-              {Object.values(TechConst)
-                .filter(tech => tech.area === TechArea.FRONTEND)
-                .map((tech, index) => { return <SkillsCard key={index} {...tech} /> })}
-            </div>
-          </Col>
-          <Col className="skills-card">
-            <div className="skills-title">
-              <p>Smart Contract Development</p>
-            </div>
-            <div className="skills-content">
-              {Object.values(TechConst)
-                .filter(tech => tech.area === TechArea.SMART_CONTRACT)
-                .map((tech, index) => { return <SkillsCard key={index} {...tech} /> })}
-            </div>
-          </Col>
-
+          {skillsAreaMap.slice(0, 2).map((skill, index) => (
+            <Col className="skills-box" key={index}>
+              <Row className="skills-title">
+                <p>{skill.title}</p>
+              </Row>
+              <Row className="skills-content">
+                {Object.values(TechConst)
+                .filter(tech => tech.area === skill.area)
+                .map((tech, index) => <SkillsCard key={index} {...tech} />)}
+              </Row>
+            </Col>
+          ))}
         </Row>
         <Row className="skills-row">
-          <Col className="skills-card">
-            <div className="skills-title">
-              <p>Database Management</p>
-            </div>
-            <div className="skills-content">
-              {Object.values(TechConst)
-                .filter(tech => tech.area === TechArea.DATABASE)
-                .map((tech, index) => { return <SkillsCard key={index} {...tech} /> })}
-            </div>
-          </Col>
-          <Col className="skills-card">
-            <div className="skills-title">
-              <p>Backend</p>
-            </div>
-            <div className="skills-content">
-              {Object.values(TechConst)
-                .filter(tech => tech.area === TechArea.BACKEND)
-                .map((tech, index) => { return <SkillsCard key={index} {...tech} /> })}
-            </div>
-          </Col>
+          {skillsAreaMap.slice(2).map((skill, index) => (
+            <Col className="skills-box" key={index}>
+              <Row className="skills-title">
+                <p>{skill.title}</p>
+              </Row>
+              <Row className="skills-content">
+                {Object.values(TechConst)
+                .filter(tech => tech.area === skill.area)
+                .map((tech, index) => <SkillsCard key={index} {...tech} />)}
+              </Row>
+            </Col>
+          ))}
         </Row>
       </Container>
     </section>
