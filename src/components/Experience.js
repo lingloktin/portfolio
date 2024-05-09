@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import educationData from "../constants/EducationConst";
-import experienceData from "../constants/ExperienceConst";
+import { experienceData, educationData } from "../constants/ExperienceConst";
 
 export const Experience = () => {
   return (
