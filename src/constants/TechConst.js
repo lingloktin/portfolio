@@ -1,4 +1,25 @@
+import javascript from "../assets/img/skills/javascript.png";
+import html from "../assets/img/skills/html.png";
+import css from "../assets/img/skills/css.png";
+import react from "../assets/img/skills/react.png";
+import bootstrap from "../assets/img/skills/bootstrap.png";
+import node from "../assets/img/skills/node.png";
+import ethereum from "../assets/img/skills/ethereum.png";
+import web3 from "../assets/img/skills/web3.png";
+import npm from "../assets/img/skills/npm.png";
+import ganache from "../assets/img/skills/ganache.png";
+import metamask from "../assets/img/skills/metamask.png";
+import truffle from "../assets/img/skills/truffle.png";
+import mongodb from "../assets/img/skills/mongodb.png";
+import mongoose from "../assets/img/skills/mongoose.png";
+import postgres from "../assets/img/skills/postgres.png";
+
+import solidity from "../assets/img/skills/solidity.png";
+import express from "../assets/img/skills/express.png";
+
+
 const IconFrom = {
+  LOCAL_FILE: 0,
   BOXICONS: 1,
   FORTAWESOME : 2,
 }
@@ -19,112 +40,105 @@ const TechType = {
 const TechConst = {
   JAVASCRIPT: {
     text: "JavaScript",
-    iconFrom: IconFrom.BOXICONS,
-    iconUrl: "bx bxl-javascript",
+    shortName: "js",    
+    iconUrl: javascript,
     area: TechArea.FRONTEND,
     type: TechType.LANGUAGE,
   },
   HTML: {
-    text: "HTML",
-    iconFrom: IconFrom.BOXICONS,
-    iconUrl: "bx bxs-file-html",
+    text: "HTML",    
+    iconUrl: html,
     area: TechArea.FRONTEND,
     type: TechType.LANGUAGE,
   },
   CSS: {
-    text: "CSS",
-    iconFrom: IconFrom.BOXICONS,
-    iconUrl: "bx bxs-file-css",
+    text: "CSS",    
+    iconUrl: css,
     area: TechArea.FRONTEND,
     type: TechType.LANGUAGE,
   },
   NODEJS: {
-    text: "Node.js",
-    iconFrom: IconFrom.FORTAWESOME,
-    iconUrl: "fa-brands fa-node",
+    text: "Node.js",    
+    iconUrl: node,
     area: TechArea.BACKEND,
     type: TechType.TOOL,
   },
   ETHEREUM: {
-    text: "Ethereum",
-    iconFrom: IconFrom.FORTAWESOME,
-    iconUrl: "fa-brands fa-ethereum",
+    text: "Ethereum",    
+    iconUrl: ethereum,
     area: TechArea.SMART_CONTRACT,
     type: TechType.TOOL,
   },
   SOLIDITY: {
     text: "Solidity",
-    iconUrl: "",
+    shortName: "solidity",    
+    iconUrl: solidity,
     area: TechArea.SMART_CONTRACT,
     type: TechType.LANGUAGE,
   },
   WEB3JS: {
     text: "Web3.js",
-    iconUrl: "",
-    area: TechArea.SMART_CONTRACT,
+    iconUrl: web3,
+    area: TechArea.GENERAL,
     type: TechType.TOOL,
   },
   NPM: {
     text: "NPM",
-    iconUrl: "",
+    iconUrl: npm,
     area: TechArea.GENERAL,
     type: TechType.TOOL,
   },
   GANACHE: {
     text: "Ganache",
-    iconUrl: "",
+    iconUrl: ganache,
     area: TechArea.SMART_CONTRACT,
     type: TechType.TOOL,
   },
   METAMASK: {
     text: "MetaMask",
-    iconUrl: "",
+    iconUrl: metamask,
     area: TechArea.SMART_CONTRACT,
     type: TechType.TOOL,
   },
   REACTJS: {
-    text: "React.js",
-    iconFrom: IconFrom.BOXICONS,
-    iconUrl: "bx bxl-react",
+    text: "React.js",    
+    iconUrl: react,
     area: TechArea.FRONTEND,
     type: TechType.TOOL,
   },
-  REACTBOOTSTRAP: {
-    text: "React-Bootstrap",
-    iconFrom: IconFrom.FORTAWESOME,
-    iconUrl: "",
+  BOOTSTRAP: {
+    text: "Bootstrap",    
+    iconUrl: bootstrap,
     area: TechArea.FRONTEND,
     type: TechType.TOOL,
   },
   EXPRESS: {
-    text: "Express",
-    iconUrl: "",
+    text: "Express",    
+    iconUrl: express,
     area: TechArea.BACKEND,
     type: TechType.TOOL,
   },
   MONGODB: {
-    text: "MongoDB",
-    iconFrom: IconFrom.BOXICONS,
-    iconUrl: "bx bxl-mongodb",
+    text: "MongoDB",    
+    iconUrl: mongodb,
     area: TechArea.DATABASE,
     type: TechType.TOOL,
   },
   MONGOOSE: {
     text: "Mongoose",
-    iconUrl: "",
-    area: TechArea.DATABASE,
+    iconUrl: mongoose,
+    area: TechArea.GENERAL,
     type: TechType.TOOL,
   },
-  JQUERY: {
-    text: "jQuery",
-    iconFrom: IconFrom.BOXICONS,
-    iconUrl: "bx bxl-jquery",
-    area: TechArea.FRONTEND,
+  POSTGRES: {
+    text: "PostgreSQL",    
+    iconUrl: postgres,
+    area: TechArea.DATABASE,
     type: TechType.TOOL,
   },
   TRUFFLE: {
     text: "Truffle",
-    iconUrl: "",
+    iconUrl: truffle,
     area: TechArea.SMART_CONTRACT,
     type: TechType.TOOL,
   },
