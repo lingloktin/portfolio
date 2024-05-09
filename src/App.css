@@ -594,6 +594,9 @@ li {
   border: 1px solid var(--main-color);
   border-radius: 15px;
   background-color: var(--grey);
+  margin: 2rem;
+    padding: 2rem;
+    gap: 1rem;
 }
 .skills .skills-title {
   text-align: center;
@@ -616,6 +619,7 @@ li {
   display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 1rem;
 }
 .skills .skills-icon img{
   width: auto;

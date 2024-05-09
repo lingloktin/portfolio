@@ -13,6 +13,7 @@ import truffle from "../assets/img/skills/truffle.png";
 import mongodb from "../assets/img/skills/mongodb.png";
 import mongoose from "../assets/img/skills/mongoose.png";
 import postgres from "../assets/img/skills/postgres.png";
+import sql from "../assets/img/skills/sql.png";
 
 import solidity from "../assets/img/skills/solidity.png";
 import express from "../assets/img/skills/express.png";
@@ -113,7 +114,7 @@ const TechConst = {
     type: TechType.TOOL,
   },
   EXPRESS: {
-    text: "Express",    
+    text: "Express.js",    
     iconUrl: express,
     area: TechArea.BACKEND,
     type: TechType.TOOL,
@@ -133,6 +134,12 @@ const TechConst = {
   POSTGRES: {
     text: "PostgreSQL",    
     iconUrl: postgres,
+    area: TechArea.DATABASE,
+    type: TechType.TOOL,
+  },
+  SQL: {
+    text: "SQL",    
+    iconUrl: sql,
     area: TechArea.DATABASE,
     type: TechType.TOOL,
   },
