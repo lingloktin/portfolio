@@ -11,7 +11,7 @@ export const ProjectCard = ({ title, description, imgUrl, tech, githubUrl }) => 
   };
 
   return (
-    <Col size={12} sm={6} md={4}>
+    <Col size={12} sm={12} md={4}>
       <div className='proj-card'>
         <div className={`proj-imgbx ${isCoverVisible ? '' : 'clickable'}`} onClick={isCoverVisible ? null : toggleCover}>
           <img src={imgUrl} />
