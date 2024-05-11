@@ -17,140 +17,140 @@ import sql from "../assets/img/skills/sql.png";
 
 import solidity from "../assets/img/skills/solidity.png";
 import express from "../assets/img/skills/express.png";
-
-
-const IconFrom = {
-  LOCAL_FILE: 0,
-  BOXICONS: 1,
-  FORTAWESOME : 2,
-}
+import flutter from "../assets/img/skills/flutter.png";
+import python from "../assets/img/skills/python.png";
+import java from "../assets/img/skills/java.png";
+import vb from "../assets/img/skills/vb.png";
 
 const TechArea = {
-  GENERAL: 0,
+  LANGUAGE: 0,
   FRONTEND: 1,
   BACKEND: 2,
   DATABASE: 3,
   SMART_CONTRACT: 4,
-};
-
-const TechType = {  
-  LANGUAGE: 1,
-  TOOL: 2,
+  MOBILE_APP: 5,
+  GENERAL: 6,
 };
 
 const TechConst = {
   JAVASCRIPT: {
     text: "JavaScript",
-    shortName: "js",    
     iconUrl: javascript,
-    area: TechArea.FRONTEND,
-    type: TechType.LANGUAGE,
+    area: TechArea.LANGUAGE,
+  },
+  PYTHON: {
+    text: "Python",
+    iconUrl: python,
+    area: TechArea.LANGUAGE,
+  },
+  JAVA: {
+    text: "Java",
+    iconUrl: java,
+    area: TechArea.LANGUAGE,
+  },
+  VB: {
+    text: "Visual Basic",
+    iconUrl: vb,
+    area: TechArea.LANGUAGE,
+  },
+  REACT_NATIVE: {
+    text: "React Native",
+    iconUrl: react,
+    area: TechArea.MOBILE_APP,
+  },
+  FLUTTER: {
+    text: "flutter",
+    iconUrl: flutter,
+    area: TechArea.MOBILE_APP,
   },
   HTML: {
-    text: "HTML",    
+    text: "HTML",
     iconUrl: html,
     area: TechArea.FRONTEND,
-    type: TechType.LANGUAGE,
   },
   CSS: {
-    text: "CSS",    
+    text: "CSS",
     iconUrl: css,
     area: TechArea.FRONTEND,
-    type: TechType.LANGUAGE,
   },
   NODEJS: {
-    text: "Node.js",    
+    text: "Node.js",
     iconUrl: node,
     area: TechArea.BACKEND,
-    type: TechType.TOOL,
-  },
-  ETHEREUM: {
-    text: "Ethereum",    
-    iconUrl: ethereum,
-    area: TechArea.SMART_CONTRACT,
-    type: TechType.TOOL,
   },
   SOLIDITY: {
     text: "Solidity",
-    shortName: "solidity",    
+    shortName: "solidity",
     iconUrl: solidity,
     area: TechArea.SMART_CONTRACT,
-    type: TechType.LANGUAGE,
+  },
+  ETHEREUM: {
+    text: "Ethereum",
+    iconUrl: ethereum,
+    area: TechArea.SMART_CONTRACT,
   },
   WEB3JS: {
     text: "Web3.js",
     iconUrl: web3,
     area: TechArea.GENERAL,
-    type: TechType.TOOL,
   },
   NPM: {
     text: "NPM",
     iconUrl: npm,
     area: TechArea.GENERAL,
-    type: TechType.TOOL,
   },
   GANACHE: {
     text: "Ganache",
     iconUrl: ganache,
     area: TechArea.SMART_CONTRACT,
-    type: TechType.TOOL,
   },
   METAMASK: {
     text: "MetaMask",
     iconUrl: metamask,
     area: TechArea.SMART_CONTRACT,
-    type: TechType.TOOL,
   },
   REACTJS: {
-    text: "React.js",    
+    text: "React.js",
     iconUrl: react,
     area: TechArea.FRONTEND,
-    type: TechType.TOOL,
   },
   BOOTSTRAP: {
-    text: "Bootstrap",    
+    text: "Bootstrap",
     iconUrl: bootstrap,
     area: TechArea.FRONTEND,
-    type: TechType.TOOL,
   },
   EXPRESS: {
-    text: "Express.js",    
+    text: "Express.js",
     iconUrl: express,
     area: TechArea.BACKEND,
-    type: TechType.TOOL,
+  },
+  SQL: {
+    text: "SQL",
+    iconUrl: sql,
+    area: TechArea.DATABASE,
+  },
+  POSTGRES: {
+    text: "PostgreSQL",
+    iconUrl: postgres,
+    area: TechArea.DATABASE,
   },
   MONGODB: {
-    text: "MongoDB",    
+    text: "MongoDB",
     iconUrl: mongodb,
     area: TechArea.DATABASE,
-    type: TechType.TOOL,
   },
   MONGOOSE: {
     text: "Mongoose",
     iconUrl: mongoose,
     area: TechArea.GENERAL,
-    type: TechType.TOOL,
-  },
-  POSTGRES: {
-    text: "PostgreSQL",    
-    iconUrl: postgres,
-    area: TechArea.DATABASE,
-    type: TechType.TOOL,
-  },
-  SQL: {
-    text: "SQL",    
-    iconUrl: sql,
-    area: TechArea.DATABASE,
-    type: TechType.TOOL,
   },
   TRUFFLE: {
     text: "Truffle",
     iconUrl: truffle,
     area: TechArea.SMART_CONTRACT,
-    type: TechType.TOOL,
   },
 }
 
 
 
-export { TechArea, TechConst, IconFrom }
+export { TechArea, TechConst }

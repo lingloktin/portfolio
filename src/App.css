@@ -584,19 +584,19 @@ li {
   background-color: var(--second-bg-color);
 }
 .skills .skills-row {
-  gap: 2rem;
+  /* gap: 2rem; */
 }
 .skills .skills-box {
   display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   border: 1px solid var(--main-color);
   border-radius: 15px;
   background-color: var(--grey);
   margin: 2rem;
-    padding: 2rem;
-    gap: 1rem;
+  padding: 2rem;
+  gap: 1rem;
 }
 .skills .skills-title {
   text-align: center;
@@ -613,18 +613,18 @@ li {
   letter-spacing: 0.8px;
   line-height: 1.1em;
   display: flex;
-    align-items: center;
+  align-items: center;
 }
-.skills .skills-item{
+.skills .skills-item {
   display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 }
-.skills .skills-icon img{
+.skills .skills-icon img {
   width: auto;
-  height: 100px;
+  max-height: 80px;
 }
-.skills .skills-label{
-  
+.skills .skills-label {
+  font-size: 1.8rem;
 }

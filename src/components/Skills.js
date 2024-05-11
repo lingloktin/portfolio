@@ -5,6 +5,14 @@ import { SkillsCard } from "./SkillsCard"
 export const Skills = () => {
   const skillsAreaMap = [
     {
+      title: "Programming Language",
+      area: TechArea.LANGUAGE
+    },
+    {
+      title: "Mobile App Development",
+      area: TechArea.MOBILE_APP
+    },
+    {
       title: "Frontend Development",
       area: TechArea.FRONTEND
     },
@@ -45,7 +53,21 @@ export const Skills = () => {
           ))}
         </Row>
         <Row className="skills-row">
-          {skillsAreaMap.slice(2).map((skill, index) => (
+          {skillsAreaMap.slice(2, 4).map((skill, index) => (
+            <Col className="skills-box" key={index}>
+              <Row className="skills-title">
+                <p>{skill.title}</p>
+              </Row>
+              <Row className="skills-content">
+                {Object.values(TechConst)
+                .filter(tech => tech.area === skill.area)
+                .map((tech, index) => <SkillsCard key={index} {...tech} />)}
+              </Row>
+            </Col>
+          ))}
+        </Row>
+        <Row className="skills-row">
+          {skillsAreaMap.slice(4).map((skill, index) => (
             <Col className="skills-box" key={index}>
               <Row className="skills-title">
                 <p>{skill.title}</p>
