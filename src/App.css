@@ -640,8 +640,13 @@ li {
 }
 .contact .contact-text-field{
   flex: 1;
-  color: white;
 }
-.contact .contact-text-field-box{
-  color: white;
+.MuiInputBase-input {
+  color: var(--white)!important; 
+}
+.MuiInputLabel-root {
+  color: var(--main-color)!important; 
+}
+.MuiOutlinedInput-notchedOutline {
+  border-color: var(--main-color)!important; /* Change the border color on focus */
 }

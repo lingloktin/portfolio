@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
-import { TextField, OutlinedInput } from '@mui/material';
+import { TextField } from '@mui/material';
 
 export const Contact = () => {
     return (
         <section className="contact" id="contact">
+
             <Container>
                 <Row>
                     <Col>
@@ -25,11 +26,12 @@ export const Contact = () => {
                         </h2>
                     </Col>
                     <Col className="contact-form">
+                        
                         <TextField className="contact-text-field" 
                         label="Full Name" 
                         variant="outlined" 
-                        inputProps={{ className: 'contact-text-field-box', color: 'white' }} 
-                        color="secondary"/>
+                        inputProps={{ className: 'contact-text-field-box' }} 
+                        />
                     </Col>
 
                 </Row>
