@@ -14,8 +14,9 @@
 
 :root {
   --black: rgb(18, 18, 18);
-  --grey: rgba(255, 255, 255, 0.25);
   --white: rgb(237, 237, 237);
+  --white-transpant: rgba(255, 255, 255, 0.25);
+  --white-transpant-0-05: rgba(255, 255, 255, 0.05);
   --bg-color: rgb(8, 27, 41);
   --second-bg-color: rgb(17, 46, 66);
   --text-color: rgb(237, 237, 237);
@@ -383,7 +384,7 @@ li {
   display: flex;
   padding-left: 0;
   padding-right: 0;
-  border: 1px solid var(--grey);
+  border: 1px solid var(--white-transpant);
 }
 .projects .nav.nav-pills .nav-item {
   flex: 1;
@@ -422,14 +423,14 @@ li {
   border-radius: 15px 0px 0px 15px;
 }
 .nav-link#projects-tabs-tab-2 {
-  border-left: 1px solid var(--grey);
-  border-right: 1px solid var(--grey);
+  border-left: 1px solid var(--white-transpant);
+  border-right: 1px solid var(--white-transpant);
 }
 .nav-link#projects-tabs-tab-3 {
   border-radius: 0 15px 15px 0;
 }
 .projects .nav.nav-pills .nav-link {
-  /* border: 1px solid var(--grey-color); */
+  /* border: 1px solid var(--white-transpant-color); */
 }
 .proj-card {
   position: relative;
@@ -593,7 +594,7 @@ li {
   justify-content: center;
   border: 1px solid var(--main-color);
   border-radius: 15px;
-  background-color: var(--grey);
+  /* background-color: var(--white-transpant-0-05); */
   margin: 2rem;
   padding: 2rem;
   gap: 1rem;
@@ -627,4 +628,9 @@ li {
 }
 .skills .skills-label {
   font-size: 1.8rem;
+}
+
+/************ Contact Css ************/
+.contact .container {
+  display: flex;
 }
