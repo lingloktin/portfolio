@@ -633,4 +633,15 @@ li {
 /************ Contact Css ************/
 .contact .container {
   display: flex;
+  flex-direction: column;
+}
+.contact .contact-form{
+  display: flex;
+}
+.contact .contact-text-field{
+  flex: 1;
+  color: white;
+}
+.contact .contact-text-field-box{
+  color: white;
 }
