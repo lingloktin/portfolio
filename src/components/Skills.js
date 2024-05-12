@@ -36,8 +36,6 @@ export const Skills = () => {
         <h2 className="section-header" id="skills">
           My <span>Skills</span>
         </h2>
-      </Container>
-      <Container>
         <Row className="skills-row">
           {skillsAreaMap.slice(0, 2).map((skill, index) => (
             <Col className="skills-box" key={index}>

@@ -10,8 +10,6 @@ export const Projects = () => {
         <h2 className="section-header">
           My <span>Projects</span>
         </h2>
-      </Container>
-      <Container>
         <Row>
           <Tab.Container
             id="projects-tabs"

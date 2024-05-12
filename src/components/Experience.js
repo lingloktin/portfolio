@@ -9,8 +9,6 @@ export const Experience = () => {
         <h2 className="section-header" id="experience">
           My <span>Journey</span>
         </h2>
-      </Container>
-      <Container>
         <Row>
           <Col size={12} sm={12} md={6}>
             <Container>
