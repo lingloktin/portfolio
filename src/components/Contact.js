@@ -6,20 +6,33 @@ export const Contact = () => {
     return (
         <section className="contact" id="contact">
             <Container>
-                <Col>
-                    <h2 className="section-header" id="skills">
-                        Contact <span>Me!</span>
-                    </h2>
-                    <div>
-                    <TextField id="outlined-basic" label="Outlined" variant="outlined" />
-                    <OutlinedInput/>
-                    </div>
-                </Col>
-                <Col>
-                    <h2 className="section-header" id="skills">
-                        Contact <span>Me!</span>
-                    </h2>
-                </Col>
+                <Row>
+                    <Col>
+                        <h2 className="section-header" id="skills">
+                            Contact <span>Me!</span>
+                        </h2>
+                    </Col>
+                    <Col>
+                        <h2 className="section-header" id="skills">
+                            ... or leave me a <span>message!</span>
+                        </h2>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>
+                        <h2 className="section-header" id="skills">
+                            Contact <span>Me!</span>
+                        </h2>
+                    </Col>
+                    <Col className="contact-form">
+                        <TextField className="contact-text-field" 
+                        label="Full Name" 
+                        variant="outlined" 
+                        inputProps={{ className: 'contact-text-field-box', color: 'white' }} 
+                        color="secondary"/>
+                    </Col>
+
+                </Row>
             </Container>
         </section>
     )
