@@ -637,16 +637,24 @@ li {
 }
 .contact .contact-form{
   display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  font-size: 3rem;
+}
+.contact .contact-form-row{
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
 }
 .contact .contact-text-field{
   flex: 1;
 }
-.MuiInputBase-input {
+.contact .MuiInputBase-input {
   color: var(--white)!important; 
 }
-.MuiInputLabel-root {
-  color: var(--main-color)!important; 
+.contact .MuiInputLabel-root {
+  color: var(--white)!important; 
 }
-.MuiOutlinedInput-notchedOutline {
+.contact .MuiOutlinedInput-notchedOutline {
   border-color: var(--main-color)!important; /* Change the border color on focus */
 }

@@ -1,41 +1,56 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
-import { TextField } from '@mui/material';
+import { TextField } from "@mui/material";
 
 export const Contact = () => {
-    return (
-        <section className="contact" id="contact">
+  const OutlinedTextField = ({ label, row = 1 }) => (
+    <TextField
+      className="contact-text-field"
+      label={label}
+      variant="outlined"
+      InputProps={{
+        sx: { fontSize: "1.6rem" },
+      }}
+      InputLabelProps={{
+        sx: { fontSize: "1.6rem" },
+      }}
+      multiline
+          rows={row}
+    />
+  );
 
-            <Container>
-                <Row>
-                    <Col>
-                        <h2 className="section-header" id="skills">
-                            Contact <span>Me!</span>
-                        </h2>
-                    </Col>
-                    <Col>
-                        <h2 className="section-header" id="skills">
-                            ... or leave me a <span>message!</span>
-                        </h2>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col>
-                        <h2 className="section-header" id="skills">
-                            Contact <span>Me!</span>
-                        </h2>
-                    </Col>
-                    <Col className="contact-form">
-                        
-                        <TextField className="contact-text-field" 
-                        label="Full Name" 
-                        variant="outlined" 
-                        inputProps={{ className: 'contact-text-field-box' }} 
-                        />
-                    </Col>
-
-                </Row>
-            </Container>
-        </section>
-    )
-}
+  return (
+    <section className="contact" id="contact">
+      <Container>
+        <Row>
+          <Col>
+            <h2 className="section-header" id="skills">
+              Contact <span>Me!</span>
+            </h2>
+          </Col>
+          <Col>
+            <h2 className="section-header" id="skills">
+              ... or leave me a <span>message!</span>
+            </h2>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <h2 className="section-header" id="skills">
+              aslk;jdfj sad;fas jf
+            </h2>
+          </Col>
+          <Col className="contact-form">
+            <Row className="contact-form-row">
+              <OutlinedTextField label="Full Name" />
+              <OutlinedTextField label="Email Address" />
+            </Row>
+            <Row className="contact-form-row">
+              <OutlinedTextField label="Your Message" row={6} />
+            </Row>
+          </Col>
+        </Row>
+      </Container>
+    </section>
+  );
+};
