@@ -41,19 +41,19 @@ export const Contact = () => {
         <section className="contact" id="contact">
             <Container>
                 <Row>
-                    <Col>
+                    <Col size={12} sm={12} md={6}>
                         <h2 className="section-header" id="skills">
                             Contact <span>Me!</span>
                         </h2>
                     </Col>
-                    <Col>
+                    <Col size={12} sm={0} md={6} className="hidden-when-mobile">
                         <h2 className="section-header" id="skills">
                             ... or leave me a <span>message!</span>
                         </h2>
                     </Col>
                 </Row>
                 <Row>
-                    <Col className="social-icon contact-method-container">
+                    <Col className="social-icon contact-method-container" size={12} sm={12} md={6}>
                         {contactMethods.map((method, index) => (
                             <Row className="contact-method" key={index}>
                                 <div className="contact-method-icon">
@@ -67,13 +67,16 @@ export const Contact = () => {
                             </Row>
                         ))}
                     </Col>
-                    <Col className="contact-form">
+                    <Col className="contact-form" size={12} sm={12} md={6}>
                         <Row className="contact-form-row">
                             <OutlinedTextField label="Name" />
                             <OutlinedTextField label="Email Address" />
                         </Row>
                         <Row className="contact-form-row">
                             <OutlinedTextField label="Your Message" row={10} />
+                        </Row>
+                        <Row className="contact-form-row btn-box">
+                            <button className="btn" type="submit">Submit</button>
                         </Row>
                     </Col>
                 </Row>
