@@ -631,19 +631,75 @@ li {
 }
 
 /************ Contact Css ************/
-.contact .container {
+.contact .contact-container {
   display: flex;
   flex-direction: column;
+}
+.contact .hidden-when-mobile {
+  display: none;
+}
+@media (min-width: 768px) {
+  .contact .hidden-when-mobile {
+    display: block;
+  }
+}
+@media (min-width: 768px) {
+  .contact-method-container {
+    padding-bottom: 8rem;
+  }
+}
+.contact .contact-method-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;  
+}
+.contact .contact-method {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding-bottom: 3rem;
+}
+@media (min-width: 992px) {
+  .contact .contact-method {
+    padding-left: 16%;
+  }
+}
+@media (min-width: 1200px) {
+  .contact .contact-method {
+    padding-left: 21%;
+  }
+}
+@media (min-width: 1400px) {
+  .contact .contact-method {
+    padding-left: 25%;
+  }
+}
+.contact .contact-method-icon {
+  width: auto;
+  height: auto;
+  position: relative;
+}
+.contact .contact-method-text {
+  display: flex;
+  align-items: center;
+}
+.contact .contact-method-text p {
+  font-size: 1.6rem;
+  margin-bottom: 0;
 }
 .contact .contact-form {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  padding-top: 1rem;
 }
 .contact .contact-form-row {
   display: flex;
+  justify-content: center;
   flex-direction: row;
   gap: 2rem;
+  width: 100%;
 }
 .contact .contact-text-field {
   flex: 1;
@@ -657,29 +713,6 @@ li {
 .contact .MuiOutlinedInput-notchedOutline {
   border-color: var(--main-color) !important;
 }
-.contact .contact-method-container{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-}
-.contact .contact-method-container > * {
-  width: 51%;
-}
-.contact .contact-method {
-  display: flex;
-    flex-direction: row;
-}
-.contact .contact-method-icon {
-  width: auto;
-  height: auto;
-  position: relative;
-}
-.contact .contact-method-text {
-  display: flex;
-    align-items: center;
-}
-.contact .contact-method-text p {
-  font-size: 1.6rem;
-  margin-bottom: 0
+.contact-form-row .btn {
+  margin-top: 1rem;
 }
