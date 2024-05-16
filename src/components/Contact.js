@@ -76,7 +76,7 @@ export const Contact = () => {
                             <OutlinedTextField label="Your Message" row={10} />
                         </Row>
                         <Row className="contact-form-row btn-box">
-                            <button className="btn" type="submit">Submit</button>
+                            <button className="btn mt-2" type="submit">Submit</button>
                         </Row>
                     </Col>
                 </Row>
