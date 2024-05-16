@@ -652,7 +652,7 @@ li {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;  
+  align-items: center;
 }
 .contact .contact-method {
   display: flex;
@@ -713,6 +713,14 @@ li {
 .contact .MuiOutlinedInput-notchedOutline {
   border-color: var(--main-color) !important;
 }
-.contact-form-row .btn {
-  margin-top: 1rem;
+
+/************ Footer Css ************/
+.footer {
+  background-color: var(--black);
+}
+.footer-text {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  justify-content: center;
+  align-items: center;
 }
