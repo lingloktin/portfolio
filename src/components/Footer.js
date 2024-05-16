@@ -4,7 +4,9 @@ export const Footer = () => {
     return (
         <footer className="footer">
             <Row className="footer-text">
-                Copyright &copy; 2024 by Marcus Ling | All Rights Reserved.
+                <p>
+                    Copyright &copy; 2024 by Marcus Ling | All Rights Reserved.
+                </p>
             </Row>
         </footer>
     );

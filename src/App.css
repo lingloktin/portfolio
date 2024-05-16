@@ -300,20 +300,6 @@ span.navbar-text {
   overflow: hidden;
   z-index: 2;
 }
-.experience-content .content::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background: var(--main-color-transparent);
-  transition: 0.5s;
-  z-index: -1;
-}
-.experience-content .content:hover::before {
-  width: 100%;
-}
 .experience-content .content .year {
   font-size: 1.5rem;
   color: var(--main-color);
@@ -712,6 +698,44 @@ li {
 }
 .contact .MuiOutlinedInput-notchedOutline {
   border-color: var(--main-color) !important;
+  border: .3rem solid var(--main-color);
+}
+.contact .gotop-icon a {
+  position: absolute;
+  right: 4rem;
+  bottom: 6rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8rem;
+  background: var(--main-color);
+  border: 0.3rem solid var(--main-color);
+  border-radius: 0.8rem;
+  text-decoration: none;
+  overflow: hidden;
+}
+.contact .gotop-icon a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: var(--bg-color);
+  transition: 0.5s;
+}
+.contact .gotop-icon a:hover::before {
+  width: 100%;
+}
+.contact .gotop-icon a i {
+  font-size: 2.4rem;
+  color: var(--bg-color);
+  transition: .5s;
+  z-index: 1;
+}
+.contact .gotop-icon a:hover i {
+  color: var(--main-color);
+  z-index: 1;
 }
 
 /************ Footer Css ************/
@@ -723,4 +747,9 @@ li {
   padding-bottom: 1rem;
   justify-content: center;
   align-items: center;
+}
+.footer-text p {
+  font-size: 1.4rem;
+  margin-bottom: 0;
+  text-align: center;
 }

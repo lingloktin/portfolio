@@ -80,6 +80,11 @@ export const Contact = () => {
                         </Row>
                     </Col>
                 </Row>
+                <div className="gotop-icon">
+                    <a href="#home">
+                        <i className="bx bx-up-arrow-alt"></i>
+                    </a>
+                </div>
             </Container>
         </section>
     );
