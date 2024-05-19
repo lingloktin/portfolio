@@ -61,40 +61,59 @@ nav.navbar {
   width: 100%;
   top: 0;
   z-index: 9999;
-  padding: 2rem 9%;
+  padding: 2rem 5%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   transition: 0.4s ease-in-out;
 }
+@media (max-width: 991px) {
+  nav.navbar {
+  background-color: var(--black);
+}
+}
+@media (min-width: 1200px) {
+  nav.navbar {
+    padding: 2rem 9%;
+  }
+}
 nav.navbar.scrolled {
-  padding: 10px 0;
   background-color: var(--black);
 }
 nav.navbar a.navbar-brand {
-  width: 9%;
-}
-nav.navbar .navbar-nav .nav-link.navbar-link {
-  font-weight: 400;
-  color: var(--white);
-  letter-spacing: 0.8px;
-  padding: 0 25px;
-  font-size: 18px;
-  opacity: 0.75;
-}
-nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
-nav.navbar .navbar-nav a.nav-link.navbar-link.active {
-  opacity: 1;
-  color: var(--main-color);
+  width: auto;
 }
 nav.navbar a.navbar-brand {
   font-size: 2.5rem;
   color: var(--white);
   font-weight: 600;
 }
+nav.navbar .navbar-nav .nav-link.navbar-link {
+  font-weight: 400;
+  color: var(--white);
+  letter-spacing: 0.8px;
+  padding: 0.5rem 2.5rem;
+  font-size: 1.8rem;
+  opacity: 0.85;
+}
+nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
+nav.navbar .navbar-nav a.nav-link.navbar-link.active {
+  opacity: 1;
+  color: var(--main-color);
+}
 span.navbar-text {
   display: flex;
   align-items: center;
+}
+.navbar-toggler:focus {
+  box-shadow: none !important;
+}
+nav.navbar .bx-menu, .bx-x {
+  width: auto;
+  height: auto;
+  vertical-align: middle;
+  color: var(--white);
+  font-size: 3rem;
 }
 
 /************ Banner Css ************/
@@ -108,13 +127,17 @@ span.navbar-text {
   background-size: cover;
   background-repeat: no-repeat;
 }
+.banner-col-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position:relative;
+}
 .banner h1 {
-  padding: 110px 0 0 0;
   font-size: 5.5rem;
   font-weight: 700;
   letter-spacing: 0.8px;
   line-height: 1.3;
-  display: block;
 }
 .banner .text-animate {
   position: relative;
@@ -139,7 +162,16 @@ span.navbar-text {
   justify-content: space-between;
   width: 34.5rem;
   height: 5rem;
-  margin: 2rem 0 4rem;
+}
+@media (min-width: 992px) {
+  .btn-box {
+    margin: 0 0 2rem;
+  }
+}
+@media (min-width: 1200px) {
+  .btn-box {
+    margin: 2rem 0 4rem;
+}
 }
 .btn-box .btn {
   position: relative;
@@ -180,9 +212,16 @@ span.navbar-text {
 .banner .social-icon {
   position: relative;
   width: 145px;
-  margin: 8rem 0 4rem;
+  padding: 2rem 0;
   display: flex;
   justify-content: space-between;
+}
+@media (min-width: 1200px) {
+  .banner .social-icon {
+    position: absolute;
+    bottom: 0;
+    padding: 2rem 0;
+}
 }
 .social-icon a {
   position: relative;
@@ -219,26 +258,24 @@ span.navbar-text {
   width: 100%;
 }
 .banner-img-container {
-  background: url("./assets/img/banner/banner_img.jpg") no-repeat center center;
+  /* background: url("./assets/img/banner/banner_img.jpg") no-repeat center center; */
   background-size: contain;
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0;
 }
-.banner-imgHover {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 50%;
-  height: 100%;
-  background: transparent;
-  transition: 0.5s;
+@media (min-width: 992px) {
+  .banner-img-container {
+  padding: 3rem;
 }
-.banner-imgHover:hover {
-  background: var(--bg-color);
-  opacity: 0.8;
+}
+.banner-img-container img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 @keyframes updown {
@@ -698,7 +735,7 @@ li {
 }
 .contact .MuiOutlinedInput-notchedOutline {
   border-color: var(--main-color) !important;
-  border: .3rem solid var(--main-color);
+  border: 0.3rem solid var(--main-color);
 }
 .contact .gotop-icon a {
   position: absolute;
@@ -730,7 +767,7 @@ li {
 .contact .gotop-icon a i {
   font-size: 2.4rem;
   color: var(--bg-color);
-  transition: .5s;
+  transition: 0.5s;
   z-index: 1;
 }
 .contact .gotop-icon a:hover i {
