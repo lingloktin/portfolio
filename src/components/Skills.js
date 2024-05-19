@@ -31,9 +31,9 @@ export const Skills = () => {
   ]
 
   return (
-    <section className="skills">
+    <section className="skills" id="skills">
       <Container>
-        <h2 className="section-header" id="skills">
+        <h2 className="section-header">
           My <span>Skills</span>
         </h2>
         <Row className="skills-row">

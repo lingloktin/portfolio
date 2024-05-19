@@ -4,9 +4,9 @@ import { experienceData, educationData } from "../constants/ExperienceConst";
 
 export const Experience = () => {
   return (
-    <section className="experience">
+    <section className="experience" id="experience">
       <Container>
-        <h2 className="section-header" id="experience">
+        <h2 className="section-header">
           My <span>Journey</span>
         </h2>
         <Row>
