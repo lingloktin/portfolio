@@ -14,7 +14,7 @@ export const ProjectCard = ({ title, description, imgUrl, tech, githubUrl }) => 
     <Col size={12} sm={12} md={4}>
       <div className='proj-card'>
         <div className={`proj-imgbx ${isCoverVisible ? '' : 'clickable'}`} onClick={isCoverVisible ? null : toggleCover}>
-          <img src={imgUrl} />
+          <img src={imgUrl} alt="project"/>
         </div>
         <div className="proj-txtx">
           <h4 className={`${isCoverVisible ? '' : 'clickable'}`} onClick={isCoverVisible ? null : toggleCover}>{title}</h4>
