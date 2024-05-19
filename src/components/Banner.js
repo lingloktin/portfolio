@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { ArrowRightCircle } from "react-bootstrap-icons";
-import TrackVisibility from "react-on-screen";
+import bannerImg from "../assets/img/banner/banner_img.jpg";
 
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -53,7 +52,7 @@ export const Banner = () => {
     <section className="banner" id="home">
       <Container>
         <Row className="aligh-items-center">
-          <Col xs={12} md={6} xl={6}>
+          <Col className="banner-col-1" xs={12} md={7} xl={7}>
             <h1>Hi! I'm Marcus Ling</h1>
             <div className="text-animate">
               <h3>
@@ -87,9 +86,10 @@ export const Banner = () => {
               </a>
             </div>
           </Col>
-          <Col xs={12} md={6} xl={6}>
-            <div className="banner-img-container"></div>
-            {/* <div className="banner-imgHover"></div> */}
+          <Col xs={12} md={5} xl={5}>
+            <div className="banner-img-container">
+              <img src={bannerImg} alt="Banner" />
+            </div>
           </Col>
         </Row>
       </Container>
