@@ -751,17 +751,22 @@ li {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  padding-bottom: 2rem;
 }
 .skills .skills-icon {
-  width: auto;
+  width: 10rem;
 }
 .skills .skills-icon img {
-  width: auto;
-  max-height: 80px;
 }
 .skills .skills-label {
   font-size: 1.8rem;
+  width: 100%;
+  display: inline-flex;
+  align-content: center;
+  align-items: baseline;
+  justify-content: center;
 }
+
 @media (max-width: 576px) {
   .skills .skills-title {
     font-size: 2.7rem;
