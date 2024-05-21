@@ -51,18 +51,21 @@ export const Banner = () => {
   return (
     <section className="banner" id="home">
       <Container>
-        <Row className="aligh-items-center">
-          <Col className="banner-col-1" xs={12} md={7} xl={7}>
+        <Row className="banner-row">
+          <Col className="banner-col" xs={12} md={7} xl={7}>
             <h1>Hi! I'm Marcus Ling</h1>
             <div className="text-animate">
               <h3
-                // className="txt-rotate"
-                // dataPeriod="2000"
-                // data-rotate='[ "Software Developer", "Programmer", "Web Developer" ]'
+              // className="txt-rotate"
+              // dataPeriod="2000"
+              // data-rotate='[ "Software Developer", "Programmer", "Web Developer" ]'
               >
                 {/* {text} */}
-                Software Developer
+                Software Engineer
               </h3>
+            </div>
+            <div className="banner-img-container show-mobile-only">
+              <img src={bannerImg} alt="Banner" />
             </div>
             <p>
               Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -76,17 +79,19 @@ export const Banner = () => {
                 Contact me
               </a>
             </div>
-            <div className="social-icon">
-              <a href="#">
-                <i class="bx bxl-github"></i>
-              </a>
-              <a href="#">
-                <i class="bx bxl-linkedin"></i>
-              </a>
+            <div className="social-icon-row">
+              <div className="social-icon">
+                <a href="#">
+                  <i class="bx bxl-github"></i>
+                </a>
+                <a href="#">
+                  <i class="bx bxl-linkedin"></i>
+                </a>
+              </div>
             </div>
           </Col>
           <Col xs={12} md={5} xl={5}>
-            <div className="banner-img-container">
+            <div className="banner-img-container no-show-mobile">
               <img src={bannerImg} alt="Banner" />
             </div>
           </Col>
