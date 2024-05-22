@@ -68,12 +68,14 @@ export const Banner = () => {
               <img src={bannerImg} alt="Banner" />
             </div>
             <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
+              Accomplished Software Engineer skilled in full-stack development,
+              software engineering, smart contract development, and effective
+              database management. Proficiently utilizes modern technologies to
+              architect, develop, and implement innovative software solutions.
+              Committed to delivering excellence in software engineering and
+              holds a Bachelor of Engineering in Computer Science from The
+              University of Hong Kong.
             </p>
-            {/* <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p> */}
             <div className="btn-box">
               <a href="#contact" className="btn">
                 Contact me
