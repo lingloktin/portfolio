@@ -1,26 +1,25 @@
-import javascript from "../assets/img/skills/javascript.png";
-import html from "../assets/img/skills/html.png";
-import css from "../assets/img/skills/css.png";
-import react from "../assets/img/skills/react.png";
-import bootstrap from "../assets/img/skills/bootstrap.png";
-import node from "../assets/img/skills/node.png";
-import ethereum from "../assets/img/skills/ethereum.png";
-import web3 from "../assets/img/skills/web3.png";
-import npm from "../assets/img/skills/npm.png";
-import ganache from "../assets/img/skills/ganache.png";
-import metamask from "../assets/img/skills/metamask.png";
-import truffle from "../assets/img/skills/truffle.png";
-import mongodb from "../assets/img/skills/mongodb.png";
-import mongoose from "../assets/img/skills/mongoose.png";
-import postgres from "../assets/img/skills/postgres.png";
-import sql from "../assets/img/skills/sql.png";
-
-import solidity from "../assets/img/skills/solidity.png";
-import express from "../assets/img/skills/express.png";
-import flutter from "../assets/img/skills/flutter.png";
-import python from "../assets/img/skills/python.png";
-import java from "../assets/img/skills/java.png";
-import vb from "../assets/img/skills/vb.png";
+import techIconJavascript from "../assets/img/skills/javascript.png";
+import techIconHtml from "../assets/img/skills/html.png";
+import techIconCss from "../assets/img/skills/css.png";
+import techIconReact from "../assets/img/skills/react.png";
+import techIconBootstrap from "../assets/img/skills/bootstrap.png";
+import techIconNode from "../assets/img/skills/node.png";
+import techIconEthereum from "../assets/img/skills/ethereum.png";
+import techIconWeb3 from "../assets/img/skills/web3.png";
+import techIconNpm from "../assets/img/skills/npm.png";
+import techIconGanache from "../assets/img/skills/ganache.png";
+import techIconMetamask from "../assets/img/skills/metamask.png";
+import techIconTruffle from "../assets/img/skills/truffle.png";
+import techIconMongodb from "../assets/img/skills/mongodb.png";
+import techIconMongoose from "../assets/img/skills/mongoose.png";
+import techIconPostgres from "../assets/img/skills/postgres.png";
+import techIconSql from "../assets/img/skills/sql.png";
+import techIconSolidity from "../assets/img/skills/solidity.png";
+import techIconExpress from "../assets/img/skills/express.png";
+import techIconFlutter from "../assets/img/skills/flutter.png";
+import techIconPython from "../assets/img/skills/python.png";
+import techIconJava from "../assets/img/skills/java.png";
+import techIconVb from "../assets/img/skills/vb.png";
 
 const TechArea = {
   LANGUAGE: 0,
@@ -35,118 +34,118 @@ const TechArea = {
 const TechConst = {
   JAVASCRIPT: {
     text: "JavaScript",
-    iconUrl: javascript,
+    iconUrl: techIconJavascript,
     area: TechArea.LANGUAGE,
   },
   PYTHON: {
     text: "Python",
-    iconUrl: python,
+    iconUrl: techIconPython,
     area: TechArea.LANGUAGE,
   },
   JAVA: {
     text: "Java",
-    iconUrl: java,
+    iconUrl: techIconJava,
     area: TechArea.LANGUAGE,
   },
   VB: {
     text: "Visual Basic",
-    iconUrl: vb,
+    iconUrl: techIconVb,
     area: TechArea.LANGUAGE,
   },
   REACT_NATIVE: {
     text: "React Native",
-    iconUrl: react,
+    iconUrl: techIconReact,
     area: TechArea.MOBILE_APP,
   },
   FLUTTER: {
     text: "flutter",
-    iconUrl: flutter,
+    iconUrl: techIconFlutter,
     area: TechArea.MOBILE_APP,
   },
   HTML: {
     text: "HTML",
-    iconUrl: html,
+    iconUrl: techIconHtml,
     area: TechArea.FRONTEND,
   },
   CSS: {
     text: "CSS",
-    iconUrl: css,
+    iconUrl: techIconCss,
     area: TechArea.FRONTEND,
   },
   NODEJS: {
     text: "Node.js",
-    iconUrl: node,
+    iconUrl: techIconNode,
     area: TechArea.BACKEND,
   },
   SOLIDITY: {
     text: "Solidity",
     shortName: "solidity",
-    iconUrl: solidity,
+    iconUrl: techIconSolidity,
     area: TechArea.SMART_CONTRACT,
   },
   ETHEREUM: {
     text: "Ethereum",
-    iconUrl: ethereum,
+    iconUrl: techIconEthereum,
     area: TechArea.SMART_CONTRACT,
   },
   WEB3JS: {
     text: "Web3.js",
-    iconUrl: web3,
+    iconUrl: techIconWeb3,
     area: TechArea.GENERAL,
   },
   NPM: {
     text: "NPM",
-    iconUrl: npm,
+    iconUrl: techIconNpm,
     area: TechArea.GENERAL,
   },
   GANACHE: {
     text: "Ganache",
-    iconUrl: ganache,
+    iconUrl: techIconGanache,
     area: TechArea.SMART_CONTRACT,
   },
   METAMASK: {
     text: "MetaMask",
-    iconUrl: metamask,
+    iconUrl: techIconMetamask,
     area: TechArea.SMART_CONTRACT,
   },
   REACTJS: {
     text: "React.js",
-    iconUrl: react,
+    iconUrl: techIconReact,
     area: TechArea.FRONTEND,
   },
   BOOTSTRAP: {
     text: "Bootstrap",
-    iconUrl: bootstrap,
+    iconUrl: techIconBootstrap,
     area: TechArea.FRONTEND,
   },
   EXPRESS: {
     text: "Express.js",
-    iconUrl: express,
+    iconUrl: techIconExpress,
     area: TechArea.BACKEND,
   },
   SQL: {
     text: "SQL",
-    iconUrl: sql,
+    iconUrl: techIconSql,
     area: TechArea.DATABASE,
   },
   POSTGRES: {
     text: "PostgreSQL",
-    iconUrl: postgres,
+    iconUrl: techIconPostgres,
     area: TechArea.DATABASE,
   },
   MONGODB: {
     text: "MongoDB",
-    iconUrl: mongodb,
+    iconUrl: techIconMongodb,
     area: TechArea.DATABASE,
   },
   MONGOOSE: {
     text: "Mongoose",
-    iconUrl: mongoose,
+    iconUrl: techIconMongoose,
     area: TechArea.GENERAL,
   },
   TRUFFLE: {
     text: "Truffle",
-    iconUrl: truffle,
+    iconUrl: techIconTruffle,
     area: TechArea.SMART_CONTRACT,
   },
 }
