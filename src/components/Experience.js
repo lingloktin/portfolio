@@ -22,16 +22,14 @@ export const Experience = () => {
                           <div className="year">
                             <i className="bx bxs-calendar"></i> {education.year}
                           </div>
-                          <Row>
-                            <Col>
-                              <div
-                                className={`${education.shortName}-icon`}
-                              ></div>
-                            </Col>
-                            <Col className={`${education.shortName}-title`}>
+                          <Row className="experience-title">
+                            <Row className="experience-title-row">
+                              {/* <img src={education.iconUrl} alt={education.shortName}></img> */}
                               <h3>{education.title}</h3>
+                            </Row>
+                            <Row className="experience-title-row">
                               <h4>{education.subtitle}</h4>
-                            </Col>
+                            </Row>
                           </Row>
                           <Row>
                             <p>{education.description}</p>
@@ -58,15 +56,16 @@ export const Experience = () => {
                             {experience.year}
                           </div>
                           <Row>
-                            <Col>
-                              <div
-                                className={`${experience.shortName}-icon`}
-                              ></div>
-                            </Col>
-                            <Col className={`${experience.shortName}-title`}>
+                            <Row className="experience-title">
+                              <img
+                                src={experience.iconUrl}
+                                alt={experience.shortName}
+                              ></img>
                               <h3>{experience.title}</h3>
+                            </Row>
+                            <Row>
                               <h4>{experience.subtitle}</h4>
-                            </Col>
+                            </Row>
                           </Row>
                           <Row>
                             <ul>
