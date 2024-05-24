@@ -46,9 +46,9 @@ export const Skills = () => {
                 md={12}
                 lg={6}
               >
-                <Row className="skills-title">
+                <div className="skills-title">
                   <p>{skill.title}</p>
-                </Row>
+                </div>
                 <Row className="skills-content">
                   {Object.values(TechConst)
                     .filter((tech) => tech.area === skill.area)
@@ -68,9 +68,9 @@ export const Skills = () => {
                 md={12}
                 lg={6}
               >
-                <Row className="skills-title">
+                <div className="skills-title">
                   <p>{skill.title}</p>
-                </Row>
+                </div>
                 <Row className="skills-content">
                   {Object.values(TechConst)
                     .filter((tech) => tech.area === skill.area)
@@ -90,9 +90,9 @@ export const Skills = () => {
                 md={12}
                 lg={6}
               >
-                <Row className="skills-title">
+                <div className="skills-title">
                   <p>{skill.title}</p>
-                </Row>
+                </div>
                 <Row className="skills-content">
                   {Object.values(TechConst)
                     .filter((tech) => tech.area === skill.area)
