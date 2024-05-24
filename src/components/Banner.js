@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import bannerImg from "../assets/img/banner/banner_img.jpg";
+import bannerImgHorizontal from "../assets/img/banner/banner_img_horizontal.jpg";
 
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -65,7 +66,7 @@ export const Banner = () => {
               </h3>
             </div>
             <div className="banner-img-container show-mobile-only">
-              <img src={bannerImg} alt="Banner" />
+              <img src={bannerImgHorizontal} alt="Banner" />
             </div>
             <p>
               Accomplished Software Engineer skilled in full-stack development,
