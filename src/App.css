@@ -52,7 +52,7 @@ section {
   margin-bottom: 3rem;
   text-align: center;
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .section-header {
     font-size: 4.5rem;
   }
@@ -155,8 +155,12 @@ nav.navbar .bx-menu,
   font-size: 3.2rem;
   font-weight: 700;
   color: transparent;
-  -webkit-text-stroke: 1px var(--main-color);
+  -webkit-text-stroke: .7px var(--main-color);
   letter-spacing: 0.8px;
+  background-image: linear-gradient(var(--main-color), var(--main-color));
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  background-position: 0 0;
 }
 .banner p {
   color: #b8b8b8;
@@ -389,15 +393,15 @@ nav.navbar .bx-menu,
 .experience .experience-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 5rem;
   justify-content: center;
   align-items: center;
 }
-.experience .col .title {
+.experience .title {
   font-size: 2.5rem;
   margin: 0 0 1.5rem 2rem;
+  flex: 1;
 }
-.experience .col .experience-box {
+.experience .experience-box {
   border-left: 0.2rem solid var(--main-color);
 }
 .experience-box .experience-content {
@@ -431,8 +435,20 @@ nav.navbar .bx-menu,
 .experience-content .content .year i {
   padding-right: 0.5rem;
 }
-.experience-title {
-  /* flex: 1; */
+.experience-content-header{
+  display: flex;
+    align-items: center;
+}
+.experience-icon{
+    width: 8rem;
+}
+.experience-icon img {
+  width: 100%;
+  padding-right: 10%;
+}
+.experience-titles-div {
+  display: flex;
+    flex-direction: column;
 }
 .experience-content .content h3 {
   font-size: 2.5rem;
@@ -449,7 +465,7 @@ li {
   padding: 0.5rem;
   margin-left: 2rem;
 }
-@media (max-width: 576px) {
+@media (max-width: 575px) {
   .experience .col .title {
     font-size: 2.3rem;
   }
@@ -695,7 +711,7 @@ li {
 .proj-link a:hover::before {
   width: 100%;
 }
-@media (max-width: 576px) {
+@media (max-width: 575px) {
   .projects .nav.nav-pills .nav-link {
     font-size: 1.8rem;
   }
@@ -763,9 +779,7 @@ li {
   padding-bottom: 1rem;
 }
 .skills .skills-icon {
-  width: 10rem;
-}
-.skills .skills-icon img {
+  width: 8rem;
 }
 .skills .skills-label {
   font-size: 1.8rem;
@@ -780,7 +794,7 @@ li {
     flex: unset;
   }
 }
-@media (max-width: 576px) {
+@media (max-width: 575px) {
   .skills .skills-title {
     font-size: 2.5rem;
   }
