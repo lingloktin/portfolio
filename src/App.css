@@ -150,6 +150,7 @@ nav.navbar .bx-menu,
 
 .banner .text-animate {
   position: relative;
+  width: fit-content;
 }
 .banner .text-animate h3 {
   font-size: 3.2rem;
@@ -161,6 +162,27 @@ nav.navbar .bx-menu,
   background-repeat: no-repeat;
   -webkit-background-clip: text;
   background-position: 0 0;
+}
+.banner .text-animate h3::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  color: var(--main-color);
+  -webkit-text-stroke: 0.7px transparent;
+  border-right: 2px solid var(--main-color);
+  overflow: hidden;
+  animation: animate 6s linear infinite;
+}
+@keyframes animate {
+  0%, 10%, 100% {
+    width: 0;
+  }
+  70%, 90% {
+    width: 100%;
+  }
 }
 .banner p {
   color: #b8b8b8;
