@@ -33,19 +33,15 @@ export const Skills = () => {
   return (
     <section className="skills" id="skills">
       <Container>
-        <h2 className="section-header">
-          My <span>Skills</span>
-        </h2>
+        <div className="section-header-div">
+          <h2 className="section-header">
+            My <span>Skills</span>
+          </h2>
+        </div>
         <Col className="skills-content-container">
           <Row className="skills-row">
             {skillsAreaMap.slice(0, 2).map((skill, index) => (
-              <Col
-                className="skills-box"
-                key={index}
-                size={12}
-                md={12}
-                lg={6}
-              >
+              <Col className="skills-box" key={index} size={12} md={12} lg={6}>
                 <div className="skills-title">
                   <p>{skill.title}</p>
                 </div>
@@ -61,13 +57,7 @@ export const Skills = () => {
           </Row>
           <Row className="skills-row">
             {skillsAreaMap.slice(2, 4).map((skill, index) => (
-              <Col
-                className="skills-box"
-                key={index}
-                size={12}
-                md={12}
-                lg={6}
-              >
+              <Col className="skills-box" key={index} size={12} md={12} lg={6}>
                 <div className="skills-title">
                   <p>{skill.title}</p>
                 </div>
@@ -83,13 +73,7 @@ export const Skills = () => {
           </Row>
           <Row className="skills-row">
             {skillsAreaMap.slice(4).map((skill, index) => (
-              <Col
-                className="skills-box"
-                key={index}
-                size={12}
-                md={12}
-                lg={6}
-              >
+              <Col className="skills-box" key={index} size={12} md={12} lg={6}>
                 <div className="skills-title">
                   <p>{skill.title}</p>
                 </div>

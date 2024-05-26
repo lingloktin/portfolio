@@ -7,9 +7,11 @@ export const Projects = () => {
   return (
     <section className="projects" id="projects">
       <Container>
-        <h2 className="section-header">
-          My <span>Projects</span>
-        </h2>
+        <div className="section-header-div">
+          <h2 className="section-header">
+            My <span>Projects</span>
+          </h2>
+        </div>
         <Row>
           <Tab.Container
             id="projects-tabs"
