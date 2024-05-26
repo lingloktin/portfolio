@@ -47,10 +47,18 @@ section {
   align-items: center;
   padding: 100px 20px;
 }
+.section-header-div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 .section-header {
+  position: relative;
   font-size: 5rem;
   margin-bottom: 3rem;
   text-align: center;
+  width: fit-content;
+  --i: 1;
 }
 @media (max-width: 767px) {
   .section-header {
@@ -93,6 +101,12 @@ nav.navbar a.navbar-brand {
   font-size: 2.5rem;
   color: var(--white);
   font-weight: 600;
+  position: relative;
+  --i: 1;
+}
+nav.navbar .navbar-nav {
+  position: relative;
+  --i: 2;
 }
 nav.navbar .navbar-nav .nav-link.navbar-link {
   font-weight: 400;
@@ -110,6 +124,10 @@ nav.navbar .navbar-nav a.nav-link.navbar-link.active {
 span.navbar-text {
   display: flex;
   align-items: center;
+}
+.navbar-toggler {
+  position: relative;
+  --i: 2;
 }
 .navbar-toggler:focus {
   box-shadow: none !important;
@@ -146,56 +164,88 @@ nav.navbar .bx-menu,
   font-weight: 700;
   letter-spacing: 0.8px;
   line-height: 1.3;
+  position: relative;
+  --i: 2;
 }
 
 .banner .text-animate {
   position: relative;
   width: fit-content;
+  --animation-style: ease-in-out;
 }
 .banner .text-animate h3 {
+  margin-bottom: 0;
   font-size: 3.2rem;
   font-weight: 700;
   color: transparent;
-  -webkit-text-stroke: .7px var(--main-color);
+  -webkit-text-stroke: 0.7px var(--main-color);
   letter-spacing: 0.8px;
   background-image: linear-gradient(var(--main-color), var(--main-color));
   background-repeat: no-repeat;
   -webkit-background-clip: text;
   background-position: 0 0;
+  animation: bannerBgText 6s var(--animation-style) infinite;
+  animation-delay: 2s;
+  --header-width: 301px;
+  --i: 3;
 }
 .banner .text-animate h3::before {
-  content: attr(data-text);
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 0;
   height: 100%;
   color: var(--main-color);
-  -webkit-text-stroke: 0.7px transparent;
   border-right: 2px solid var(--main-color);
-  overflow: hidden;
-  animation: animate 6s linear infinite;
+  animation: bannerCursorText 6s var(--animation-style) infinite;
+  animation-delay: 2s;
+  z-index: -1;
 }
-@keyframes animate {
-  0%, 10%, 100% {
+
+@keyframes bannerBgText {
+  0%,
+  10%,
+  100% {
+    background-position: calc(var(--header-width) * -1) 0;
+  }
+  65%,
+  85% {
+    background-position: 0 0;
+  }
+}
+@keyframes bannerCursorText {
+  0%,
+  10%,
+  100% {
     width: 0;
   }
-  70%, 90% {
+  65%,
+  78%,
+  85% {
     width: 100%;
+    opacity: 1;
+  }
+  75%,
+  81% {
+    opacity: 0;
   }
 }
 .banner p {
+  position: relative;
   color: #b8b8b8;
   font-size: 1.6rem;
   margin: 2rem 0 4rem;
   letter-spacing: 0.5px;
   width: 96%;
+  --i: 4;
 }
 .btn-box {
   position: relative;
   display: flex;
   justify-content: space-between;
   margin: 2rem 0 4rem;
+  --i: 5;
 }
 .btn-box .btn {
   position: relative;
@@ -231,8 +281,10 @@ nav.navbar .bx-menu,
 .btn-box .btn:hover::before {
   width: 100%;
 }
+.banner .btn-box {
+  width: fit-content;
+}
 .banner .social-icon-row {
-  /* margin: 3rem 0; */
 }
 .banner .social-icon {
   position: absolute;
@@ -241,6 +293,7 @@ nav.navbar .bx-menu,
   justify-content: space-between;
   bottom: 0;
   margin: 3rem 0;
+  --i: 6;
 }
 .social-icon a {
   position: relative;
@@ -276,6 +329,7 @@ nav.navbar .bx-menu,
   width: 100%;
 }
 .banner-img-container {
+  position: relative;
   background-size: contain;
   width: 100%;
   height: 100%;
@@ -283,6 +337,7 @@ nav.navbar .bx-menu,
   justify-content: center;
   align-items: center;
   padding: 3rem;
+  --i: 7;
 }
 .banner-img-container img {
   width: 100%;
@@ -357,6 +412,7 @@ nav.navbar .bx-menu,
     margin: 1rem 0 3rem;
   }
   .banner .btn-box {
+    width: 100%;
     justify-content: center;
     margin: 0 0 3rem;
   }
@@ -412,19 +468,40 @@ nav.navbar .bx-menu,
   background-color: var(--second-bg-color);
   padding-bottom: 5rem;
 }
-.experience .experience-row {
+.experience .experience-col-1,
+.experience .experience-col-2 {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
-.experience .title {
-  font-size: 2.5rem;
+.experience .title-div {
+  width: 100%;
   margin: 0 0 1.5rem 2rem;
+}
+.experience .title {
+  position: relative;
+  font-size: 2.5rem;
   flex: 1;
+  width: fit-content;
+  /* --i: 2; */
+}
+.experience .experience-col-1 .title {
+  --i: 2;
+}
+.experience .experience-col-2 .title {
+  --i: 5;
 }
 .experience .experience-box {
+  position: relative;
   border-left: 0.2rem solid var(--main-color);
+}
+.experience .experience-col-1 .experience-box{
+  --i: 3;
+}
+.experience .experience-col-2 .experience-box{
+  --i: 6;
 }
 .experience-box .experience-content {
   position: relative;
@@ -457,12 +534,12 @@ nav.navbar .bx-menu,
 .experience-content .content .year i {
   padding-right: 0.5rem;
 }
-.experience-content-header{
+.experience-content-header {
   display: flex;
-    align-items: center;
+  align-items: center;
 }
-.experience-icon{
-    width: 8rem;
+.experience-icon {
+  width: 8rem;
 }
 .experience-icon img {
   width: 100%;
@@ -470,7 +547,7 @@ nav.navbar .bx-menu,
 }
 .experience-titles-div {
   display: flex;
-    flex-direction: column;
+  flex-direction: column;
 }
 .experience-content .content h3 {
   font-size: 2.5rem;
@@ -969,4 +1046,38 @@ li {
   font-size: 1.4rem;
   margin-bottom: 0;
   text-align: center;
+}
+
+/************ Animation and scroll ************/
+
+.animate {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: yellowgreen;
+  z-index: 99;
+  /* z-index: -1;
+  background-color: var(--main-color);
+  animation: animate 6s linear infinite; */
+}
+.experience .experience-box .animate {
+  width: 105%;
+}
+/* .navbar .animate,
+.banner .animate,
+.banner .social-icon .animate,
+.contact .contact-method-icon .animate,
+.contact .contact-form .animate,
+.contact .gotop-icon .animate  */
+.navbar .animate,
+.show-animate .animate {
+  animation: showRight 1s ease forwards;
+  animation-delay: calc(0.2s * var(--i));
+}
+@keyframes showRight {
+  100% {
+    width: 0;
+  }
 }

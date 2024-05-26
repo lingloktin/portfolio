@@ -41,8 +41,10 @@ export const NavBar = () => {
 
         sections.forEach((section) => {
           const navLink = document.querySelector(`[href="#${section}"]`);
+          const activeSectionElement = document.getElementById(activeSection);
           if (section === activeSection) {
             navLink.classList.add("active");
+            activeSectionElement.classList.add("show-animate");
           } else {
             navLink.classList.remove("active");
           }
@@ -64,20 +66,25 @@ export const NavBar = () => {
     setMenuIcon((prevIcon) =>
       prevIcon === "bx bx-menu" ? "bx bx-x" : "bx bx-menu"
     );
-    setExpanded(prevExpanded => !prevExpanded);
+    setExpanded((prevExpanded) => !prevExpanded);
   };
   const handleLinkClick = () => {
     setExpanded(false);
-    setMenuIcon('bx bx-menu');
+    setMenuIcon("bx bx-menu");
   };
 
-
   return (
-    <Navbar expand="lg" className={scrolled ? "scrolled" : ""} expanded={expanded}>
-      <Navbar.Brand href="#">Marcus Ling</Navbar.Brand>
+    <Navbar
+      expand="lg"
+      className={scrolled ? "scrolled" : ""}
+      expanded={expanded}
+    >
+      <Navbar.Brand href="#">
+        Marcus Ling<span className="animate"></span>
+      </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={toggleMenu}>
-        {/* <span className="navbar-toggler-icon"></span> */}
         <i className={menuIcon}></i>
+        <span className="animate"></span>
       </Navbar.Toggle>
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ms-auto">
@@ -126,6 +133,7 @@ export const NavBar = () => {
           >
             Contact
           </Nav.Link>
+          <span className="animate"></span>
         </Nav>
       </Navbar.Collapse>
     </Navbar>

@@ -6,13 +6,20 @@ export const Experience = () => {
   return (
     <section className="experience" id="experience">
       <Container>
-        <h2 className="section-header">
-          My <span>Journey</span>
-        </h2>
+        <div className="section-header-div">
+          <h2 className="section-header">
+            My <span>Journey</span>
+            <span className="animate"></span>
+          </h2>
+        </div>
         <Row>
           <Col sm={12} md={6}>
-            <div className="experience-row">
-              <h3 className="title">Education</h3>
+            <div className="experience-col-1">
+              <div className="title-div">
+                <h3 className="title">
+                  Education<span className="animate"></span>
+                </h3>
+              </div>
               <div className="experience-box">
                 {educationData.map((education, index) => (
                   <div className="experience-content" key={index}>
@@ -42,12 +49,15 @@ export const Experience = () => {
                     </div>
                   </div>
                 ))}
+                <span className="animate"></span>
               </div>
             </div>
           </Col>
           <Col sm={12} md={6}>
-            <div className="experience-row">
-              <h3 className="title">Education</h3>
+            <div className="experience-col-2">
+              <div className="title-div">
+                <h3 className="title">Education<span className="animate"></span></h3>
+              </div>
               <div className="experience-box">
                 {experienceData.map((experience, index) => (
                   <div className="experience-content" key={index}>
@@ -81,6 +91,7 @@ export const Experience = () => {
                     </div>
                   </div>
                 ))}
+                <span className="animate"></span>
               </div>
             </div>
           </Col>
