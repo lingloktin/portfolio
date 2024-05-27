@@ -476,6 +476,12 @@ nav.navbar .bx-menu,
   justify-content: center;
   align-items: center;
 }
+.experience .experience-col-1 {
+  padding-right: 1.5rem;
+}
+.experience .experience-col-2 {
+  padding-left: 1.5rem;
+}
 .experience .title-div {
   width: 100%;
   margin: 0 0 1.5rem 2rem;
@@ -585,10 +591,16 @@ li {
   flex-direction: column;
   gap: 2rem;
 }
+.projects .section-content {
+  gap: 5rem;
+}
+.nav-pills-div {
+  display: flex;
+    justify-content: center;
+}
 .projects .nav.nav-pills {
+  position: relative;
   width: 50%;
-  margin: 0 auto;
-  margin-bottom: 5rem;
   border-radius: 15px;
   background-color: var(--second-bg-color-transparent);
   overflow: hidden;
@@ -596,6 +608,7 @@ li {
   padding-left: 0;
   padding-right: 0;
   border: 1px solid var(--white-transpant);
+  --i: 2;
 }
 @media (max-width: 991px) {
   .projects .nav.nav-pills {
@@ -650,6 +663,10 @@ li {
 }
 .projects .nav.nav-pills .nav-link {
   /* border: 1px solid var(--white-transpant-color); */
+}
+.projects .tab-content {
+  position:relative;
+  --i: 3;
 }
 .proj-card-container {
   display: flex;
@@ -1063,7 +1080,7 @@ li {
   animation: animate 6s linear infinite; */
 }
 .experience .experience-box .animate {
-  width: 105%;
+  width: 103%;
 }
 /* .navbar .animate,
 .banner .animate,

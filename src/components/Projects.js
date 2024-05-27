@@ -10,30 +10,34 @@ export const Projects = () => {
         <div className="section-header-div">
           <h2 className="section-header">
             My <span>Projects</span>
+            <span className="animate"></span>
           </h2>
         </div>
-        <Row>
+        <Row className="section-content">
           <Tab.Container
             id="projects-tabs"
             defaultActiveKey={`${projectTypes.SIDE_PROJECT}`}
           >
-            <Nav className="nav-pills">
-              <Nav.Item>
-                <Nav.Link eventKey={`${projectTypes.SIDE_PROJECT}`}>
-                  Side Hustle
-                </Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Nav.Link eventKey={`${projectTypes.ACADEMIC_PROJECT}`}>
-                  Academic Projects
-                </Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Nav.Link eventKey={`${projectTypes.COMPANY_PROJECT}`}>
-                  Company Projects
-                </Nav.Link>
-              </Nav.Item>
-            </Nav>
+            <div className="nav-pills-div">
+              <Nav className="nav-pills">
+                <Nav.Item>
+                  <Nav.Link eventKey={`${projectTypes.SIDE_PROJECT}`}>
+                    Side Hustle
+                  </Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link eventKey={`${projectTypes.ACADEMIC_PROJECT}`}>
+                    Academic Projects
+                  </Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link eventKey={`${projectTypes.COMPANY_PROJECT}`}>
+                    Company Projects
+                  </Nav.Link>
+                </Nav.Item>
+                <span className="animate"></span>
+              </Nav>
+            </div>
             <Tab.Content>
               <Tab.Pane eventKey={`${projectTypes.SIDE_PROJECT}`}>
                 <Row>
@@ -69,6 +73,7 @@ export const Projects = () => {
                     })}
                 </Row>
               </Tab.Pane>
+              <span className="animate"></span>
             </Tab.Content>
           </Tab.Container>
         </Row>

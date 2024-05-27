@@ -22,7 +22,7 @@ export const Banner = () => {
   }, []);
 
   return (
-    <section className="banner show-animate" id="home">
+    <section className="banner" id="home">
       <Container>
         <Row className="banner-row">
           <Col className="banner-col" xs={12} md={7} xl={7}>
