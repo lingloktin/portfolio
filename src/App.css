@@ -183,7 +183,7 @@ nav.navbar .bx-menu,
   background-image: linear-gradient(var(--main-color), var(--main-color));
   background-repeat: no-repeat;
   -webkit-background-clip: text;
-  background-position: 0 0;
+  background-position: calc(var(--header-width) * -1) 0;
   animation: bannerBgText 6s var(--animation-style) infinite;
   animation-delay: 2s;
   --header-width: 301px;
@@ -1025,6 +1025,9 @@ li {
   position: absolute;
   right: 4rem;
   bottom: 6rem;
+  border: 0.3rem solid var(--main-color);
+  border-radius: 0.8rem;
+  overflow: hidden;
   --animation-seq: 8;
 }
 .contact .gotop-icon a {
@@ -1033,10 +1036,7 @@ li {
   align-items: center;
   padding: 0.8rem;
   background: var(--main-color);
-  border: 0.3rem solid var(--main-color);
-  border-radius: 0.8rem;
   text-decoration: none;
-  overflow: hidden;
 }
 .contact .gotop-icon a::before {
   content: "";
@@ -1086,22 +1086,21 @@ li {
   right: 0;
   width: 100%;
   height: 100%;
-  background: yellowgreen;
+  background: var(--bg-color);
   z-index: 99;
   /* z-index: -1;
   background-color: var(--main-color);
   animation: animate 6s linear infinite; */
 }
+section:nth-child(odd) .animate {
+  background: var(--second-bg-color);
+}
+/* .nav .scrolled .animate {
+  background: var(--black);
+} */
 .experience .experience-box .animate {
   width: 103%;
 }
-/* .navbar .animate,
-.banner .animate,
-.banner .social-icon .animate,
-.contact .contact-method-icon .animate,
-.contact .contact-form .animate,
-.contact .gotop-icon .animate  */
-/* .navbar .animate, */
 .show-animate .animate {
   animation: showRight 1s ease forwards;
   animation-delay: calc(0.2s * var(--animation-seq));
