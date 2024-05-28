@@ -44,13 +44,15 @@ export const Contact = () => {
             <div className="section-header-div">
               <h2 className="section-header" id="skills">
                 Contact <span>Me!</span>
+                <span className="animate"></span>
               </h2>
             </div>
           </Col>
           <Col size={12} sm={0} md={6} className="hidden-when-mobile">
             <div className="section-header-div">
-              <h2 className="section-header" id="skills">
+              <h2 className="section-header remount" style={{ "--animation-seq": 2 }}>
                 ... or leave me a <span>message!</span>
+                <span className="animate"></span>
               </h2>
             </div>
           </Col>
@@ -74,6 +76,7 @@ export const Contact = () => {
                 </Col>
               </Row>
             ))}
+            <span className="animate"></span>
           </Col>
           <Col className="contact-form" size={12} sm={12} md={6}>
             <Row className="contact-form-row">
@@ -88,14 +91,16 @@ export const Contact = () => {
                 Submit
               </button>
             </Row>
+            <span className="animate"></span>
           </Col>
         </Row>
-        <div className="gotop-icon">
-          <a href="#home">
-            <i className="bx bx-up-arrow-alt"></i>
-          </a>
-        </div>
       </Container>
+      <div className="gotop-icon">
+        <a href="#home">
+          <i className="bx bx-up-arrow-alt"></i>
+        </a>
+        <span className="animate"></span>
+      </div>
     </section>
   );
 };

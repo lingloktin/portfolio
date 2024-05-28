@@ -36,12 +36,20 @@ export const Skills = () => {
         <div className="section-header-div">
           <h2 className="section-header">
             My <span>Skills</span>
+            <span className="animate"></span>
           </h2>
         </div>
         <Col className="skills-content-container">
           <Row className="skills-row">
             {skillsAreaMap.slice(0, 2).map((skill, index) => (
-              <Col className="skills-box" key={index} size={12} md={12} lg={6}>
+              <Col
+                className="skills-box"
+                key={index}
+                size={12}
+                md={12}
+                lg={6}
+                style={{ "--animation-seq": index + 2 }}
+              >
                 <div className="skills-title">
                   <p>{skill.title}</p>
                 </div>
@@ -52,12 +60,20 @@ export const Skills = () => {
                       <SkillsCard key={index} {...tech} />
                     ))}
                 </Row>
+                <span className="animate"></span>
               </Col>
             ))}
           </Row>
           <Row className="skills-row">
             {skillsAreaMap.slice(2, 4).map((skill, index) => (
-              <Col className="skills-box" key={index} size={12} md={12} lg={6}>
+              <Col
+                className="skills-box"
+                key={index}
+                size={12}
+                md={12}
+                lg={6}
+                style={{ "--animation-seq": index + 4 }}
+              >
                 <div className="skills-title">
                   <p>{skill.title}</p>
                 </div>
@@ -68,12 +84,20 @@ export const Skills = () => {
                       <SkillsCard key={index} {...tech} />
                     ))}
                 </Row>
+                <span className="animate"></span>
               </Col>
             ))}
           </Row>
           <Row className="skills-row">
             {skillsAreaMap.slice(4).map((skill, index) => (
-              <Col className="skills-box" key={index} size={12} md={12} lg={6}>
+              <Col
+                className="skills-box"
+                key={index}
+                size={12}
+                md={12}
+                lg={6}
+                style={{ "--animation-seq": index + 6 }}
+              >
                 <div className="skills-title">
                   <p>{skill.title}</p>
                 </div>
@@ -84,6 +108,7 @@ export const Skills = () => {
                       <SkillsCard key={index} {...tech} />
                     ))}
                 </Row>
+                <span className="animate"></span>
               </Col>
             ))}
           </Row>

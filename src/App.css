@@ -58,7 +58,7 @@ section {
   margin-bottom: 3rem;
   text-align: center;
   width: fit-content;
-  --i: 1;
+  --animation-seq: 1;
 }
 @media (max-width: 767px) {
   .section-header {
@@ -102,11 +102,11 @@ nav.navbar a.navbar-brand {
   color: var(--white);
   font-weight: 600;
   position: relative;
-  --i: 1;
+  --animation-seq: 1;
 }
 nav.navbar .navbar-nav {
   position: relative;
-  --i: 2;
+  --animation-seq: 2;
 }
 nav.navbar .navbar-nav .nav-link.navbar-link {
   font-weight: 400;
@@ -127,7 +127,7 @@ span.navbar-text {
 }
 .navbar-toggler {
   position: relative;
-  --i: 2;
+  --animation-seq: 2;
 }
 .navbar-toggler:focus {
   box-shadow: none !important;
@@ -165,7 +165,7 @@ nav.navbar .bx-menu,
   letter-spacing: 0.8px;
   line-height: 1.3;
   position: relative;
-  --i: 2;
+  --animation-seq: 2;
 }
 
 .banner .text-animate {
@@ -187,7 +187,7 @@ nav.navbar .bx-menu,
   animation: bannerBgText 6s var(--animation-style) infinite;
   animation-delay: 2s;
   --header-width: 301px;
-  --i: 3;
+  --animation-seq: 3;
 }
 .banner .text-animate h3::before {
   content: "";
@@ -238,14 +238,14 @@ nav.navbar .bx-menu,
   margin: 2rem 0 4rem;
   letter-spacing: 0.5px;
   width: 96%;
-  --i: 4;
+  --animation-seq: 4;
 }
 .btn-box {
   position: relative;
   display: flex;
   justify-content: space-between;
   margin: 2rem 0 4rem;
-  --i: 5;
+  --animation-seq: 5;
 }
 .btn-box .btn {
   position: relative;
@@ -293,7 +293,7 @@ nav.navbar .bx-menu,
   justify-content: space-between;
   bottom: 0;
   margin: 3rem 0;
-  --i: 6;
+  --animation-seq: 6;
 }
 .social-icon a {
   position: relative;
@@ -337,7 +337,7 @@ nav.navbar .bx-menu,
   justify-content: center;
   align-items: center;
   padding: 3rem;
-  --i: 7;
+  --animation-seq: 7;
 }
 .banner-img-container img {
   width: 100%;
@@ -408,13 +408,18 @@ nav.navbar .bx-menu,
   }
 }
 @media (max-width: 767px) {
+  .banner-img-container {
+    --animation-seq: 4;
+  }
   .banner p {
     margin: 1rem 0 3rem;
+    --animation-seq: 5;
   }
   .banner .btn-box {
     width: 100%;
     justify-content: center;
     margin: 0 0 3rem;
+    --animation-seq: 6;
   }
   .banner .btn-box .btn {
     font-size: 1.8rem;
@@ -425,6 +430,7 @@ nav.navbar .bx-menu,
   }
   .banner .social-icon {
     width: 147px;
+    --animation-seq: 7;
   }
   .social-icon a {
     font-size: 2.5rem;
@@ -433,7 +439,6 @@ nav.navbar .bx-menu,
     display: flex;
     padding: 5% 10%;
   }
-
   .no-show-mobile {
     display: none;
   }
@@ -491,23 +496,23 @@ nav.navbar .bx-menu,
   font-size: 2.5rem;
   flex: 1;
   width: fit-content;
-  /* --i: 2; */
+  /* --animation-seq: 2; */
 }
 .experience .experience-col-1 .title {
-  --i: 2;
+  --animation-seq: 2;
 }
 .experience .experience-col-2 .title {
-  --i: 5;
+  --animation-seq: 5;
 }
 .experience .experience-box {
   position: relative;
   border-left: 0.2rem solid var(--main-color);
 }
-.experience .experience-col-1 .experience-box{
-  --i: 3;
+.experience .experience-col-1 .experience-box {
+  --animation-seq: 3;
 }
-.experience .experience-col-2 .experience-box{
-  --i: 6;
+.experience .experience-col-2 .experience-box {
+  --animation-seq: 6;
 }
 .experience-box .experience-content {
   position: relative;
@@ -596,7 +601,7 @@ li {
 }
 .nav-pills-div {
   display: flex;
-    justify-content: center;
+  justify-content: center;
 }
 .projects .nav.nav-pills {
   position: relative;
@@ -608,7 +613,7 @@ li {
   padding-left: 0;
   padding-right: 0;
   border: 1px solid var(--white-transpant);
-  --i: 2;
+  --animation-seq: 2;
 }
 @media (max-width: 991px) {
   .projects .nav.nav-pills {
@@ -665,8 +670,8 @@ li {
   /* border: 1px solid var(--white-transpant-color); */
 }
 .projects .tab-content {
-  position:relative;
-  --i: 3;
+  position: relative;
+  --animation-seq: 3;
 }
 .proj-card-container {
   display: flex;
@@ -858,6 +863,7 @@ li {
   flex-direction: row;
 }
 .skills .skills-box {
+  position: relative;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -938,10 +944,12 @@ li {
   }
 }
 .contact .contact-method-container {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  --animation-seq: 4;
 }
 .contact .contact-method {
   display: flex;
@@ -978,10 +986,12 @@ li {
   margin-bottom: 0;
 }
 .contact .contact-form {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 2rem;
   padding-top: 1rem;
+  --animation-seq: 6;
 }
 .contact .contact-form-row {
   display: flex;
@@ -1011,10 +1021,13 @@ li {
 .contact .btn-box .btn {
   width: auto;
 }
-.contact .gotop-icon a {
+.contact .gotop-icon {
   position: absolute;
   right: 4rem;
   bottom: 6rem;
+  --animation-seq: 8;
+}
+.contact .gotop-icon a {
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -1088,10 +1101,10 @@ li {
 .contact .contact-method-icon .animate,
 .contact .contact-form .animate,
 .contact .gotop-icon .animate  */
-.navbar .animate,
+/* .navbar .animate, */
 .show-animate .animate {
   animation: showRight 1s ease forwards;
-  animation-delay: calc(0.2s * var(--i));
+  animation-delay: calc(0.2s * var(--animation-seq));
 }
 @keyframes showRight {
   100% {

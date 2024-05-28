@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useLayoutEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import bannerImg from "../assets/img/banner/banner_img.jpg";
 import bannerImgHorizontal from "../assets/img/banner/banner_img_horizontal.jpg";
@@ -13,11 +13,25 @@ export const Banner = () => {
     }
   };
 
-  useEffect(() => {
-    updateHeaderWidth();
-    window.addEventListener("resize", updateHeaderWidth);
+  useLayoutEffect(() => {
+    const checkAllResourcesLoaded = () => {
+      if (document.readyState === "complete") {
+        updateHeaderWidth();
+      } else {
+        window.addEventListener("load", updateHeaderWidth);
+      }
+    };
+
+    const handleResize = () => {
+      requestAnimationFrame(updateHeaderWidth);
+    };
+
+    checkAllResourcesLoaded();
+
+    window.addEventListener("resize", handleResize);
     return () => {
-      window.removeEventListener("resize", updateHeaderWidth);
+      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("load", updateHeaderWidth);
     };
   }, []);
 
@@ -38,8 +52,9 @@ export const Banner = () => {
                 <span className="animate"></span>
               </h3>
             </div>
-            <div className="banner-img-container show-mobile-only">
+            <div className="banner-img-container show-mobile-only remount">
               <img src={bannerImgHorizontal} alt="Banner" />
+              <span className="animate"></span>
             </div>
             <p>
               Accomplished Software Engineer skilled in full-stack development,
@@ -70,7 +85,7 @@ export const Banner = () => {
             </div>
           </Col>
           <Col xs={12} md={5} xl={5}>
-            <div className="banner-img-container no-show-mobile">
+            <div className="banner-img-container no-show-mobile remount">
               <img src={bannerImg} alt="Banner" />
               <span className="animate"></span>
             </div>

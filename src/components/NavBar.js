@@ -7,6 +7,7 @@ export const NavBar = () => {
   const [menuIcon, setMenuIcon] = useState("bx bx-menu");
   const [expanded, setExpanded] = useState(false);
 
+  // onscroll animation
   useEffect(() => {
     const onScroll = () => {
       if (window.scrollY > 50) {
@@ -44,7 +45,9 @@ export const NavBar = () => {
           const activeSectionElement = document.getElementById(activeSection);
           if (section === activeSection) {
             navLink.classList.add("active");
-            activeSectionElement.classList.add("show-animate");
+            if (activeSectionElement) {
+              activeSectionElement.classList.add("show-animate");
+            }
           } else {
             navLink.classList.remove("active");
           }
@@ -60,6 +63,36 @@ export const NavBar = () => {
     onScroll();
 
     return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  // make all elements with class "remount" to show animation once only
+  // also remove animation span from elements that are not mounted at first
+  useEffect(() => {
+    const handleResize = () => {
+      const remountElements = document.querySelectorAll(".remount");
+      let foundAnimate = false;
+
+      remountElements.forEach((remountElement) => {
+        const animateElements = remountElement.querySelectorAll(".animate");
+
+        animateElements.forEach((animateElement) => {
+          if (animateElement.offsetWidth === 0) {
+            animateElement.remove();
+          } else {
+            foundAnimate = true;
+          }
+        });
+      });
+
+      if (!foundAnimate) {
+        window.removeEventListener("resize", handleResize);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize();
+
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   const toggleMenu = () => {
@@ -79,15 +112,15 @@ export const NavBar = () => {
       className={scrolled ? "scrolled" : ""}
       expanded={expanded}
     >
-      <Navbar.Brand href="#">
+      <Navbar.Brand className="show-animate" href="#">
         Marcus Ling<span className="animate"></span>
       </Navbar.Brand>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={toggleMenu}>
+      <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={toggleMenu} className="remount show-animate">
         <i className={menuIcon}></i>
         <span className="animate"></span>
       </Navbar.Toggle>
       <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="ms-auto">
+        <Nav className="ms-auto remount show-animate">
           <Nav.Link
             href="#home"
             onClick={handleLinkClick}
