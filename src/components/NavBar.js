@@ -7,6 +7,19 @@ export const NavBar = () => {
   const [menuIcon, setMenuIcon] = useState("bx bx-menu");
   const [expanded, setExpanded] = useState(false);
 
+  useEffect(() => {
+    const onScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+    onScroll();
+
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   // onscroll animation
   useEffect(() => {
     const onScroll = () => {
@@ -52,7 +65,6 @@ export const NavBar = () => {
             navLink.classList.remove("active");
           }
         });
-
         setActiveLink(activeSection);
       };
 
@@ -113,11 +125,16 @@ export const NavBar = () => {
       expanded={expanded}
     >
       <Navbar.Brand className="show-animate" href="#">
-        Marcus Ling<span className="animate"></span>
+        Marcus Ling
+        <span className={scrolled ? "animate scrolled" : "animate"}></span>
       </Navbar.Brand>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={toggleMenu} className="remount show-animate">
+      <Navbar.Toggle
+        aria-controls="basic-navbar-nav"
+        onClick={toggleMenu}
+        className="remount show-animate"
+      >
         <i className={menuIcon}></i>
-        <span className="animate"></span>
+        <span className={scrolled ? "animate scrolled" : "animate"}></span>
       </Navbar.Toggle>
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ms-auto remount show-animate">
@@ -166,7 +183,7 @@ export const NavBar = () => {
           >
             Contact
           </Nav.Link>
-          <span className="animate"></span>
+          <span className={scrolled ? "animate scrolled" : "animate"}></span>
         </Nav>
       </Navbar.Collapse>
     </Navbar>

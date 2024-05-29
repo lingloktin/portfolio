@@ -19,24 +19,26 @@ export const Projects = () => {
             defaultActiveKey={`${projectTypes.SIDE_PROJECT}`}
           >
             <div className="nav-pills-div">
-              <Nav className="nav-pills">
-                <Nav.Item>
-                  <Nav.Link eventKey={`${projectTypes.SIDE_PROJECT}`}>
-                    Side Hustle
-                  </Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                  <Nav.Link eventKey={`${projectTypes.ACADEMIC_PROJECT}`}>
-                    Academic Projects
-                  </Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                  <Nav.Link eventKey={`${projectTypes.COMPANY_PROJECT}`}>
-                    Company Projects
-                  </Nav.Link>
-                </Nav.Item>
+              <div className="nav-pills-container">
+                <Nav className="nav-pills">
+                  <Nav.Item>
+                    <Nav.Link eventKey={`${projectTypes.SIDE_PROJECT}`}>
+                      Side Hustle
+                    </Nav.Link>
+                  </Nav.Item>
+                  <Nav.Item>
+                    <Nav.Link eventKey={`${projectTypes.ACADEMIC_PROJECT}`}>
+                      Academic Projects
+                    </Nav.Link>
+                  </Nav.Item>
+                  <Nav.Item>
+                    <Nav.Link eventKey={`${projectTypes.COMPANY_PROJECT}`}>
+                      Company Projects
+                    </Nav.Link>
+                  </Nav.Item>
+                </Nav>
                 <span className="animate"></span>
-              </Nav>
+              </div>
             </div>
             <Tab.Content>
               <Tab.Pane eventKey={`${projectTypes.SIDE_PROJECT}`}>
