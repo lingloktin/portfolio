@@ -50,7 +50,7 @@ export const Contact = () => {
           </Col>
           <Col size={12} sm={0} md={6} className="hidden-when-mobile">
             <div className="section-header-div">
-              <h2 className="section-header remount" style={{ "--animation-seq": 2 }}>
+              <h2 className="section-header remount" style={{ "--animation-seq": 6 }}>
                 ... or leave me a <span>message!</span>
                 <span className="animate"></span>
               </h2>
@@ -65,18 +65,20 @@ export const Contact = () => {
             md={6}
           >
             {contactMethods.map((method, index) => (
-              <Row className="contact-method" key={index}>
-                <div className="contact-method-icon">
-                  <a href={method.link}>
-                    <i className={method.icon}></i>
-                  </a>
+              <div className="contact-method-row">
+                <div className="contact-method" key={index}>
+                  <div className="contact-method-icon">
+                    <a href={method.link}>
+                      <i className={method.icon}></i>
+                    </a>
+                  </div>
+                  <div className="contact-method-text">
+                    <p>{method.text}</p>
+                  </div>
+                  <span className="animate"></span>
                 </div>
-                <Col className="contact-method-text">
-                  <p>{method.text}</p>
-                </Col>
-              </Row>
+              </div>
             ))}
-            <span className="animate"></span>
           </Col>
           <Col className="contact-form" size={12} sm={12} md={6}>
             <Row className="contact-form-row">
@@ -95,10 +97,12 @@ export const Contact = () => {
           </Col>
         </Row>
       </Container>
-      <div className="gotop-icon">
-        <a href="#home">
-          <i className="bx bx-up-arrow-alt"></i>
-        </a>
+      <div className="gotop-icon-container">
+        <div className="gotop-icon">
+          <a href="#home">
+            <i className="bx bx-up-arrow-alt"></i>
+          </a>
+        </div>
         <span className="animate"></span>
       </div>
     </section>

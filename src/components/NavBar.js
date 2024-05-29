@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useLayoutEffect } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 
 export const NavBar = () => {
@@ -7,21 +7,8 @@ export const NavBar = () => {
   const [menuIcon, setMenuIcon] = useState("bx bx-menu");
   const [expanded, setExpanded] = useState(false);
 
-  useEffect(() => {
-    const onScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
-    onScroll();
-
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
   // onscroll animation
-  useEffect(() => {
+  useLayoutEffect(() => {
     const onScroll = () => {
       if (window.scrollY > 50) {
         setScrolled(true);
