@@ -56,7 +56,7 @@ export const Experience = () => {
           <Col sm={12} md={6}>
             <div className="experience-col-2">
               <div className="title-div">
-                <h3 className="title">Education<span className="animate"></span></h3>
+                <h3 className="title">Experience<span className="animate"></span></h3>
               </div>
               <div className="experience-box">
                 {experienceData.map((experience, index) => (
