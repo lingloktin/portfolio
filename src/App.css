@@ -473,20 +473,22 @@ nav.navbar .bx-menu,
   background-color: var(--second-bg-color);
   padding-bottom: 5rem;
 }
-.experience .experience-col-1,
-.experience .experience-col-2 {
+.experience .experience-col {
   position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
+
 .experience .experience-col-1 {
   padding-right: 1.5rem;
 }
+
 .experience .experience-col-2 {
   padding-left: 1.5rem;
 }
+
 .experience .title-div {
   width: 100%;
   margin: 0 0 1.5rem 2rem;
@@ -606,6 +608,7 @@ li {
 }
 .projects .nav-pills-container {
   position: relative;
+  --animation-seq: 2;
 }
 .projects .nav.nav-pills {
   position: relative;
@@ -617,7 +620,6 @@ li {
   padding-left: 0;
   padding-right: 0;
   border: 1px solid var(--white-transpant);
-  --animation-seq: 2;
 }
 .projects .nav.nav-pills .nav-item {
   flex: 1;
