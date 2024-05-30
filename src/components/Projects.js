@@ -1,9 +1,13 @@
 import { useState, useEffect } from "react";
-import { ProjectCard } from "./ProjectCard";
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
+import { ProjectCard } from "./ProjectCard";
+import { ProjectTabPane } from "./ProjectTabPane";
 import { projectTypes, projectsData } from "../constants/ProjectsConst";
 
 export const Projects = () => {
+  const getFilteredProjects = (type) =>
+    projectsData.filter((project) => project.type === type);
+
   return (
     <section className="projects" id="projects">
       <Container>
@@ -16,23 +20,23 @@ export const Projects = () => {
         <Row className="section-content">
           <Tab.Container
             id="projects-tabs"
-            defaultActiveKey={`${projectTypes.SIDE_PROJECT}`}
+            defaultActiveKey={projectTypes.SIDE_PROJECT}
           >
             <div className="nav-pills-div">
               <div className="nav-pills-container">
                 <Nav className="nav-pills">
                   <Nav.Item>
-                    <Nav.Link eventKey={`${projectTypes.SIDE_PROJECT}`}>
+                    <Nav.Link eventKey={projectTypes.SIDE_PROJECT}>
                       Side Hustle
                     </Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
-                    <Nav.Link eventKey={`${projectTypes.ACADEMIC_PROJECT}`}>
+                    <Nav.Link eventKey={projectTypes.ACADEMIC_PROJECT}>
                       Academic Projects
                     </Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
-                    <Nav.Link eventKey={`${projectTypes.COMPANY_PROJECT}`}>
+                    <Nav.Link eventKey={projectTypes.COMPANY_PROJECT}>
                       Company Projects
                     </Nav.Link>
                   </Nav.Item>
@@ -41,40 +45,18 @@ export const Projects = () => {
               </div>
             </div>
             <Tab.Content>
-              <Tab.Pane eventKey={`${projectTypes.SIDE_PROJECT}`}>
-                <Row>
-                  {projectsData
-                    .filter(
-                      (project) => project.type === projectTypes.SIDE_PROJECT
-                    )
-                    .map((project, index) => {
-                      return <ProjectCard key={index} {...project} />;
-                    })}
-                </Row>
-              </Tab.Pane>
-              <Tab.Pane eventKey={`${projectTypes.ACADEMIC_PROJECT}`}>
-                <Row>
-                  {projectsData
-                    .filter(
-                      (project) =>
-                        project.type === projectTypes.ACADEMIC_PROJECT
-                    )
-                    .map((project, index) => {
-                      return <ProjectCard key={index} {...project} />;
-                    })}
-                </Row>
-              </Tab.Pane>
-              <Tab.Pane eventKey={`${projectTypes.COMPANY_PROJECT}`}>
-                <Row>
-                  {projectsData
-                    .filter(
-                      (project) => project.type === projectTypes.COMPANY_PROJECT
-                    )
-                    .map((project, index) => {
-                      return <ProjectCard key={index} {...project} />;
-                    })}
-                </Row>
-              </Tab.Pane>
+              <ProjectTabPane
+                projects={getFilteredProjects(projectTypes.SIDE_PROJECT)}
+                eventKey={projectTypes.SIDE_PROJECT}
+              />
+              <ProjectTabPane
+                projects={getFilteredProjects(projectTypes.ACADEMIC_PROJECT)}
+                eventKey={projectTypes.ACADEMIC_PROJECT}
+              />
+              <ProjectTabPane
+                projects={getFilteredProjects(projectTypes.COMPANY_PROJECT)}
+                eventKey={projectTypes.COMPANY_PROJECT}
+              />
               <span className="animate"></span>
             </Tab.Content>
           </Tab.Container>
