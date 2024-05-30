@@ -1,5 +1,5 @@
 import { useState, useEffect, useLayoutEffect } from "react";
-import { Navbar, Nav, Container } from "react-bootstrap";
+import { Navbar, Nav } from "react-bootstrap";
 
 export const NavBar = () => {
   const [activeLink, setActiveLink] = useState("");
@@ -7,62 +7,53 @@ export const NavBar = () => {
   const [menuIcon, setMenuIcon] = useState("bx bx-menu");
   const [expanded, setExpanded] = useState(false);
 
+  const sections = ["home", "experience", "projects", "skills", "contact"];
+
   // onscroll animation
   useLayoutEffect(() => {
     const onScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+      setScrolled(window.scrollY > 50);
 
-      const updateActiveLink = () => {
-        const sections = [
-          "home",
-          "experience",
-          "projects",
-          "skills",
-          "contact",
-        ];
-        let activeSection = "";
+      let activeSection = "";
+      let animatedSection = "";
 
-        sections.forEach((section) => {
-          const element = document.getElementById(section);
+      sections.forEach((section) => {
+        const element = document.getElementById(section);
 
-          if (element) {
-            const rect = element.getBoundingClientRect();
-            const elementTop = rect.top;
-            const elementBottom = rect.bottom;
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          const elementTop = rect.top;
+          const elementBottom = rect.bottom;
 
-            if (elementTop <= 100 && elementBottom >= 100) {
-              activeSection = section;
-            }
+          if (elementTop <= 100 && elementBottom >= 100) {
+            activeSection = section;
           }
-        });
-
-        sections.forEach((section) => {
-          const navLink = document.querySelector(`[href="#${section}"]`);
-          const activeSectionElement = document.getElementById(activeSection);
-          if (section === activeSection) {
-            navLink.classList.add("active");
-            if (activeSectionElement) {
-              activeSectionElement.classList.add("show-animate");
-            }
-          } else {
-            navLink.classList.remove("active");
+          if (elementTop <= 300 && elementBottom >= 300) {
+            animatedSection = section;
           }
-        });
-        setActiveLink(activeSection);
-      };
+        }
+      });
 
-      updateActiveLink();
+      sections.forEach((section) => {
+        const navLink = document.querySelector(`[href="#${section}"]`);
+        const animatedSectionElement = document.getElementById(animatedSection);
+        if (section !== activeSection) {
+          navLink.classList.remove("active");
+        }
+        if (section === animatedSection) {
+          if (animatedSectionElement) {
+            animatedSectionElement.classList.add("show-animate");
+          }
+        }
+      });
+      setActiveLink(activeSection);
     };
 
     window.addEventListener("scroll", onScroll);
     onScroll();
 
     return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  }, [sections]);
 
   // make all elements with class "remount" to show animation once only
   // also remove animation span from elements that are not mounted at first
@@ -125,51 +116,18 @@ export const NavBar = () => {
       </Navbar.Toggle>
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ms-auto remount show-animate">
-          <Nav.Link
-            href="#home"
-            onClick={handleLinkClick}
-            className={
-              activeLink === "home" ? "active navbar-link" : "navbar-link"
-            }
-          >
-            Home
-          </Nav.Link>
-          <Nav.Link
-            href="#experience"
-            onClick={handleLinkClick}
-            className={
-              activeLink === "experience" ? "active navbar-link" : "navbar-link"
-            }
-          >
-            Experience
-          </Nav.Link>
-          <Nav.Link
-            href="#projects"
-            onClick={handleLinkClick}
-            className={
-              activeLink === "projects" ? "active navbar-link" : "navbar-link"
-            }
-          >
-            Projects
-          </Nav.Link>
-          <Nav.Link
-            href="#skills"
-            onClick={handleLinkClick}
-            className={
-              activeLink === "skills" ? "active navbar-link" : "navbar-link"
-            }
-          >
-            Skills
-          </Nav.Link>
-          <Nav.Link
-            href="#contact"
-            onClick={handleLinkClick}
-            className={
-              activeLink === "contact" ? "active navbar-link" : "navbar-link"
-            }
-          >
-            Contact
-          </Nav.Link>
+          {sections.map((section) => (
+            <Nav.Link
+              key={section}
+              href={`#${section}`}
+              onClick={handleLinkClick}
+              className={
+                activeLink === section ? "active navbar-link" : "navbar-link"
+              }
+            >
+              {section.charAt(0).toUpperCase() + section.slice(1)}
+            </Nav.Link>
+          ))}
           <span className={scrolled ? "animate scrolled" : "animate"}></span>
         </Nav>
       </Navbar.Collapse>
