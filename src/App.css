@@ -1073,6 +1073,15 @@ li {
   color: var(--main-color);
   z-index: 1;
 }
+.modal-content {
+  color: black !important;
+}
+.modal-body {
+  font-size: 1.8rem;
+}
+.modal-btn {
+  font-size: 1.5rem;
+}
 
 /************ Footer Css ************/
 .footer {

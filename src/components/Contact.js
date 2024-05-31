@@ -1,5 +1,5 @@
 import { useState, useRef } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Modal, Button } from "react-bootstrap";
 import { TextField } from "@mui/material";
 import { contactMethods } from "../constants/ContactConst";
 import emailjs from "emailjs-com";
@@ -8,6 +8,8 @@ import CircularProgress from "@mui/material/CircularProgress";
 
 export const Contact = () => {
   const [loading, setLoading] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const [modalMessage, setModalMessage] = useState("");
   const fromNameRef = useRef("");
   const fromEmailRef = useRef("");
   const messageRef = useRef("");
@@ -31,14 +33,16 @@ export const Contact = () => {
       )
       .then((response) => {
         console.log("SUCCESS!", response.status, response.text);
-        alert("Message sent successfully!");
+        setModalMessage("Message sent successfully!");
+        setShowModal(true);
         fromNameRef.current.value = "";
         fromEmailRef.current.value = "";
         messageRef.current.value = "";
       })
       .catch((err) => {
         console.error("FAILED...", err);
-        alert("Failed to send message. Please try again later.");
+        setModalMessage("Failed to send message. Please try again later.");
+        setShowModal(true);
       })
       .finally(() => setLoading(false));
   };
@@ -128,12 +132,8 @@ export const Contact = () => {
                 />
               </Row>
               <Row className="contact-form-row btn-box">
-                <button className="btn" type="submit">
-                  {loading ? (
-                    <CircularProgress size={24} />
-                  ) : (
-                    "Submit"
-                  )}
+                <button className="btn" type="submit" disabled={loading}>
+                  {loading ? <CircularProgress size={24} /> : "Submit"}
                 </button>
               </Row>
               <span className="animate"></span>
@@ -149,6 +149,24 @@ export const Contact = () => {
         </div>
         <span className="animate"></span>
       </div>
+      <Modal
+        size="sm"
+        show={showModal}
+        onHide={() => setShowModal(false)}
+        centered
+        backdrop="static"
+        keyboard={false}
+      >
+        <Modal.Header closeButton>
+          <Modal.Title>Notification</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>{modalMessage}</Modal.Body>
+        <Modal.Footer>
+          <Button className="modal-btn" variant="primary" onClick={() => setShowModal(false)}>
+            Close
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </section>
   );
 };
