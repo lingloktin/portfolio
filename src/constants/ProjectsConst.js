@@ -38,7 +38,7 @@ const projectsData = [
   },
   {
     title: "Personal Portfolio",
-    description: "Design & Development",
+    description: "Utilizing ReactBootstrap",
     imgUrl: projImgPortfolio,
     tech: {
       "Frontend Development": [TechConst.REACTJS.text, TechConst.BOOTSTRAP.text, TechConst.HTML.text, TechConst.CSS.text],
