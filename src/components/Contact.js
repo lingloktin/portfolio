@@ -1,26 +1,44 @@
-import { useState, useEffect } from "react";
-import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
+import { useRef } from "react";
+import { Container, Row, Col } from "react-bootstrap";
 import { TextField } from "@mui/material";
+import { contactMethods } from "../constants/ContactConst";
+import emailjs from "emailjs-com";
+import { EmailConst } from "../constants/EmailConst";
 
 export const Contact = () => {
-  const contactMethods = [
-    {
-      icon: "bx bxl-whatsapp",
-      text: "+852 56169596",
-      link: "https://wa.me/85256169596",
-    },
-    {
-      icon: "bx bx-envelope",
-      text: "marcus.ling.lt@gmail.com",
-      link: "mailto:marcus.ling.lt@gmail.com",
-    },
-    {
-      icon: "bx bxl-linkedin",
-      text: "TO-BE-CHANGED-LATER",
-      link: "#",
-    },
-  ];
-  const OutlinedTextField = ({ label, row = 1 }) => (
+  const fromNameRef = useRef("");
+  const fromEmailRef = useRef("");
+  const messageRef = useRef("");
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    const formData = {
+      from_name: fromNameRef.current.value,
+      from_email: fromEmailRef.current.value,
+      message: messageRef.current.value,
+    };
+
+    emailjs
+      .send(
+        EmailConst.SERVICE_ID,
+        EmailConst.TEMPLATE_ID,
+        formData,
+        EmailConst.PUBLIC_KEY
+      )
+      .then((response) => {
+        console.log("SUCCESS!", response.status, response.text);
+        alert("Message sent successfully!");
+        fromNameRef.current.value = "";
+        fromEmailRef.current.value = "";
+        messageRef.current.value = "";
+      })
+      .catch((err) => {
+        console.error("FAILED...", err);
+        alert("Failed to send message. Please try again later.");
+      });
+  };
+  const OutlinedTextField = ({ label, name, rows = 1, inputRef }) => (
     <TextField
       className="contact-text-field"
       label={label}
@@ -32,7 +50,8 @@ export const Contact = () => {
         sx: { fontSize: "1.6rem" },
       }}
       multiline
-      rows={row}
+      rows={rows}
+      inputRef={inputRef}
     />
   );
 
@@ -50,52 +69,69 @@ export const Contact = () => {
           </Col>
           <Col size={12} sm={0} md={6} className="hidden-when-mobile">
             <div className="section-header-div">
-              <h2 className="section-header remount" style={{ "--animation-seq": 6 }}>
+              <h2
+                className="section-header remount"
+                style={{ "--animation-seq": 6 }}
+              >
                 ... or leave me a <span>message!</span>
                 <span className="animate"></span>
               </h2>
             </div>
           </Col>
         </Row>
-        <Row>
-          <Col
-            className="social-icon contact-method-container"
-            size={12}
-            sm={12}
-            md={6}
-          >
-            {contactMethods.map((method, index) => (
-              <div className="contact-method-row">
-                <div className="contact-method" key={index}>
-                  <div className="contact-method-icon">
-                    <a href={method.link}>
-                      <i className={method.icon}></i>
-                    </a>
+        <form onSubmit={sendEmail}>
+          <Row>
+            <Col
+              className="social-icon contact-method-container"
+              sm={12}
+              md={6}
+            >
+              {contactMethods.map((method, index) => (
+                <div className="contact-method-row">
+                  <div className="contact-method" key={index}>
+                    <div className="contact-method-icon">
+                      <a href={method.link}>
+                        <i className={method.icon}></i>
+                      </a>
+                    </div>
+                    <div className="contact-method-text">
+                      <p>{method.text}</p>
+                    </div>
+                    <span className="animate"></span>
                   </div>
-                  <div className="contact-method-text">
-                    <p>{method.text}</p>
-                  </div>
-                  <span className="animate"></span>
                 </div>
-              </div>
-            ))}
-          </Col>
-          <Col className="contact-form" size={12} sm={12} md={6}>
-            <Row className="contact-form-row">
-              <OutlinedTextField label="Name" />
-              <OutlinedTextField label="Email Address" />
-            </Row>
-            <Row className="contact-form-row">
-              <OutlinedTextField label="Your Message" row={10} />
-            </Row>
-            <Row className="contact-form-row btn-box">
-              <button className="btn" type="submit">
-                Submit
-              </button>
-            </Row>
-            <span className="animate"></span>
-          </Col>
-        </Row>
+              ))}
+            </Col>
+            <Col className="contact-form" sm={12} md={6}>
+              <Row className="contact-form-row">
+                <OutlinedTextField
+                  label="Name"
+                  name="from_name"
+                  inputRef={fromNameRef}
+                />
+                <OutlinedTextField
+                  label="Email Address"
+                  name="from_email"
+                  inputRef={fromEmailRef}
+                />
+              </Row>
+              <Row className="contact-form-row">
+                <OutlinedTextField
+                  label="Your Message"
+                  name="message"
+                  rows={10}
+                  inputRef={messageRef}
+                />
+              </Row>
+              <Row className="contact-form-row btn-box">
+                <button className="btn" type="submit">
+                  Submit
+                </button>
+              </Row>
+              <span className="animate"></span>
+            </Col>
+          </Row>
+        </form>
       </Container>
       <div className="gotop-icon-container">
         <div className="gotop-icon">
