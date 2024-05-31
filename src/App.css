@@ -857,6 +857,7 @@ li {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%
 }
 .skills .skills-row {
   width: 100%;
@@ -1036,6 +1037,7 @@ li {
   --animation-seq: 9;
 }
 .contact .gotop-icon {  
+  position: relative;
   border: 0.3rem solid var(--main-color);
   border-radius: 0.8rem;
   overflow: hidden;
