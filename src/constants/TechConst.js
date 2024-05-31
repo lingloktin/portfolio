@@ -148,6 +148,11 @@ const TechConst = {
     iconUrl: techIconTruffle,
     area: TechArea.SMART_CONTRACT,
   },
+  ASP: {
+    text: "ASP.NET",
+    iconUrl: "",
+    area: TechArea.GENERAL,
+  },
 }
 
 
