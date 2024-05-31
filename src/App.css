@@ -23,6 +23,7 @@
   --main-color: rgb(0, 171, 240);
   --main-color-transparent: rgba(11, 69, 90, 0.282);
   --second-bg-color-transparent: rgba(17, 46, 66, 0.5);
+  --proj-color: linear-gradient(90.21deg, #aa367c -5.91%, #4a2fbd 111.58%);
 }
 
 html {
@@ -646,7 +647,7 @@ li {
   position: absolute;
   width: 0%;
   height: 100%;
-  background: linear-gradient(#aa367c -5.91%, #4a2fbd 111.58%);
+  background: var(--proj-color);
   /* background: transparent; */
   top: 0;
   left: 0;
@@ -682,7 +683,7 @@ li {
   position: relative;
   height: 100%;
   width: 100%;
-  background: linear-gradient(90.21deg, #aa367c -5.91%, #4a2fbd 111.58%);
+  background: var(--proj-color);
   height: 400px;
   margin-bottom: 25px;
   border-radius: 30px;
