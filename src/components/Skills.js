@@ -1,6 +1,6 @@
 import { Container, Row, Col } from "react-bootstrap";
 import { TechArea, TechConst } from "../constants/TechConst";
-import { SkillsCard } from "./SkillsCard";
+import { SkillsContainer } from "./SkillsContainer";
 
 export const Skills = () => {
   const skillsAreaMap = [
@@ -39,80 +39,38 @@ export const Skills = () => {
             <span className="animate"></span>
           </h2>
         </div>
-        <Col className="skills-content-container">
+        <div className="skills-content-container">
           <Row className="skills-row">
-            {skillsAreaMap.slice(0, 2).map((skill, index) => (
-              <Col
-                className="skills-box"
+          {skillsAreaMap.slice(0, 2).map((skill, index) => (
+              <SkillsContainer
                 key={index}
-                size={12}
-                md={12}
-                lg={6}
-                style={{ "--animation-seq": index + 2 }}
-              >
-                <div className="skills-title">
-                  <p>{skill.title}</p>
-                </div>
-                <Row className="skills-content">
-                  {Object.values(TechConst)
-                    .filter((tech) => tech.area === skill.area)
-                    .map((tech, index) => (
-                      <SkillsCard key={index} {...tech} />
-                    ))}
-                </Row>
-                <span className="animate"></span>
-              </Col>
+                title={skill.title}
+                techArea={skill.area}
+                animationSeq={index + 2}
+              />
             ))}
           </Row>
           <Row className="skills-row">
-            {skillsAreaMap.slice(2, 4).map((skill, index) => (
-              <Col
-                className="skills-box"
+          {skillsAreaMap.slice(2, 4).map((skill, index) => (
+              <SkillsContainer
                 key={index}
-                size={12}
-                md={12}
-                lg={6}
-                style={{ "--animation-seq": index + 4 }}
-              >
-                <div className="skills-title">
-                  <p>{skill.title}</p>
-                </div>
-                <Row className="skills-content">
-                  {Object.values(TechConst)
-                    .filter((tech) => tech.area === skill.area)
-                    .map((tech, index) => (
-                      <SkillsCard key={index} {...tech} />
-                    ))}
-                </Row>
-                <span className="animate"></span>
-              </Col>
+                title={skill.title}
+                techArea={skill.area}
+                animationSeq={index + 4}
+              />
             ))}
           </Row>
           <Row className="skills-row">
-            {skillsAreaMap.slice(4).map((skill, index) => (
-              <Col
-                className="skills-box"
+          {skillsAreaMap.slice(4).map((skill, index) => (
+              <SkillsContainer
                 key={index}
-                size={12}
-                md={12}
-                lg={6}
-                style={{ "--animation-seq": index + 6 }}
-              >
-                <div className="skills-title">
-                  <p>{skill.title}</p>
-                </div>
-                <Row className="skills-content">
-                  {Object.values(TechConst)
-                    .filter((tech) => tech.area === skill.area)
-                    .map((tech, index) => (
-                      <SkillsCard key={index} {...tech} />
-                    ))}
-                </Row>
-                <span className="animate"></span>
-              </Col>
+                title={skill.title}
+                techArea={skill.area}
+                animationSeq={index + 6}
+              />
             ))}
           </Row>
-        </Col>
+        </div>
       </Container>
     </section>
   );
