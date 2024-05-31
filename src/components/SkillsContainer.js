@@ -1,5 +1,5 @@
 import React from "react";
-import { TechArea, TechConst } from "../constants/TechConst";
+import { TechConst } from "../constants/TechConst";
 
 import { Col, Row } from "react-bootstrap";
 

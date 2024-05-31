@@ -1,5 +1,5 @@
-import { Container, Row, Col } from "react-bootstrap";
-import { TechArea, TechConst } from "../constants/TechConst";
+import { Container, Row } from "react-bootstrap";
+import { TechArea } from "../constants/TechConst";
 import { SkillsContainer } from "./SkillsContainer";
 
 export const Skills = () => {

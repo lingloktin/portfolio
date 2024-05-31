@@ -1,10 +1,10 @@
+import emailjs from "emailjs-com";
 import { useState, useRef } from "react";
 import { Container, Row, Col, Modal, Button } from "react-bootstrap";
 import { TextField } from "@mui/material";
-import { contactMethods } from "../constants/ContactConst";
-import emailjs from "emailjs-com";
-import { EmailConst } from "../constants/EmailConst";
 import CircularProgress from "@mui/material/CircularProgress";
+import { contactMethods } from "../constants/ContactConst";
+import { EmailConst } from "../constants/EmailConst";
 
 export const Contact = () => {
   const [loading, setLoading] = useState(false);
@@ -98,7 +98,11 @@ export const Contact = () => {
                 <div className="contact-method-row">
                   <div className="contact-method" key={index}>
                     <div className="contact-method-icon">
-                      <a href={method.link}>
+                      <a
+                        href={method.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <i className={method.icon}></i>
                       </a>
                     </div>
@@ -162,7 +166,11 @@ export const Contact = () => {
         </Modal.Header>
         <Modal.Body>{modalMessage}</Modal.Body>
         <Modal.Footer>
-          <Button className="modal-btn" variant="primary" onClick={() => setShowModal(false)}>
+          <Button
+            className="modal-btn"
+            variant="primary"
+            onClick={() => setShowModal(false)}
+          >
             Close
           </Button>
         </Modal.Footer>

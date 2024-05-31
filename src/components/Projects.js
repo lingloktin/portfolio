@@ -1,5 +1,4 @@
-import { useState, useEffect } from "react";
-import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
+import { Container, Row, Tab, Nav } from "react-bootstrap";
 import { ProjectTabPane } from "./ProjectTabPane";
 import { projectTypes, projectsData } from "../constants/ProjectsConst";
 
