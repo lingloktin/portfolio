@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
-import { ProjectCard } from "./ProjectCard";
 import { ProjectTabPane } from "./ProjectTabPane";
 import { projectTypes, projectsData } from "../constants/ProjectsConst";
 
