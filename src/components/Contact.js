@@ -1,17 +1,20 @@
-import { useRef } from "react";
+import { useState, useRef } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { TextField } from "@mui/material";
 import { contactMethods } from "../constants/ContactConst";
 import emailjs from "emailjs-com";
 import { EmailConst } from "../constants/EmailConst";
+import CircularProgress from "@mui/material/CircularProgress";
 
 export const Contact = () => {
+  const [loading, setLoading] = useState(false);
   const fromNameRef = useRef("");
   const fromEmailRef = useRef("");
   const messageRef = useRef("");
 
   const sendEmail = (e) => {
     e.preventDefault();
+    setLoading(true);
 
     const formData = {
       from_name: fromNameRef.current.value,
@@ -36,7 +39,8 @@ export const Contact = () => {
       .catch((err) => {
         console.error("FAILED...", err);
         alert("Failed to send message. Please try again later.");
-      });
+      })
+      .finally(() => setLoading(false));
   };
   const OutlinedTextField = ({ label, name, rows = 1, inputRef }) => (
     <TextField
@@ -125,7 +129,11 @@ export const Contact = () => {
               </Row>
               <Row className="contact-form-row btn-box">
                 <button className="btn" type="submit">
-                  Submit
+                  {loading ? (
+                    <CircularProgress size={24} />
+                  ) : (
+                    "Submit"
+                  )}
                 </button>
               </Row>
               <span className="animate"></span>
