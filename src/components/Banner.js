@@ -2,6 +2,7 @@ import { useState, useRef, useLayoutEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import bannerImg from "../assets/img/banner/banner_img.jpg";
 import bannerImgHorizontal from "../assets/img/banner/banner_img_horizontal.jpg";
+import { contactMethods } from "../constants/ContactConst";
 
 export const Banner = () => {
   const headerRef = useRef(null);
@@ -70,12 +71,18 @@ export const Banner = () => {
             </div>
             <div className="social-icon-row">
               <div className="social-icon">
-              <a href="https://github.com/lingloktin" target="_blank" rel="noopener noreferrer">
-                  <i className="bx bxl-github"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/marcus-ling-93b5711bb/" target="_blank" rel="noopener noreferrer">
-                  <i className="bx bxl-linkedin"></i>
-                </a>
+              {contactMethods
+                  .filter((method) => method.inBanner)
+                  .map((method, index) => (
+                    <a
+                      key={index}
+                      href={method.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <i className={method.icon}></i>
+                    </a>
+                  ))}
                 <span className="animate"></span>
               </div>
             </div>
