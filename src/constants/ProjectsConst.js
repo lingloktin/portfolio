@@ -1,5 +1,6 @@
 import projImgEthToDo from "../assets/img/projects/project_eth_to_do.jpg";
 import projImgCRUD from "../assets/img/projects/project_crud.jpg";
+import projImgPortfolio from "../assets/img/projects/project_portfolio.jpeg";
 import projImg2 from "../assets/img/projects/project-img2.png";
 import projImg3 from "../assets/img/projects/project-img3.png";
 import { TechConst } from "./TechConst";
@@ -38,7 +39,7 @@ const projectsData = [
   {
     title: "Personal Portfolio",
     description: "Design & Development",
-    imgUrl: projImg3,
+    imgUrl: projImgPortfolio,
     tech: {
       "Frontend Development": [TechConst.REACTJS.text, TechConst.BOOTSTRAP.text, TechConst.HTML.text, TechConst.CSS.text],
     },
