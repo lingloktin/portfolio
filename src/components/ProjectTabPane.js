@@ -1,7 +1,7 @@
 import { Tab, Row, Col } from "react-bootstrap";
 import React, { useState } from 'react';
 
-const ProjectCard = ({ title, description, imgUrl, tech, githubUrl }) => {
+const ProjectCard = ({ title, description, imgUrl, tech, hasGitLink, githubUrl, hasExternalLink, externalUrl }) => {
   const [isCoverVisible, setIsCoverVisible] = useState(false);
 
   const toggleCover = () => {
@@ -12,7 +12,7 @@ const ProjectCard = ({ title, description, imgUrl, tech, githubUrl }) => {
     <Col className="proj-card-container" size={12} sm={12} md={6} lg={4}>
       <div className='proj-card'>
         <div className={`proj-imgbx ${isCoverVisible ? '' : 'clickable'}`} onClick={isCoverVisible ? null : toggleCover}>
-          <img src={imgUrl} alt="project"/>
+          <img src={imgUrl} alt="project" />
         </div>
         <div className="proj-txtx">
           <h4 className={`${isCoverVisible ? '' : 'clickable'}`} onClick={isCoverVisible ? null : toggleCover}>{title}</h4>
@@ -27,9 +27,16 @@ const ProjectCard = ({ title, description, imgUrl, tech, githubUrl }) => {
             ))}
           </div>
           <div className="proj-link">
-            <a href={githubUrl}>
-              <i class="bx bxl-github"></i>
-            </a>
+            {hasGitLink ?
+              <a href={githubUrl} target="_blank" rel="noopener noreferrer">
+                <i class="bx bxl-github"></i>
+              </a>
+              : ""}
+            {hasExternalLink ?
+              <a href={externalUrl} target="_blank" rel="noopener noreferrer">
+                <i class='bx bx-link-external'></i>
+              </a>
+              : ""}
           </div>
         </div>
       </div>
