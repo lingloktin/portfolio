@@ -370,9 +370,6 @@ nav.navbar .bx-menu,
     position: relative;
     margin: 0;
   }
-  .banner .social-icon-row {
-    /* margin: 2rem 0; */
-  }
 }
 @media (max-width: 991px) {
   .banner h1 {
@@ -444,12 +441,6 @@ nav.navbar .bx-menu,
     display: none;
   }
 }
-@media (max-width: 575px) {
-  .banner.btn-box.btn {
-  }
-  .social-icon {
-  }
-}
 @media (max-width: 460px) {
   .banner h1 {
     font-size: 3.3rem;
@@ -499,7 +490,6 @@ nav.navbar .bx-menu,
   font-size: 2.5rem;
   flex: 1;
   width: fit-content;
-  /* --animation-seq: 2; */
 }
 .experience .experience-col-1 .title {
   --animation-seq: 2;
@@ -648,16 +638,13 @@ li {
   width: 0%;
   height: 100%;
   background: var(--proj-color);
-  /* background: transparent; */
   top: 0;
   left: 0;
   z-index: -1;
   transition: 0.3s ease-in-out;
 }
 .projects .nav.nav-pills .nav-link.active::before {
-  width: 100%;
-  /* background: linear-gradient(#AA367C -5.91%, #4A2FBD 111.58%) */
-}
+  width: 100%;}
 .nav-link#projects-tabs-tab-1 {
   border-radius: 15px 0px 0px 15px;
 }
@@ -667,9 +654,6 @@ li {
 }
 .nav-link#projects-tabs-tab-3 {
   border-radius: 0 15px 15px 0;
-}
-.projects .nav.nav-pills .nav-link {
-  /* border: 1px solid var(--white-transpant-color); */
 }
 .projects .tab-content {
   position: relative;
@@ -874,7 +858,6 @@ li {
   justify-content: center;
   border: 1px solid var(--main-color);
   border-radius: 2rem;
-  /* background-color: var(--white-transpant-0-05); */
   margin: 1.5rem;
   padding: 2rem;
   gap: 1rem;
@@ -1109,7 +1092,6 @@ li {
   bottom: -2px;
   left: -2px;
   background-color: var(--bg-color);
-  /* background: yellowgreen; */
   z-index: 99;
   width: calc(100% + 4px);
   transform-origin: center;

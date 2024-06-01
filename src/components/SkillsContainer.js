@@ -1,6 +1,5 @@
 import React from "react";
 import { TechConst } from "../constants/TechConst";
-
 import { Col, Row } from "react-bootstrap";
 
 const SkillsCard = ({ text, shortName, iconUrl, area, type }) => {
