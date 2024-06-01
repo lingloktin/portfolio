@@ -2,6 +2,7 @@ import ProjImgEthToDo from "../assets/img/projects/project_eth_to_do.jpg";
 import ProjImgCRUD from "../assets/img/projects/project_crud.jpg";
 import ProjImgPortfolio from "../assets/img/projects/project_portfolio.jpeg";
 import ProjImgSTH from "../assets/img/projects/project_sth.jpeg";
+import ProjFypReactApp from "../assets/img/projects/project_fyp_reactapp.jpeg";
 import ProjImg2 from "../assets/img/projects/project-img2.png";
 import ProjImg3 from "../assets/img/projects/project-img3.png";
 import { TechConst } from "./TechConst";
@@ -74,7 +75,7 @@ const ProjectsData = [
   {
     title: "FYP React App",
     description: "Design & Development",
-    imgUrl: ProjImg2,
+    imgUrl: ProjFypReactApp,
     tech: {
       "Frontend Development": [TechConst.REACTJS.text, TechConst.HTML.text, TechConst.CSS.text, TechConst.JAVASCRIPT.text],
     },
