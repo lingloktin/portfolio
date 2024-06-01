@@ -1,8 +1,8 @@
 import { useState, useRef, useLayoutEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import bannerImg from "../assets/img/banner/banner_img.jpg";
-import bannerImgHorizontal from "../assets/img/banner/banner_img_horizontal.jpg";
-import { contactMethods } from "../constants/ContactConst";
+import BannerImg from "../assets/img/banner/banner_img.jpg";
+import BannerImgHorizontal from "../assets/img/banner/banner_img_horizontal.jpg";
+import { ContactConst } from "../constants/ContactConst";
 
 export const Banner = () => {
   const headerRef = useRef(null);
@@ -50,7 +50,7 @@ export const Banner = () => {
               </h3>
             </div>
             <div className="banner-img-container show-mobile-only remount">
-              <img src={bannerImgHorizontal} alt="Banner Horizontal" />
+              <img src={BannerImgHorizontal} alt="Banner Horizontal" />
               <span className="animate"></span>
             </div>
             <p>
@@ -71,7 +71,7 @@ export const Banner = () => {
             </div>
             <div className="social-icon-row">
               <div className="social-icon">
-              {contactMethods
+              {ContactConst
                   .filter((method) => method.inBanner)
                   .map((method, index) => (
                     <a
@@ -89,7 +89,7 @@ export const Banner = () => {
           </Col>
           <Col xs={12} md={5} xl={5}>
             <div className="banner-img-container no-show-mobile remount">
-              <img src={bannerImg} alt="Banner" />
+              <img src={BannerImg} alt="Banner" />
               <span className="animate"></span>
             </div>
           </Col>

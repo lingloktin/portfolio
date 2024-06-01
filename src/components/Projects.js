@@ -1,10 +1,10 @@
 import { Container, Row, Tab, Nav } from "react-bootstrap";
 import { ProjectTabPane } from "./ProjectTabPane";
-import { projectTypes, projectsData } from "../constants/ProjectsConst";
+import { ProjectTypes, ProjectsData } from "../constants/ProjectsConst";
 
 export const Projects = () => {
   const getFilteredProjects = (type) =>
-    projectsData.filter((project) => project.type === type);
+    ProjectsData.filter((project) => project.type === type);
 
   return (
     <section className="projects" id="projects">
@@ -18,23 +18,23 @@ export const Projects = () => {
         <Row className="section-content">
           <Tab.Container
             id="projects-tabs"
-            defaultActiveKey={projectTypes.SIDE_PROJECT}
+            defaultActiveKey={ProjectTypes.SIDE_PROJECT}
           >
             <div className="nav-pills-div">
               <div className="nav-pills-container">
                 <Nav className="nav-pills">
                   <Nav.Item>
-                    <Nav.Link eventKey={projectTypes.SIDE_PROJECT}>
+                    <Nav.Link eventKey={ProjectTypes.SIDE_PROJECT}>
                       Side Hustle
                     </Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
-                    <Nav.Link eventKey={projectTypes.ACADEMIC_PROJECT}>
+                    <Nav.Link eventKey={ProjectTypes.ACADEMIC_PROJECT}>
                       Academic Projects
                     </Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
-                    <Nav.Link eventKey={projectTypes.COMPANY_PROJECT}>
+                    <Nav.Link eventKey={ProjectTypes.COMPANY_PROJECT}>
                       Company Projects
                     </Nav.Link>
                   </Nav.Item>
@@ -44,16 +44,16 @@ export const Projects = () => {
             </div>
             <Tab.Content>
               <ProjectTabPane
-                projects={getFilteredProjects(projectTypes.SIDE_PROJECT)}
-                eventKey={projectTypes.SIDE_PROJECT}
+                projects={getFilteredProjects(ProjectTypes.SIDE_PROJECT)}
+                eventKey={ProjectTypes.SIDE_PROJECT}
               />
               <ProjectTabPane
-                projects={getFilteredProjects(projectTypes.ACADEMIC_PROJECT)}
-                eventKey={projectTypes.ACADEMIC_PROJECT}
+                projects={getFilteredProjects(ProjectTypes.ACADEMIC_PROJECT)}
+                eventKey={ProjectTypes.ACADEMIC_PROJECT}
               />
               <ProjectTabPane
-                projects={getFilteredProjects(projectTypes.COMPANY_PROJECT)}
-                eventKey={projectTypes.COMPANY_PROJECT}
+                projects={getFilteredProjects(ProjectTypes.COMPANY_PROJECT)}
+                eventKey={ProjectTypes.COMPANY_PROJECT}
               />
               <span className="animate"></span>
             </Tab.Content>

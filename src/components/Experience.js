@@ -1,5 +1,5 @@
 import { Container, Row, Col } from "react-bootstrap";
-import { experienceData, educationData } from "../constants/ExperienceConst";
+import { ExperienceConst, EducationConst } from "../constants/ExperienceConst";
 import { ExperienceCard } from "./ExperienceCard";
 
 export const Experience = () => {
@@ -20,7 +20,7 @@ export const Experience = () => {
                   Education<span className="animate"></span>
                 </h3>
               </div>
-              <ExperienceCard data={educationData} isEducation={true} />
+              <ExperienceCard data={EducationConst} isEducation={true} />
             </div>
           </Col>
           <Col sm={12} md={6}>
@@ -30,7 +30,7 @@ export const Experience = () => {
                   Experience<span className="animate"></span>
                 </h3>
               </div>
-              <ExperienceCard data={experienceData} isEducation={false} />
+              <ExperienceCard data={ExperienceConst} isEducation={false} />
             </div>
           </Col>
         </Row>

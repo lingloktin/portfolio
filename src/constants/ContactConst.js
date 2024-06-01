@@ -1,4 +1,4 @@
-export const contactMethods = [
+export const ContactConst = [
   {
     icon: "bx bxl-whatsapp",
     text: "+852 56169596",

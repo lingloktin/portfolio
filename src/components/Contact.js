@@ -3,7 +3,7 @@ import { useState, useRef } from "react";
 import { Container, Row, Col, Modal, Button } from "react-bootstrap";
 import { TextField } from "@mui/material";
 import CircularProgress from "@mui/material/CircularProgress";
-import { contactMethods } from "../constants/ContactConst";
+import { ContactConst } from "../constants/ContactConst";
 import { EmailConst } from "../constants/EmailConst";
 
 export const Contact = () => {
@@ -94,7 +94,7 @@ export const Contact = () => {
               sm={12}
               md={6}
             >
-              {contactMethods.map((method, index) => (
+              {ContactConst.map((method, index) => (
                 <div className="contact-method-row">
                   <div className="contact-method" key={index}>
                     <div className="contact-method-icon">
