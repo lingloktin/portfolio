@@ -58,7 +58,7 @@ const TechConst = {
     area: TechArea.MOBILE_APP,
   },
   FLUTTER: {
-    text: "flutter",
+    text: "Flutter",
     iconUrl: TechIconFlutter,
     area: TechArea.MOBILE_APP,
   },
