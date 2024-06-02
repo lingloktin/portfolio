@@ -3,7 +3,6 @@ import ProjImgCRUD from "../assets/img/projects/project_crud.jpg";
 import ProjImgPortfolio from "../assets/img/projects/project_portfolio.jpeg";
 import ProjImgSTH from "../assets/img/projects/project_sth.jpeg";
 import ProjFypReactApp from "../assets/img/projects/project_fyp_reactapp.jpeg";
-import ProjImg2 from "../assets/img/projects/project-img2.png";
 import ProjImg3 from "../assets/img/projects/project-img3.png";
 import { TechConst } from "./TechConst";
 
@@ -15,6 +14,19 @@ const ProjectTypes = {
 
 
 const ProjectsData = [
+  {
+    title: "Personal Portfolio",
+    description: "Utilizing ReactBootstrap",
+    imgUrl: ProjImgPortfolio,
+    tech: {
+      "Frontend Development": [TechConst.REACTJS.text, TechConst.BOOTSTRAP.text, TechConst.HTML.text, TechConst.CSS.text],
+    },
+    hasGitLink: true,
+    githubUrl: "https://github.com/lingloktin/portfolio",
+    hasExternalLink: false,
+    externalUrl: "",
+    type: ProjectTypes.SIDE_PROJECT,
+  },
   {
     title: "BlockChain To-Do List",
     description: "Learning Blockchain",
@@ -40,19 +52,6 @@ const ProjectsData = [
     },
     hasGitLink: true,
     githubUrl: "https://github.com/lingloktin/simple-crud",
-    hasExternalLink: false,
-    externalUrl: "",
-    type: ProjectTypes.SIDE_PROJECT,
-  },
-  {
-    title: "Personal Portfolio",
-    description: "Utilizing ReactBootstrap",
-    imgUrl: ProjImgPortfolio,
-    tech: {
-      "Frontend Development": [TechConst.REACTJS.text, TechConst.BOOTSTRAP.text, TechConst.HTML.text, TechConst.CSS.text],
-    },
-    hasGitLink: true,
-    githubUrl: "https://github.com/lingloktin/portfolio",
     hasExternalLink: false,
     externalUrl: "",
     type: ProjectTypes.SIDE_PROJECT,
