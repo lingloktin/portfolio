@@ -1,6 +1,7 @@
 # Portfolio Website
 
 ![Portfolio Screenshot](.\src\assets\img\projects\project_portfolio.jpeg)
+![Portfolio Screenshot](.\\src\\assets\\img\\projects\\project_portfolio.jpeg)
 
 ## Description
 
