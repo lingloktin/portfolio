@@ -12,7 +12,7 @@ import { Footer } from "./components/Footer";
 
 function App() {
   useEffect(() => {
-    document.title = 'Marcus\' Portfolio';
+    document.title = "Marcus' Portfolio";
   }, []);
   return (
     <div className="App">
