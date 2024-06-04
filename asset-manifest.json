@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.b6db3a91.css",
+    "main.js": "/portfolio/static/js/main.d4bbff20.js",
+    "static/js/453.ace21015.chunk.js": "/portfolio/static/js/453.ace21015.chunk.js",
+    "static/media/hku.png": "/portfolio/static/media/hku.f7adfe567170cbfb4839.png",
+    "static/media/sttss.png": "/portfolio/static/media/sttss.eb8898dc262e9f20ce55.png",
+    "static/media/banner_img.jpg": "/portfolio/static/media/banner_img.f3d083eb1e142e9dd60e.jpg",
+    "static/media/banner_img_horizontal.jpg": "/portfolio/static/media/banner_img_horizontal.627661bbc4abf980413e.jpg",
+    "static/media/boxicons.svg": "/portfolio/static/media/boxicons.9e2b21b135bc7d4c803f.svg",
+    "static/media/moveit.png": "/portfolio/static/media/moveit.fa21312273d7a09055df.png",
+    "static/media/sth.png": "/portfolio/static/media/sth.0d9574667962edb44270.png",
+    "static/media/project_sth.jpeg": "/portfolio/static/media/project_sth.f3acfd8e05d92b154704.jpeg",
+    "static/media/pks.png": "/portfolio/static/media/pks.8487597e9f1f03000a6b.png",
+    "static/media/boxicons.eot": "/portfolio/static/media/boxicons.65a8ce52fc5427e8f94d.eot",
+    "static/media/boxicons.woff": "/portfolio/static/media/boxicons.d12afc36557395143e4b.woff",
+    "static/media/boxicons.ttf": "/portfolio/static/media/boxicons.db9ddb1898dbd76badca.ttf",
+    "static/media/project_portfolio.jpeg": "/portfolio/static/media/project_portfolio.fd5b73ff8680065af921.jpeg",
+    "static/media/boxicons.woff2": "/portfolio/static/media/boxicons.df635aaf04cd75132f62.woff2",
+    "static/media/project_fyp_reactapp.jpeg": "/portfolio/static/media/project_fyp_reactapp.7feaf16819396bf988bc.jpeg",
+    "static/media/project_crud.jpg": "/portfolio/static/media/project_crud.ae175d6311b5e182e500.jpg",
+    "static/media/project_eth_to_do.jpg": "/portfolio/static/media/project_eth_to_do.acad919b2c56b2609696.jpg",
+    "static/media/sql.png": "/portfolio/static/media/sql.d0875781b3030e385cc1.png",
+    "static/media/react.png": "/portfolio/static/media/react.89996b225745a7b82cf2.png",
+    "static/media/express.png": "/portfolio/static/media/express.e3d4f9e5c8b469e45838.png",
+    "static/media/project_doctor_portal.jpg": "/portfolio/static/media/project_doctor_portal.0be1658bbe6b1671e2be.jpg",
+    "index.html": "/portfolio/index.html",
+    "main.b6db3a91.css.map": "/portfolio/static/css/main.b6db3a91.css.map",
+    "main.d4bbff20.js.map": "/portfolio/static/js/main.d4bbff20.js.map",
+    "453.ace21015.chunk.js.map": "/portfolio/static/js/453.ace21015.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b6db3a91.css",
+    "static/js/main.d4bbff20.js"
+  ]
+}
