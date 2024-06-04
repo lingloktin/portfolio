@@ -2,8 +2,8 @@ import ProjImgEthToDo from "../assets/img/projects/project_eth_to_do.jpg";
 import ProjImgCRUD from "../assets/img/projects/project_crud.jpg";
 import ProjImgPortfolio from "../assets/img/projects/project_portfolio.jpeg";
 import ProjImgSTH from "../assets/img/projects/project_sth.jpeg";
-import ProjFypReactApp from "../assets/img/projects/project_fyp_reactapp.jpeg";
-import ProjImg3 from "../assets/img/projects/project-img3.png";
+import ProjImgFypReactApp from "../assets/img/projects/project_fyp_reactapp.jpeg";
+import ProjImgDoctorPortal from "../assets/img/projects/project_doctor_portal.jpg";
 import { TechConst } from "./TechConst";
 
 const ProjectTypes = {
@@ -74,7 +74,7 @@ const ProjectsData = [
   {
     title: "FYP React App",
     description: "Design & Development",
-    imgUrl: ProjFypReactApp,
+    imgUrl: ProjImgFypReactApp,
     tech: {
       "Frontend Development": [TechConst.REACTJS.text, TechConst.HTML.text, TechConst.CSS.text, TechConst.JAVASCRIPT.text],
     },
@@ -87,7 +87,7 @@ const ProjectsData = [
   {
     title: "Doctor Portal",
     description: "Maintenance & Development",
-    imgUrl: ProjImg3,
+    imgUrl: ProjImgDoctorPortal,
     tech: {
       "Mobile App Development": [TechConst.REACT_NATIVE.text],
     },
