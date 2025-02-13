@@ -12,11 +12,11 @@ const ExperienceConst = [
         title: "St. Teresa's Hospital",
         subtitle: "Programmer",
         description: [
-            "Designed and implemented new features to Payment Transfer System, increasing efficiency",
-            "Identified and resolved several software bugs monthly to prevent potential service disruptions, improving system reliability",
-            "Collaborated with staff to optimize workflows, ensuring alignment with operational needs",
-            "Provided technical support for system users, enabling seamless adoption of system updates",
-            "Performed data insertions and table alterations to support new feature rollouts"
+            "React Native expertise for mobile app enhancement",
+            "Skilled in MSSQL for accurate data management",
+            "ASP.NET maintenance ensuring seamless patient experiences",
+            "Proficient in VB programming for program optimization",
+            "Provided effective technical support & played a key role in UAT testing"
         ]
     },
     {
