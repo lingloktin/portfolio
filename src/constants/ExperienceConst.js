@@ -12,11 +12,11 @@ const ExperienceConst = [
         title: "St. Teresa's Hospital",
         subtitle: "Programmer",
         description: [
-            "Designed and implemented new features to Payment Transfer System, increasing efficiency",
-            "Identified and resolved several software bugs monthly to prevent potential service disruptions, improving system reliability",
-            "Collaborated with staff to optimize workflows, ensuring alignment with operational needs",
-            "Provided technical support for system users, enabling seamless adoption of system updates",
-            "Performed data insertions and table alterations to support new feature rollouts"
+            "Maintained and enhanced React.js web apps and a React Native mobile app, using Redux for state management and ensuring responsive design",
+            "Developed and supported C# ASP.NET Core APIs, delivering robust backend services and ensuring seamless integration with frontend systems",
+            "Sustained legacy VB systems, identifying and resolving bugs to maintain operational stability",
+            "Managed SQL databases, performing data patching, insertions, and schema updates to support system enhancements",
+            "Collaborated with users to gather requirements and optimize workflows"
         ]
     },
     {
@@ -38,9 +38,9 @@ const ExperienceConst = [
         title: "Peanut King Solution Limited",
         subtitle: "Software Engineer Intern",
         description: [
-            "Collaborated cross-departmentally in software development",
-            "Created interactive websites using Bootstrap",
-            "Developed robotic codes for educational purposes"
+            "Programmed Arduino-based robots, integrating sensors and motor control for autonomous functionality",
+            " Delivered Arduino and robotics workshops to secondary school students, fostering STEM engagement",
+            "Created interactive websites using Bootstrap"
         ]
     }
 ];
@@ -52,7 +52,11 @@ const EducationConst = [
         iconUrl: ExpIconHku,
         title: "The University of Hong Kong",
         subtitle: "Computer Science - Bachelor of Engineering",
-        description: "The University of Hong Kong (HKU) offers a prestigious Bachelor of Engineering in Computer Science program, equipping students with a diverse skill set in software development, data science, machine learning, and more. Throughout the program, students delve into cutting-edge technologies and gain practical experience in problem-solving and innovation. With a strong emphasis on critical thinking and creativity, graduates emerge ready to tackle the challenges of the digital age, contributing to the advancement of technology and shaping the future of the industry."
+        description: [
+            "Final Year Project: Blockchain-Based Contract and Resume Verification Platform",
+            "Designed smart contracts on the Polygon network to tokenize certifications and employment records, ensuring authenticity and tamper-proof verification",
+            "Built a full-stack application with React.js for the frontend and Node.js/Express.js for the backend, integrating with a PostgreSQL database"
+        ]
     },
     {
         year: "2012 - 2018",

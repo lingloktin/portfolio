@@ -1,6 +1,6 @@
 import React from "react";
 
-export const ExperienceCard = ({ data, isEducation }) => {
+export const ExperienceCard = ({ data }) => {
   return (
     <div className="experience-box">
       {data.map((item, index) => (
@@ -23,14 +23,14 @@ export const ExperienceCard = ({ data, isEducation }) => {
               </div>
             </div>
             <div>
-              {isEducation ? (
-                <p>{item.description}</p>
-              ) : (
+              {Array.isArray(item.description) ? (
                 <ul>
                   {item.description.map((desc, idx) => (
                     <li key={idx}>{desc}</li>
                   ))}
                 </ul>
+              ) : (
+                <p>{item.description}</p>
               )}
             </div>
           </div>

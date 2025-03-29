@@ -20,7 +20,7 @@ export const Experience = () => {
                   Education<span className="animate"></span>
                 </h3>
               </div>
-              <ExperienceCard data={EducationConst} isEducation={true} />
+              <ExperienceCard data={EducationConst} />
             </div>
           </Col>
           <Col sm={12} md={6}>
@@ -30,7 +30,7 @@ export const Experience = () => {
                   Experience<span className="animate"></span>
                 </h3>
               </div>
-              <ExperienceCard data={ExperienceConst} isEducation={false} />
+              <ExperienceCard data={ExperienceConst} />
             </div>
           </Col>
         </Row>
