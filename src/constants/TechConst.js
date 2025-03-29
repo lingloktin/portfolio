@@ -20,6 +20,7 @@ import TechIconFlutter from "../assets/img/skills/flutter.png";
 import TechIconPython from "../assets/img/skills/python.png";
 import TechIconJava from "../assets/img/skills/java.png";
 import TechIconVb from "../assets/img/skills/vb.png";
+import TechIconDotnetCore from "../assets/img/skills/dotnetcore.png";
 
 const TechArea = {
   LANGUAGE: 0,
@@ -152,6 +153,11 @@ const TechConst = {
     text: "ASP.NET",
     iconUrl: "",
     area: TechArea.GENERAL,
+  },
+  DOTNETCORE: {
+    text: ".NET Core",
+    iconUrl: TechIconDotnetCore,
+    area: TechArea.BACKEND,
   },
 }
 

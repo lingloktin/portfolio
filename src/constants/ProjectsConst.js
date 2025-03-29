@@ -89,7 +89,9 @@ const ProjectsData = [
     description: "Maintenance & Development",
     imgUrl: ProjImgDoctorPortal,
     tech: {
+      "Web App Development": [TechConst.REACTJS.text],
       "Mobile App Development": [TechConst.REACT_NATIVE.text],
+      "Backend Development": [TechConst.DOTNETCORE.text],
     },
     hasGitLink: false,
     githubUrl: "",
